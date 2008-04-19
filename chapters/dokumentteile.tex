@@ -1,0 +1,158 @@
+%
+% Diplomarbeit mit LaTeX
+% ===========================================================================
+% This is part of the book "Diplomarbeit mit LaTeX".
+% Copyright (c) 2002-2008 Tobias Erbsland, Andreas Nitsch
+% See the file diplomarbeit_mit_latex.tex for copying conditions.
+%
+
+\chapter{Dokumentteile}
+\index{Dokumentteile|(}
+
+Ein Dokument besteht normalerweise aus einzelnen, in sich geschlossenen Dokumentteilen:
+
+\begin{itemize}
+	\item Titelseite
+	\item Inhaltsverzeichnis
+	\item Inhalt
+	\item Anhang
+\end{itemize}
+
+Diese einzelnen Teile kannst du mit \DMLLaTeX \ einfach einfügen, bzw. aufbauen.
+
+\section{Anpassen der Titelseite}
+\index{Titelseite}\index{Anpassen!Titelseite}
+
+Um eine Titelseite aufzubauen, hast du mehrere Möglichkeiten. Im Kapitel \ref{sec:grundlagen} wird der einfachste Weg mit dem Kommando \texttt{\textbackslash maketitle} aufgezeigt.
+
+Dabei setzt man im Header oder zumindest vor dem Befehl die notwendigen Angaben:
+
+\begin{lstlisting}
+\title{Diplomarbeit}
+\author{Hans Muster}
+\date{12.12.2005} % optional
+
+\maketitle
+\end{lstlisting}
+
+Das Argument \texttt{\textbackslash date} ist dabei optional. Wenn du es weglässt, wird automatisch das aktuelle Datum eingefügt. 
+
+In einem Artikel (\enquote{article}) wird der Titel einfach oben an das aktuelle Dokument mit einer großen Schriftart gesetzt. Das Dokument oder Inhaltsverzeichnis beginnt direkt darunter. In einem Buch (\enquote{book}) entsteht so eine separate Titelseite.
+
+\subsection{Separate Titelseite in einem Artikel}
+\label{sec:separatetitelseite}
+\index{Separate Titelseite}
+
+Falls du in einem Artikel eine separate Titelseite wünschst, kannst du das über die Klassenoption \enquote{titlepage} erreichen. Wie man eine solche Klassenoption setzt, kannst du in Kapitel \ref{sec:globaleoptionen} nachlesen.
+
+\subsection{Eine eigene Titelseite erstellen}
+\index{Eigene Titelseite}
+
+Die Umgebung \enquote{titlepage} eignet sich vor allem dafür, wenn du eine eigene Titelseite erstellen möchtest. Dabei musst du jedoch einige der unterliegenden {\rmfamily\TeX} Kommandos kennen, welche die Grundlage von \DMLLaTeX \ bilden.
+
+Hier als Beispiel die Titelseite dieses Dokuments:
+
+\begin{lstlisting}[frame=tb, caption=Titelseite dieses Dokuments]
+\begin{titlepage}
+	\vspace*{7cm}
+	\begin{center}
+		\Huge
+		Diplomarbeit mit \DMLLaTeX\\
+		\vspace{1cm}
+		\large
+		Version 1.2\\
+		\vspace{2cm}
+		Tobias Erbsland <te@profzone.ch>\\
+		Andreas Nitsch\\
+	\end{center}
+	\normalsize
+	\vfill
+	Copyright (c) 2002, 2003, 2005  Tobias Erbsland.
+
+	Permission is granted to copy, distribute and/or modify this document
+	under the terms of the GNU Free Documentation License, Version 1.2
+	or any later version published by the Free Software Foundation;
+	with no Invariant Sections, no Front-Cover Texts, and no Back-Cover Texts.
+	A copy of the license is included in the section entitled \enquote{GNU
+	Free Documentation License}.
+\end{titlepage}
+\end{lstlisting}
+
+\section{Verzeichnisse}
+\index{Verzeichnisse|(}
+
+Inhaltsverzeichnisse werden in \DMLLaTeX \ automatisch erzeugt. Es ist möglich ein Inhaltsverzeichnis, ein Abbildungsverzeichnis und ein Tabellenverzeichnis ohne großen Aufwand in das Dokument einzubetten.
+
+\DMLLaTeX \ geht dabei folgendermaßen vor: beim ersten Durchlauf werden die Seitennummern und Titel aller relevanten Überschriften und Beschriftungen in einer separaten Datei gespeichert (.aux). Aus dieser Datei werden am Schluss einzelne Dateien mit den verschiedenen Inhaltsverzeichnissen erstellt (.toc, .lot, .lof).
+
+Beim nächsten Durchlauf werden diese Dateien für das Inhaltsverzeichnis und die anderen Verzeichnisse verwendet. Da sich die Seitennummerierung dadurch verändern kann (weil z.B. das Inhaltsverzeichnis um fünf Zeilen wächst), wird evtl. ein weiterer Durchlauf notwendig.
+
+Die Seitenverweise sind daher frühestens nach dem zweiten oder sogar dritten Durchlauf des Dokuments korrekt. Bevor du also die endgültige Fassung deines Dokuments erstellst, solltest du das Dokument sooft kompilieren, bis keine Warnungen wie die folgende mehr auftreten:
+
+\begin{lstlisting}
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+\end{lstlisting}
+
+\subsection{Inhaltsverzeichnis}
+\index{Inhaltsverzeichnis}
+
+Das Inhaltsverzeichnis wird aus den Überschriften des Dokuments gebildet. Du kannst es mit folgendem Befehl in dein Dokument einbetten:
+
+\begin{lstlisting}
+\tableofcontents
+\end{lstlisting}
+
+\newpage
+Falls du möchtest, dass ein bestimmter Abschnitt nicht im Inhaltsverzeichnis auftaucht, kannst du die \enquote{*}-Schreibweise verwenden:
+
+\begin{lstlisting}
+\subsection*{Nicht im Inhaltsverzeichnis}
+\end{lstlisting}
+
+Möglicherweise ist der Titel im Dokument zu lang für das Inhaltsverzeichnis. Du hast daher die Möglichkeit den Eintrag, welcher im Inhaltsverzeichnis gemacht wird, vom Titel im Dokument zu trennen:
+
+\begin{lstlisting}
+\subsection[Kurzer Titel im Inhaltsverz.]{Hier der Lange
+	Titel, welcher leider im Inhaltsverzeichnis keinen Platz gefunden
+	hat.}
+\end{lstlisting}
+ 
+
+\subsection{Abbildungsverzeichnis und Tabellenverzeichnis}
+\index{Abbildungsverzeichnis}\index{Tabellenverzeichnis}
+
+Das Abbildungsverzeichnis und das Tabellenverzeichnis werden aus den \texttt{\textbackslash caption} Einträgen innerhalb der \enquote{figure} und \enquote{table} Floats gebildet. 
+
+Die beiden Verzeichnisse kannst du folgendermaßen in dein Dokument einbetten:
+
+\begin{lstlisting}
+\listoffigures
+\listoftables
+\end{lstlisting}
+
+\index{Verzeichnisse|)}
+
+\section{Anhang}
+\index{Anhang}
+
+Oft hat ein Dokument noch Anhänge. Das sind Kapitel oder Anschnitte, welche zusätzliche Informationen zu dem Thema des Dokuments erhalten, z.B. Tabellen, Diagramme oder große Grafiken, welche oft aus dem Dokument referenziert werden, jedoch nicht in ein bestimmtes Kapitel des Dokuments passen. Ein Beispiel hierfür ist die API-Referenz einer Software.
+
+Der Anhang wird mit dem Befehl \texttt{\textbackslash appendix}\index{appendix@\texttt{\textbackslash appendix}} eingeleitet. Nach diesem Befehl werden die Kapitel oder Abschnitte mit Großbuchstaben nummeriert.
+
+\begin{lstlisting}[frame=tb, caption=Dokumentstruktur mit Anhang]
+\section{Dokumentinhalt}
+\subsection{Untertitel des Dokumentinhalts}
+
+\section{Weiterer Dokumentinhalt}
+
+\appendix % Ab hier beginnt der Anhang
+
+\section{Erster Anhang}
+\subsection{Untertitel des ersten Anhangs}
+
+\section{Zweiter Anhang}
+
+\end{lstlisting}
+
+\index{Dokumentteile|)}
+

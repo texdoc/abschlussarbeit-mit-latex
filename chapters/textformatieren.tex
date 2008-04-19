@@ -1,0 +1,249 @@
+%
+% Diplomarbeit mit LaTeX
+% ===========================================================================
+% This is part of the book "Diplomarbeit mit LaTeX".
+% Copyright (c) 2002-2005 Tobias Erbsland, Andreas Nitsch
+% See the file diplomarbeit_mit_latex.tex for copying conditions.
+%
+
+\chapter{Text formatieren}
+\index{Formatieren|(}
+
+\DMLLaTeX \ kennt verschiedenste Arten, auf die ein Text formatiert und strukturiert werden kann. Ich zähle hier nur die Wichtigsten mit kleinen Beispielen auf.
+
+\section{Absätze und Zeilenumbrüche}
+
+Es spielt keine Rolle, wie genau du den Text innerhalb deines Dokuments formatierst. Die folgenden beiden Listings ergeben also das selbe Resultat:
+
+\begin{lstlisting}
+Ein Beispieltext auf einer einzelnen Zeile.
+\end{lstlisting}
+
+\begin{lstlisting}
+Ein Beispieltext
+auf einer
+einzelnen Zeile.
+\end{lstlisting}
+
+Dabei ignoriert \DMLLaTeX \ überflüssige Leerzeichen und Zeilenumbrüche. Du kannst den Text in deiner Datei so formatieren, dass er für dich zum Editieren übersichtlich ist.
+
+\subsection{Absätze}
+\index{Formatieren!Absaetze@Absätze}
+\index{Absatz}
+
+Um einen Absatz zu erzeugen, fügst du einfach mindestens eine Leerzeile zwischen zwei Textstellen in dein Dokument ein:
+
+\begin{lstlisting}
+Dies ist der erste Absatz von
+diesem Dokument.
+
+Das ist der zweite.
+\end{lstlisting}
+
+\DMLLaTeX \ formatiert normalerweise neue Absätze so, dass die erste Zeile des neuen Absatzes ein wenig eingerückt wird. Dies entspricht den amerikanischen Absatzregeln. \index{Absatzregeln}\index{Europaeische Absaetze@Europäische Absätze}Um europäische Absätze zu erzeugen, existieren in den \KOMAScript-Dokumentklassen verschiedenste Optionen.
+
+\begin{itemize}
+	\item parskip\index{parskip}\index{Dokumentklasse!Optionen}
+	\item parskip*
+	\item parskip+
+	\item parskip-
+	\item halfparskip\index{halfparskip}
+	\item halfparskip*
+	\item halfparskip+
+	\item halfparskip-
+	\item parindent\index{parindent}
+\end{itemize}
+
+Voreingestellt ist \enquote{parindent}. Alle Optionen, welche mit \enquote{parskip} beginnen, erzeugen eine ganze Zeile Abstand zwischen zwei Absätzen. Die Optionen, welche mit \enquote{halfparskip} beginnen, erzeugen eine halbe Zeile Zwischenraum. Der Stern, das Plus und Minus steuern u.a., wieviel Leerraum in der letzten Zeile eines Absatzes freibleiben soll.
+
+Wie du diese Optionen bei der Dokumentklasse setzt, findest du in Kapitel \ref{sec:globaleoptionen}. Weitere Informationen zu diesen Optionen findest du in der \enquote{scrguide}, welche du hier~\cite{KOMA} oder lokal auf deiner Festplatte im \enquote{doc} Verzeichnis deiner MiKTeX Distribution findest (z.\,B. unter c:\textbackslash texmf\textbackslash doc\textbackslash latex\textbackslash koma-script).
+
+\subsection{Zeilenumbrüche}
+\index{Formatieren!Zeilenumbrueche@Zeilenumbrüche}
+\index{Zeilenumbruch}
+
+Einen einfachen Zeilenumbruch kannst du mit einem doppelten Backslash erzeugen. Dabei wird die Zeile genau an dieser Stelle umbrochen. Zeilenumbrüche sollten nur in speziellen Fällen verwendet werden, wie z.,B. bei Adressen, in Tabellen oder ähnlichen Situationen.
+
+\begin{lstlisting}
+Hans Muster \\
+Mustergasse 12 \\
+1234 Musterhausen
+\end{lstlisting}
+
+\section{Überschriften}
+\index{Formatieren!Ueberschriften@Überschriften}
+\index{Ueberschriften@Überschriften}
+
+Überschriften bilden die Struktur des Dokuments. Es existieren folgende Überschriftstypen:
+\index{chapter@\texttt{\textbackslash chapter}}
+\index{section@\texttt{\textbackslash section}}
+\index{subsection@\texttt{\textbackslash subsection}}
+\index{subsubsection@\texttt{\textbackslash subsubsection}}
+\index{paragraph@\texttt{\textbackslash paragraph}}
+\index{subparagraph@\texttt{\textbackslash subparagraph}}
+
+\begin{enumerate}
+	\item \texttt{\textbackslash chapter\{Kapitel\}}
+	\item \texttt{\textbackslash section\{Abschnitt\}}
+	\item \texttt{\textbackslash subsection\{Unterabschnitt\}}
+	\item \texttt{\textbackslash subsubsection\{Unter-Unterabschnitt\}}
+	\item \texttt{\textbackslash paragraph\{Absatz\}}
+	\item \texttt{\textbackslash subparagraph\{Unter-Absatz\}}
+\end{enumerate}
+
+Der Befehl \texttt{\textbackslash chapter} existiert nur in den Dokumentklassen \enquote{scrbook} und \enquote{scrreprt}. Weiterhin gibt es noch den Befehl \texttt{\textbackslash part}. Mehr zu Dokumentklassen findest du in Kapitel \ref{sec:dokumentklassen}.
+
+Zu jedem Überschriftstyp existiert noch eine Form mit einem \enquote{*}:
+
+\begin{enumerate}
+	\item \texttt{\textbackslash chapter*\{Kapitel\}}
+	\item \texttt{\textbackslash section*\{Abschnitt\}}
+	\item \texttt{\textbackslash subsection*\{Unterabschnitt\}}
+	\item \texttt{\textbackslash subsubsection*\{Unter-Unterabschnitt\}}
+	\item \texttt{\textbackslash paragraph*\{Absatz\}}
+	\item \texttt{\textbackslash subparagraph*\{Unter-Absatz\}}
+\end{enumerate}
+
+Diese Befehle generieren analog zu den ersten Befehlen die entsprechende Überschrift, jedoch ohne Nummerierung. Zudem taucht diese Überschrift nicht im Inhaltsverzeichnis auf.
+
+
+
+
+\section{Textstellen hervorheben}
+\index{Formatieren!Hervorheben}
+
+Einzelne Wörter oder Textteile können \emph{hervorgehoben} werden. Dies machst du mit dem Befehl \texttt{\textbackslash emph}:
+
+\begin{lstlisting}
+Einzelne Wörter oder Textteile können \emph{hervorgehoben} werden.
+\end{lstlisting}
+
+Neben dieser einfachen Her\-vor\-he\-bung kannst du Wörter auch \textbf{fett}\index{Fett}\index{Formatieren!Fett}\index{textbf@\texttt{\textbackslash textbf}}, \textit{kursiv}\index{Kursiv}\index{Formatieren!Kursiv}\index{textit@\texttt{\textbackslash textit}} oder\\ \texttt{monospaced}\index{Monospaced}\index{Formatieren!Monospaced}\index{Feste Zeichenbreite}\index{texttt@\texttt{\textbackslash texttt}} setzen lassen:
+
+\begin{lstlisting}
+\textbf{fett}, \textit{kursiv} oder \texttt{monospaced}.
+\textbf{Ganze Textzeile fett}
+\end{lstlisting}
+
+Du solltest jedoch für eine einfache Hervorhebung immer den \texttt{\textbackslash emph} Befehl verwenden. Die Formatierung des \texttt{\textbackslash emph} Befehls lässt sich nachtränglich beliebig neu definieren.
+
+Beachte auch dass fetter Text die Aufmerksamkeit des Lesers auf die so markierte Stelle lenkt. Damit unterbrichst du den normalen Lesefluss. Verwendest du viele fett markierte Textstellen, wird das Lesen deines Dokuments zur Qual.
+
+\section{Listen und Aufzählungen}
+\index{Listen|(}\index{Aufzaehlungen@Aufzählungen|(}
+
+Es gibt verschiedenste Listen und Aufzählungen in \DMLLaTeX. Hier zeige ich die Wichtigsten davon:
+
+\subsection{Einfache Aufzählung}
+\index{Aufzaehlungen@Aufzählungen!einfache}\index{Einfache Aufzaehlung@einfache Aufzählung}
+
+Eine einfache Aufzählung erstellst du folgendermaßen:
+
+\begin{lstlisting}
+\begin{itemize}
+	\item Der erste Punkt.
+	\item Der zweite Punkt in der Liste.
+	\item Noch ein weiterer Punkt.
+\end{itemize}
+\end{lstlisting}
+
+Und so sieht das ganze danach aus:
+
+\begin{itemize}
+	\item Der erste Punkt.
+	\item Der zweite Punkt in der Liste.
+	\item Noch ein weiterer Punkt.
+\end{itemize}
+
+\subsection{Nummerierte Aufzählung}
+\index{Aufzaehlungen@Aufzählungen!nummerierte}\index{Nummerierte Aufzaehlung@nummerierte Aufzählung}
+
+Eine nummerierte Aufzählung erstellst du folgendermaßen:
+
+\begin{lstlisting}
+\begin{enumerate}
+	\item Ein nummerierter Punkt.
+	\item Der zweite nummerierte Punkt.
+	\item Noch ein dritter nummerierter Punkt.
+\end{enumerate}
+\end{lstlisting}
+
+Und so sieht das ganze fertig aus:
+
+\begin{enumerate}
+	\item Ein nummerierter Punkt.
+	\item Der zweite nummerierte Punkt.
+	\item Noch ein dritter nummerierter Punkt.
+\end{enumerate}
+
+\subsection{Verschachtelte Aufzählungen}
+\index{Aufzaehlungen@Aufzählungen!verschachtelte}\index{Verschachtelte Aufzaehlungen@verschachtelte Aufzählungen}
+
+Diese Aufzählungstypen lassen sich natürlich beliebig verschachteln:
+
+\begin{lstlisting}
+\begin{enumerate}
+	\item Ein nummerierter Punkt.
+	\item Der zweite nummerierte Punkt.
+	\begin{enumerate}
+		\item Ein nummerierter Punkt.
+		\item Der zweite nummerierte Punkt.
+		\item Noch ein dritter nummerierter Punkt.
+	\end{enumerate}
+	\item Noch ein dritter nummerierter Punkt.
+\end{enumerate}
+\end{lstlisting}
+
+Und so sieht das ganze fertig aus:
+
+\begin{enumerate}
+	\item Ein nummerierter Punkt.
+	\item Der zweite nummerierte Punkt.
+	\begin{enumerate}
+		\item Ein nummerierter Punkt.
+		\item Der zweite nummerierte Punkt.
+		\item Noch ein dritter nummerierter Punkt.
+	\end{enumerate}
+	\item Noch ein dritter nummerierter Punkt.
+\end{enumerate}
+
+
+\subsection{Beschreibungslisten}
+\index{Listen!Beschreibungslisten}\index{Beschreibungslisten}
+
+Eine weitere Form einer Aufzählung ist die Beschreibungsliste. Hier ist ein Beispiel einer Beschreibungsliste:
+
+\begin{lstlisting}
+\begin{description}
+	\item[Apfel] Eine Frucht die meistens auf großen Bäumen wächst,
+		welche man ernten kann und welche ganz lecker schmeckt.
+		Teilweise ist auch ein Wurm drin. Da dies ein längerer Satz ist,
+		erkennt man, wie weitere Zeilen mit einem fixen Abstand 
+		umbrochen werden.
+	\item[Wurm] Ist teilweise im Apfel drin.
+		Um auch hier den Abstand beim Umbruch in eine neue 
+		Zeile zu sehen, schreibe ich einen längeren Satz.
+		Mit einem bisschen Glück ist die Beschreibung hier
+		länger als eine Zeile.
+	\item[Birne] Siehe dazu \emph{Apfel}, nur mit anderer
+		Form und Geschmack.
+\end{description}
+\end{lstlisting}
+
+Und so sieht das ganze fertig aus:
+
+\begin{description}
+	\item[Apfel] Eine Frucht die meistens auf großen Bäumen wächst,
+		welche man ernten kann und welche ganz lecker schmeckt.
+		Teilweise ist auch ein Wurm drin. Da dies ein längerer Satz ist,
+		erkennt man, wie weitere Zeilen mit einem fixen Abstand 
+		umbrochen werden.
+	\item[Wurm] Ist teilweise im Apfel drin.
+		Um auch hier den Abstand beim Umbruch in eine neue Zeile zu sehen,
+		schreibe ich einen längeren Satz. Mit einem bisschen Glück ist die
+		Beschreibung hier länger als eine Zeile.
+	\item[Birne] Siehe dazu \emph{Apfel}, nur mit anderer Form und Geschmack.
+\end{description}
+
+\index{Listen|)}\index{Aufzaehlungen@Aufzählungen|)}
+\index{Formatieren|)}

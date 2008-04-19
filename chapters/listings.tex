@@ -1,0 +1,105 @@
+%
+% Diplomarbeit mit LaTeX
+% ===========================================================================
+% This is part of the book "Diplomarbeit mit LaTeX".
+% Copyright (c) 2002-2005 Tobias Erbsland, Andreas Nitsch
+% See the file diplomarbeit_mit_latex.tex for copying conditions.
+%
+
+\chapter{Listings}
+
+\section{Beispiellisting eines Dokuments mit der Dokumentklasse \enquote{scrartcl}}
+\label{sec:lstarticle}
+
+\lstinputlisting[caption=Beispiellisting eines Dokuments mit der Dokumentklasse \enquote{scrartcl}, label=lst:article, frame=tb]%
+	{listings/beispiel02.tex}
+	
+\section{Beispiellisting eines Dokuments mit der Dokumentklasse \enquote{scrreprt}}
+\label{sec:lstreport}
+
+\lstinputlisting[caption=Beispiellisting eines Dokuments mit der Dokumentklasse \enquote{scrartcl}, label=lst:report, frame=tb]%
+	{listings/beispiel03.tex}
+	
+\section{Beispiellisting eines Dokuments mit der Dokumentklasse \enquote{scrbook}}
+\label{sec:lstbook}
+
+\lstinputlisting[caption=Beispiellisting eines Dokuments mit der Dokumentklasse \enquote{scrbook}, label=lst:book, frame=tb]%
+	{listings/beispiel04.tex}
+
+\newpage	
+\section{Beispiellisting einer Diplomarbeit}
+\label{sec:listing_diplomarbeit}
+
+\subsection{Hauptdokument einer Diplomarbeit}
+\label{subsec:listing_hauptdokument}
+
+\lstinputlisting[caption=Hauptdokument der Diplomarbeit, label=lst:hauptdokument, frame=tb]
+	{template_diplomarbeit/template_diplomarbeit.tex}
+
+
+\newpage	
+\subsection{Header Diplomarbeit}
+\label{subsec:header}
+
+\lstinputlisting[caption=Header der Diplomarbeit, label=lst:header, frame=tb]
+	{template_diplomarbeit/kapitel/header.tex}
+
+
+\newpage
+\subsection{Titelseite der Diplomarbeit}
+%\label{subsec:titelseite}
+
+\lstinputlisting[caption=Titelseite der Diplomarbeit, label=lst:titelseite, frame=tb]
+	{template_diplomarbeit/kapitel/titelseite.tex}
+
+
+\newpage	
+\subsection{Einleitung der Diplomarbeit}
+%\label{subsec:einleitung}
+
+\lstinputlisting[caption=Einleitung der Diplomarbeit, label=lst:einleitung, frame=tb]
+	{template_diplomarbeit/kapitel/abstract.tex}
+
+
+\newpage	
+\subsection{Danksagung zur Diplomarbeit}
+%\label{subsec:danksagung}
+
+\lstinputlisting[caption=Danksagung Diplomarbeit, label=lst:danksagung,
+ frame=tb]
+	{template_diplomarbeit/kapitel/danksagung.tex}
+
+
+\newpage
+\subsection{Erstes Kapitel der Diplomarbeit}
+%\label{subsec:erstes_kapitel}
+
+\lstinputlisting[caption=Erstes Kapitel der Diplomarbeit - ohne Glossareinträge, label=lst:erstes_kapitel,
+ frame=tb]
+	{template_diplomarbeit/kapitel/charakteristik_spuerhund.tex}
+
+\subsection{Zweites Kapitel der Diplomarbeit}
+\label{subsec:zweites_kapitel}
+
+\lstinputlisting[caption=Zweites Kapitel der Diplomarbeit - mit Glossareinträge, label=lst:zweites_kapitel,
+ frame=tb]
+	{template_diplomarbeit/kapitel/zukunftsaussichten_spuerhund.tex}
+
+\subsection{Eidesstattliche Erklärung zur Diplomarbeit}
+%\label{subsec:zweites_kapitel}
+
+\lstinputlisting[caption=Eidesstattliche Erklärung der Diplomarbeit - ist abhängig von den Bedingungen der Uni bzw. FH/TH anzupassen, label=lst:eidesstattliche_erklaerung,
+ frame=tb]
+	{template_diplomarbeit/kapitel/eidesstattliche_erklaerung.tex}
+
+
+\newpage
+\subsection{Batchdatei zum Übersetzen des LaTeX-Dokumentes}
+\label{subsec:batchdatei}
+\lstinputlisting[caption=Batchdatei zum Übersetzen des \DMLLaTeX-Dokumentes, label=lst:batchdatei,
+ frame=tb]
+	{template_diplomarbeit/make.bat}	
+	
+%
+% EOF
+%

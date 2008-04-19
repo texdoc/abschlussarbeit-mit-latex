@@ -1,0 +1,243 @@
+%
+% Diplomarbeit mit LaTeX
+% ===========================================================================
+% This is part of the book "Diplomarbeit mit LaTeX".
+% Copyright (c) 2002, 2003, 2005, 2007, 2008 Tobias Erbsland
+% Copyright (c) 2005, 2006 Andreas Nitsch
+% See the file main.tex for copying conditions.
+%
+
+%
+% A. DOKUMENTKLASSE
+% ---------------------------------------------------------------------------
+%
+
+%
+%  1. Definieren der Dokumentklasse.
+%     Wir verwenden die KOMA-Script Klasse 'scrbook' für ein Buch.
+%
+\documentclass[%
+	pdftex,%              PDFTex verwenden da wir ausschliesslich ein PDF erzeugen.
+	a4paper,%             Wir verwenden A4 Papier.
+	oneside,%             Einseitiger Druck.
+	12pt,%                Grosse Schrift, besser geeignet für A4.
+	halfparskip,%         Halbe Zeile Abstand zwischen Absätzen.
+	%chapterprefix,%       Kapitel mit 'Kapitel' anschreiben.
+	headsepline,%         Linie nach Kopfzeile.
+	footsepline,%         Linie vor Fusszeile.
+	bibtotocnumbered,%    Literaturverzeichnis im Inhaltsverzeichnis nummeriert einfügen.
+	idxtotoc%             Index ins Inhaltsverzeichnis einfügen.
+]{scrbook}
+
+
+%
+%  2. Festlegen der Zeichencodierung des Dokuments und des Zeichensatzes.
+%     Wir verwenden 'Latin1' (ISO-8859-1) für das Dokument,
+%     und die 'T1' codierung für die Schrift.
+%
+\usepackage[latin1]{inputenc}
+\usepackage[T1]{fontenc}
+
+%
+%  3. Packet für die Index-Erstellung laden.
+%
+\usepackage{makeidx}
+
+%
+%  4. Paket für die Lokalisierung ins Deutsche laden.
+%     Wir verwenden neue deutsche Rechtschreibung mit 'ngerman'.
+%
+\usepackage[ngerman]{babel}
+
+
+%
+%  5. Paket für Anführungszeichen laden.
+%     Wir setzen den Stil auf 'swiss', und verwenden so die Schweizer Anführungszeichen.
+%
+\usepackage[style=swiss]{csquotes}
+
+
+%
+%  6. Paket für erweiterte Tabelleneigenschaften.
+%
+\usepackage{array}
+
+%
+%  7. Paket um Grafiken im Dokument einbetten zu können.
+%     Im PDF sind GIF, PNG, und PDF Grafiken möglich.
+%
+\usepackage{graphicx}
+
+%
+%  8. Pakete für mathematischen Textsatz.
+%
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{dsfont}
+%\usepackage{mathtools}
+
+%
+%  9. Paket um Textteile drehen zu können.
+%
+\usepackage{rotating}
+
+%
+% 10. Paket für Farben an verschieden Stellen. 
+%     Wir definieren zusätzliche benannte Farben.
+%
+\usepackage{color}
+
+%
+% 11. Paket für spezielle PDF features.
+%
+\usepackage[%
+	pdftitle={Diplomarbeit mit LaTeX},%                        Titel des PDF Dokuments.
+	pdfauthor={Tobias Erbsland, Andreas Nitsch},%              Autor des PDF Dokuments.
+	pdfsubject={Eine Einführung in LaTeX},%                    Thema des PDF Dokuments.
+	pdfcreator={MiKTeX, LaTeX with hyperref and KOMA-Script},% Erzeuger des PDF Dokuments.
+	pdfkeywords={Diplomarbeit, Anleitung, Einstieg,%           Schlüsselwörter für das PDF.
+		LaTeX, MiKTeX, Einführung, TeXnicCenter, Windows,%     (Diese werden von Suchmaschinen
+		Installation, Start, Tutorial},%                        auch für PDF Dokumente indexiert.)
+	pdfpagemode=UseOutlines,%                                  Inhaltsverzeichnis anzeigen beim Öffnen
+	pdfdisplaydoctitle=true,%                                  Dokumenttitel statt Dateiname anzeigen.
+	pdflang=de%                                               Sprache des Dokuments.
+]{hyperref}
+
+%
+% 12. Paket um Quellcode sauber zu formatieren.
+%     Mit der option 'savemem' verschieben wir das laden von 
+%     einzelnen Programmiersprachen auf einen späteren Zeitpunkt.
+%
+\usepackage[savemem]{listings}
+
+%
+% 13a. Privates Paket für die Schriftart 'Goudy Sans' laden.
+%      Dieses Paket ist nur für die publizierte Version des Dokuments gedacht
+%      und an dieser Stelle mit den nachfolgenden Anweisungen auskommentiert.
+%
+%\usepackage{goudysans}
+
+%
+% 13a. Font 'Latin Modern Family' verwenden.
+%      Verwende dieses Paket wenn du DML selbst kompilierst.
+%
+\usepackage{lmodern}
+
+%
+% 14. Typewriter Font LuxiMono laden.
+%
+\usepackage[scaled=.85]{luximono}
+
+
+% 
+% B. EINSTELLUNGEN
+% ---------------------------------------------------------------------------
+%
+
+%
+%  1. Definieren von eigenen benannten Farben.
+%     Für spätere Verwendung in dem Dokument, definieren wir einzelne
+%     benannte Farben.
+%
+\definecolor{LinkColor}{rgb}{0,0,0.5}
+\definecolor{ListingBackground}{rgb}{0.85,0.85,0.85}
+
+%
+%  2. KOMA-Script Option, Zeilenumbruch bei Bildbeschreibungen.
+%
+\setcapindent{1em}
+
+%
+%  3. Stil der Kopf- und Fusszeilen.
+%     Wir aktivieren mit 'headings' laufende Seitentitel.
+%
+\pagestyle{headings}
+
+%
+%  4. Stil der Überschriften auf normale Schrift.
+%     Wir verwenden für die Überschriften den selben Font wie für den Text.
+%
+\setkomafont{sectioning}{\normalfont\bfseries}       % Titel mit Normalschrift
+\setkomafont{captionlabel}{\normalfont\bfseries}     % Fette Beschriftungen 
+\setkomafont{pagehead}{\normalfont\itshape}          % Kursive Seitentitel
+\setkomafont{descriptionlabel}{\normalfont\bfseries} % Fette Beschreibungstitel
+
+%
+%  5. Farbeinstellungen für die Links im PDF Dokument.
+%
+\hypersetup{%
+	colorlinks=true,%        Aktivieren von farbigen Links im Dokument (keine Rahmen)
+	linkcolor=LinkColor,%    Farbe festlegen.
+	citecolor=LinkColor,%    Farbe festlegen.
+	filecolor=LinkColor,%    Farbe festlegen.
+	menucolor=LinkColor,%    Farbe festlegen.
+	urlcolor=LinkColor,%     Farbe von URL's im Dokument.
+	bookmarksnumbered=true%  Überschriftsnummerierung im PDF Inhalt anzeigen.
+}
+
+%
+%  6. Einstellungen für das 'listings' Paket.
+%
+\lstloadlanguages{TeX} % TeX sprache laden, notwendig wegen option 'savemem'
+\lstset{%
+	language=[LaTeX]TeX,     % Sprache des Quellcodes ist TeX
+	numbers=left,            % Zelennummern links
+	stepnumber=1,            % Jede Zeile nummerieren.
+	numbersep=5pt,           % 5pt Abstand zum Quellcode
+	numberstyle=\tiny,       % Zeichengrösse 'tiny' für die Nummern.
+	breaklines=true,         % Zeilen umbrechen wenn notwendig.
+	breakautoindent=true,    % Nach dem Zeilenumbruch Zeile einrücken.
+	postbreak=\space,        % Bei Leerzeichen umbrechen.
+	tabsize=2,               % Tabulatorgrösse 2
+	basicstyle=\ttfamily\footnotesize, % Nichtproportionale Schrift, klein für den Quellcode
+	showspaces=false,        % Leerzeichen nicht anzeigen.
+	showstringspaces=false,  % Leerzeichen auch in Strings ('') nicht anzeigen.
+	extendedchars=true,      % Alle Zeichen vom Latin1 Zeichensatz anzeigen.
+	backgroundcolor=\color{ListingBackground}} % Hintergrundfarbe des Quellcodes setzen.
+
+%
+% C. NEUE MAKROS UND UMGEBUNGEN
+% ---------------------------------------------------------------------------
+
+
+%
+%  1. Umgebung für Änerungsliste mit einem speziellen Aufzählungszeichen.
+%
+\newenvironment{ListChanges}%
+	{\begin{list}{$\diamondsuit$}{}}%
+	{\end{list}}
+
+%
+%  2. Ersatz für die \LaTeX und \TeX Befehle für korrekte Darstellung.
+%     Wir verwenden die 'Latin Modern Family' ('lm') als Font, da diese im
+%     vergleich zu 'Computer Modern' ('cm') auch PostScript Dateien
+%     anbieten, was zu einer schöneren Darstellung im PDF führt.
+%
+\newcommand{\DMLLaTeX}{{\fontfamily{lmr}\selectfont\LaTeX}}
+\newcommand{\DMLTeX}{{\fontfamily{lmr}\selectfont\TeX}}
+
+\def\AmS{$\mathcal{A}$\kern-.1667em\lower.5ex\hbox
+    {$\mathcal{M}$}\kern-.125em$\mathcal{S}$}
+\def\AmSmath{\AmS{}math}
+
+%
+% D. AKTIONEN
+% ---------------------------------------------------------------------------
+%
+
+%
+%  1. Index erzeugen.
+%
+\makeindex
+
+%
+% E. SILBENTRENNUNG
+% ---------------------------------------------------------------------------
+%
+
+\hyphenation{De-zi-mal-trenn-zeichen In-stal-la-ti-ons-as-sis-tent}
+
+%
+% ===========================================================================
+% EOF
+%
