@@ -4,7 +4,7 @@ Dieses Repository ist ein Fork der Seite http://drzoom.ch/project/dml/, die mitt
 
 Das Dokument kann mittels `latexmk -pdf diplomarbeit_mit_latex.tex` erstellt werden.
 
-"Diplomarbeit mit LaTeX" ist ein Dokument welches einen einfachen Einstieg in LaTeX unter Windows beschreibt. In der Anleitung wird die LaTeX-Distribution [MiKTeX](http://miktex.org/) beschrieben in Kombination mit der Umgebung [TeXnicCenter](http://www.texniccenter.org/).
+"Diplomarbeit mit LaTeX" ist ein Dokument welches einen einfachen Einstieg in LaTeX (primär unter Windows) beschreibt. In der Anleitung wird die LaTeX-Distribution [MiKTeX](https://miktex.org/) beschrieben in Kombination mit der Umgebung [TeXnicCenter](https://www.texniccenter.org/).
 
 Das Dokument soll einen schnellen Einstieg mit LaTeX ermöglichen. Ein kleines Tutorial führt dich Schritt für Schritt in die Materie ein.
 

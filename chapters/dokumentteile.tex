@@ -30,7 +30,7 @@ Dabei setzt man im Header oder zumindest vor dem Befehl die notwendigen Angaben:
 \begin{lstlisting}
 \title{Diplomarbeit}
 \author{Hans Muster}
-\date{12.12.2005} % optional
+\date{2005-12-12} % optional
 
 \maketitle
 \end{lstlisting}
@@ -85,7 +85,7 @@ Inhaltsverzeichnisse werden in \DMLLaTeX \ automatisch erzeugt. Es ist möglich e
 
 \DMLLaTeX \ geht dabei folgendermaßen vor: beim ersten Durchlauf werden die Seitennummern und Titel aller relevanten Überschriften und Beschriftungen in einer separaten Datei gespeichert (.aux). Aus dieser Datei werden am Schluss einzelne Dateien mit den verschiedenen Inhaltsverzeichnissen erstellt (.toc, .lot, .lof).
 
-Beim nächsten Durchlauf werden diese Dateien für das Inhaltsverzeichnis und die anderen Verzeichnisse verwendet. Da sich die Seitennummerierung dadurch verändern kann (weil z.B. das Inhaltsverzeichnis um fünf Zeilen wächst), wird evtl. ein weiterer Durchlauf notwendig.
+Beim nächsten Durchlauf werden diese Dateien für das Inhaltsverzeichnis und die anderen Verzeichnisse verwendet. Da sich die Seitennummerierung dadurch verändern kann (weil z.\,B. das Inhaltsverzeichnis um fünf Zeilen wächst), wird evtl. ein weiterer Durchlauf notwendig.
 
 Die Seitenverweise sind daher frühestens nach dem zweiten oder sogar dritten Durchlauf des Dokuments korrekt. Bevor du also die endgültige Fassung deines Dokuments erstellst, solltest du das Dokument sooft kompilieren, bis keine Warnungen wie die folgende mehr auftreten:
 
@@ -135,7 +135,7 @@ Die beiden Verzeichnisse kannst du folgendermaßen in dein Dokument einbetten:
 \section{Anhang}
 \index{Anhang}
 
-Oft hat ein Dokument noch Anhänge. Das sind Kapitel oder Anschnitte, welche zusätzliche Informationen zu dem Thema des Dokuments erhalten, z.B. Tabellen, Diagramme oder große Grafiken, welche oft aus dem Dokument referenziert werden, jedoch nicht in ein bestimmtes Kapitel des Dokuments passen. Ein Beispiel hierfür ist die API-Referenz einer Software.
+Oft hat ein Dokument noch Anhänge. Das sind Kapitel oder Anschnitte, welche zusätzliche Informationen zu dem Thema des Dokuments erhalten, z.\,B. Tabellen, Diagramme oder große Grafiken, welche oft aus dem Dokument referenziert werden, jedoch nicht in ein bestimmtes Kapitel des Dokuments passen. Ein Beispiel hierfür ist die API-Referenz einer Software.
 
 Der Anhang wird mit dem Befehl \texttt{\textbackslash appendix}\index{appendix@\texttt{\textbackslash appendix}} eingeleitet. Nach diesem Befehl werden die Kapitel oder Abschnitte mit Großbuchstaben nummeriert.
 

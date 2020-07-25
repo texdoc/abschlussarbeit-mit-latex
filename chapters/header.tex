@@ -22,7 +22,7 @@
 	headsepline,%         Linie nach Kopfzeile.
 	footsepline,%         Linie vor Fusszeile.
 	bibliography=totoc,%  Literaturverzeichnis im Inhaltsverzeichnis nummeriert einfügen.
-	index=totoc,%            Index ins Inhaltsverzeichnis einfügen.
+	index=totoc,%         Index ins Inhaltsverzeichnis einfügen.
 	ngerman%              Sprache des Dokumentes
 ]{scrbook}
 % das package listings benutzt altes komascript, siehe
@@ -196,6 +196,12 @@
 \def\AmS{$\mathcal{A}$\kern-.1667em\lower.5ex\hbox
     {$\mathcal{M}$}\kern-.125em$\mathcal{S}$}
 \def\AmSmath{\AmS{}math}
+
+\newcommand{\urlindent}[2][]{%
+	\begin{addmargin}[1em]{0em}%
+		\url{#2}{#1}%
+	\end{addmargin}%
+}
 
 % D. AKTIONEN
 % ---------------------------------------------------------------------------
