@@ -21,13 +21,17 @@
 	a4paper,%             Wir verwenden A4 Papier.
 	oneside,%             Einseitiger Druck.
 	12pt,%                Grosse Schrift, besser geeignet für A4.
-	halfparskip,%         Halbe Zeile Abstand zwischen Absätzen.
+	parskip=half,%        Halbe Zeile Abstand zwischen Absätzen.
 	%chapterprefix,%       Kapitel mit 'Kapitel' anschreiben.
 	headsepline,%         Linie nach Kopfzeile.
 	footsepline,%         Linie vor Fusszeile.
-	bibtotocnumbered,%    Literaturverzeichnis im Inhaltsverzeichnis nummeriert einfügen.
-	idxtotoc%             Index ins Inhaltsverzeichnis einfügen.
+	bibliography=totoc,%  Literaturverzeichnis im Inhaltsverzeichnis nummeriert einfügen.
+	index=totoc,%            Index ins Inhaltsverzeichnis einfügen.
+	ngerman%              Sprache des Dokumentes
 ]{scrbook}
+% das package listings benutzt altes komascript, siehe
+% https://tex.stackexchange.com/questions/51867/koma-warning-about-toc
+\usepackage{scrhack}
 % tabellen mit automatischem zeilenumbruch
 \usepackage{tabularx}
 
