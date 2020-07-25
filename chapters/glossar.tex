@@ -71,11 +71,10 @@ Neben der Änderung der Glossarüberschrift gibt es noch weitere Einstellungen, mi
 Aussehen des Glossars beeinflussen kann. Folgende Einstellungen können im Header vorgenommen
 (s. Listing \ref{subsec:header}) werden und bestimmen, wie das glossary-Paket angewendet wird:
 
-\begin{tabular}{ll}
+\begin{tabularx}{\textwidth}{lX}
 			style &Der Glossar-Stil. Mögliche Werte sind:\\
 						&\textbf{list}: stellt Begriffe (fettgedruckt) und Erklärung in einer Zeile dar.\\
-						&\textbf{altlist}: stellt den Begriff fettgedruckt dar, Erklärung folgt versetzt auf der\\
-														   &nächsten Zeile\\
+						&\textbf{altlist}: stellt den Begriff fettgedruckt dar, Erklärung folgt versetzt auf der nächsten Zeile\\
 						&\textbf{super}: nutzt die \texttt{supertabular}- Umgebung für das Glossar.\\
 						&\textbf{long}: nutzt die \texttt{longtable}- Umgebung für das Glossar (default).\\
 			header &Setzt die Überschriften der Begriffs- und Erklärungsspalten. Mögliche Werte sind:\\
@@ -84,12 +83,9 @@ Aussehen des Glossars beeinflussen kann. Folgende Einstellungen können im Header
 		  border &Rahmen um das Glossar. Mögliche Werte sind:\\
 		  			&\textbf{none}: Glossar ist nicht eingerahmt (default).\\
 		  			&\textbf{plain}: Körper des Glossars wird eingerahmt.\\		  
-% Die folgenden Zeilen wurden ohne \\ nicht umbrochen, sondern gingen 314pt über den Seitenrand hinaus! :-( 
-			cols	& Anzahl der Spalten des Glossars. Mögliche Werte sind: \\ 
-						&\textbf{2}: Die Begriffsbezeichnung ist in der ersten, Erklärung und zugehörige Seitenzahl \\
- 						   					&in der zweiten Glossarspalte (default). \\ 
-						&\textbf{3}: Die Begriffsbezeichnung ist in der ersten, die Erklärung in der zweiten und die \\
- 							 					&zugehörigen Seitenzahlen in der dritten Glossarspalte. \\ 
+			cols	& Anzahl der Spalten des Glossars. Mögliche Werte sind:\\ 
+						&\textbf{2}: Die Begriffsbezeichnung ist in der ersten, Erklärung und zugehörige Seitenzahl in der zweiten Glossarspalte (default).\\ 
+						&\textbf{3}: Die Begriffsbezeichnung ist in der ersten, die Erklärung in der zweiten und die zugehörigen Seitenzahlen in der dritten Glossarspalte.\\
 		  number &Die jedem Eintrag zugeordnete Nummerierung. Nummerierungen können sein:\\
 		  			&\textbf{page}: jedem Eintrag sind/ist die zugehörige(n) Seitenzahl(en) zugeordnet (default).\\
 		  			&\textbf{section}: jedem Eintrag sind/ist die zugehörige(n) Kapitelnummer(n) zugeordnet.\\
@@ -97,10 +93,9 @@ Aussehen des Glossars beeinflussen kann. Folgende Einstellungen können im Header
 		  toc &Legt fest, ob das Glossar in das Inhaltsverzeichnis aufgenommen werden soll:\\
 		  		&\textbf{true}: fügt das Glossar zum Inhaltsverzeichnis hinzu.\\
 		  		&\textbf{false}: fügt das Glossar nicht zum Inhaltsverzeichnis hinzu.
-\end{tabular}
+\end{tabularx}
 \vspace{1em}
 \\
-Weitere Möglichkeiten Glossare nach eigenen Vorstellungen zu gestalten finden sich im
-Dokument ''glossary.dvi - glossary.sty: \DMLLaTeX \ Package to Assist Generating Glossaries''
-\footnote{Dieses Dokument befindet sich im Mik\TeX-Verzeichnis im Unterverzeichnis /miktex/doc/latex/glossary.}. Als durchaus optisch ansprechend und übersichtlich haben sich
-die Glossar- Einstellungen erwiesen, wie sie im Beispiellisting \ref{subsec:header} angeführt sind.
+Weitere Möglichkeiten, Glossare nach eigenen Vorstellungen zu gestalten, finden sich im
+Dokument ''glossary.dvi -- glossary.sty: \DMLLaTeX \ Package to Assist Generating Glossaries''\footnote{Dieses Dokument befindet sich im Mik\TeX"=Verzeichnis: \verb~/miktex/doc/latex/glossary~.}. 
+Als durchaus optisch ansprechend und übersichtlich haben sich die Glossar"=Einstellungen erwiesen, wie sie im Beispiellisting \ref{subsec:header} angeführt sind.

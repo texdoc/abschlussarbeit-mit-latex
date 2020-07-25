@@ -154,7 +154,7 @@ Das Beispiel siehst du als Tabelle \ref{tbl:beispieltabelle3} auf Seite \pageref
 \subsection{Tabellenbreite bestimmen bzw. automatischer Zeilenumbruch}
 \index{Tabellen!Spaltenbeite bestimmen}\index{Tabellen!Automatischer Zeilenumbruch}
 
-Normalerweise werden lange Zeilen nicht automatisch umbrochen, sondern \DMLLaTeX \ schreibt froh und munter über den Seitenrand hinaus. Man kann manuelle Zeilenumbrüche mit \textbackslash \textbackslash ~ einfügen, was hart an Masochismus grenzt, wenn man mehr als eine Hand voll Tabellen hat und das Layout (Ränder, Schriftgröße,...) geändert wird -- was bei größeren Arbeiten durchaus vorkommt, z.B. mal mit und mal ohne Korrekturrand, je nach Bindungsart unterschiedlicher Abstand usw.
+In konventionellen Tabellen werden lange Zeilen nicht automatisch umbrochen, sondern \DMLLaTeX \ schreibt froh und munter über den Seitenrand hinaus. Man kann manuelle Zeilenumbrüche mit \textbackslash \textbackslash \ einfügen, was hart an Masochismus grenzt, wenn man mehr als eine Hand voll Tabellen hat und das Layout (Ränder, Schriftgröße, \ldots) geändert wird -- was bei größeren Arbeiten durchaus vorkommt, z.\,B. mal mit und mal ohne Korrekturrand, je nach Bindungsart unterschiedlicher Abstand usw.
 
 \begin{table}[h]	
 		\begin{tabular}{| l | l |}  
@@ -184,10 +184,10 @@ Normalerweise werden lange Zeilen nicht automatisch umbrochen, sondern \DMLLaTeX
 	\label{tab:Tabelle_zu_breit_manuell}
 \end{table}
 
-Um die Zeilenumbrüche automatisiert setzen zu lassen, muß man die Breite der Spalte(n) mit \enquote{zu viel} Text festlegen. Dabei können entweder absolute Werte verwendet werden, z.B. 5cm oder 10em, oder sog. \textit{command lengths}, sozusagen Variablen, deren Wert von der Dokumentenklasse und Präambel abhängen, z.B. \textbackslash textwidth (Spaltenbreite in aktueller Umgebung). Ersteres ist exakter, aber man muß bei jeder Layoutänderung \textit{alle} Tabellen überprüfen und ggf. alle Spaltenbreiten anpassen. Lästig. Letzteres ist grundsätzlich angenehmer, kann aber im Einzelfall Probleme verursachen, z.B. wenn eine Spalte zu schmal für ein nicht trennbares Wort wird. Also Tabellen im Ausgabeformat genau anschauen. Nebenbei: Man kann in \DMLLaTeX \ rechnen, was wir Anschauungsbeispiel machen, indem wir \textbackslash textwidth mit 0.25 bzw. 0.75 multiplizieren.
+Um die Zeilenumbrüche automatisiert setzen zu lassen, muß man die Breite der Spalte(n) mit \enquote{zu viel} Text festlegen. Dabei können entweder absolute Werte verwendet werden, z.\,B. 5\,cm oder 10\,em, oder sog. \textit{command lengths}, sozusagen Variablen, deren Wert von der Dokumentenklasse und Präambel abhängen, z.\,B. \textbackslash textwidth (Spaltenbreite in aktueller Umgebung). Ersteres ist exakter, aber man muß bei jeder Layoutänderung \textit{alle} Tabellen überprüfen und ggf. alle Spaltenbreiten anpassen. Lästig. Letzteres ist grundsätzlich angenehmer, kann aber im Einzelfall Probleme verursachen, z.\,B. wenn eine Spalte zu schmal für ein nicht trennbares Wort wird. Also Tabellen im Ausgabeformat genau anschauen. Nebenbei: Man kann in \DMLLaTeX \ rechnen, was wir Anschauungsbeispiel machen, indem wir \textbackslash textwidth mit 0.2 bzw. 0.74 multiplizieren.
 
 \begin{table}[h]		
-		\begin{tabular}{|p{0.25\textwidth} | p{0.75\textwidth} |}  
+		\begin{tabular}{|p{0.2\textwidth} | p{0.74\textwidth} |}  
 		  % automatisch an normale Textbreite angepaßt
 			\hline
 			Kurze				& Lange Spalteninhalte automatisch umbrochen\\
