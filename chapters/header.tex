@@ -34,6 +34,13 @@
 \usepackage{scrhack}
 % tabellen mit automatischem zeilenumbruch
 \usepackage{tabularx}
+% avoid overfull boxes on page numbers >99, see 
+% https://tex.stackexchange.com/questions/49887/overfull-hbox-warning-for-toc-entries-when-using-memoir-documentclass
+% http://compgroups.net/comp.text.tex/page-number-alignment-in-koma-script-table-of-c/1914765
+\makeatletter
+\renewcommand*{\@tocrmarg}{2.55em}
+\renewcommand*{\@pnumwidth}{2.2em}
+\makeatother
 
 
 %
