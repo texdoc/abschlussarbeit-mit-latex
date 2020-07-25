@@ -1,4 +1,3 @@
-%
 % Diplomarbeit mit LaTeX
 % ===========================================================================
 % This is part of the book "Diplomarbeit mit LaTeX".
@@ -7,12 +6,9 @@
 % See the file main.tex for copying conditions.
 %
 
-%
 % A. DOKUMENTKLASSE
 % ---------------------------------------------------------------------------
-%
 
-%
 %  1. Definieren der Dokumentklasse.
 %     Wir verwenden die KOMA-Script Klasse 'scrbook' für ein Buch.
 %
@@ -42,8 +38,6 @@
 \renewcommand*{\@pnumwidth}{2.2em}
 \makeatother
 
-
-%
 %  2. Festlegen der Zeichencodierung des Dokuments und des Zeichensatzes.
 %     Wir verwenden 'Latin1' (ISO-8859-1) für das Dokument,
 %     und die 'T1' codierung für die Schrift.
@@ -51,37 +45,29 @@
 \usepackage[latin1]{inputenc}
 \usepackage[T1]{fontenc}
 
-%
 %  3. Packet für die Index-Erstellung laden.
 %
 \usepackage{makeidx}
 
-%
 %  4. Paket für die Lokalisierung ins Deutsche laden.
 %     Wir verwenden neue deutsche Rechtschreibung mit 'ngerman'.
 %
 \usepackage[main=ngerman,french]{babel}
 
-
-%
 %  5. Paket für Anführungszeichen laden.
 %     Wir setzen den Stil auf 'swiss', und verwenden so die Schweizer Anführungszeichen.
 %
 \usepackage[style=swiss]{csquotes}
 
-
-%
 %  6. Paket für erweiterte Tabelleneigenschaften.
 %
 \usepackage{array}
 
-%
 %  7. Paket um Grafiken im Dokument einbetten zu können.
 %     Im PDF sind GIF, PNG, und PDF Grafiken möglich.
 %
 \usepackage{graphicx}
 
-%
 %  8. Pakete für mathematischen Textsatz.
 %
 \usepackage{amsmath}
@@ -89,18 +75,15 @@
 \usepackage{dsfont}
 %\usepackage{mathtools}
 
-%
 %  9. Paket um Textteile drehen zu können.
 %
 \usepackage{rotating}
 
-%
 % 10. Paket für Farben an verschieden Stellen. 
 %     Wir definieren zusätzliche benannte Farben.
 %
 \usepackage{color}
 
-%
 % 11. Paket für spezielle PDF features.
 %
 \usepackage[%
@@ -116,14 +99,12 @@
 	pdflang=de%                                               Sprache des Dokuments.
 ]{hyperref}
 
-%
 % 12. Paket um Quellcode sauber zu formatieren.
 %     Mit der option 'savemem' verschieben wir das laden von 
 %     einzelnen Programmiersprachen auf einen späteren Zeitpunkt.
 %
 \usepackage[savemem]{listings}
 
-%
 % 13a. Privates Paket für die Schriftart 'Goudy Sans' laden.
 %      Dieses Paket ist nur für die publizierte Version des Dokuments gedacht
 %      und an dieser Stelle mit den nachfolgenden Anweisungen auskommentiert.
@@ -138,9 +119,7 @@
 
 % B. EINSTELLUNGEN
 % ---------------------------------------------------------------------------
-%
 
-%
 %  1. Definieren von eigenen benannten Farben.
 %     Für spätere Verwendung in dem Dokument, definieren wir einzelne
 %     benannte Farben.
@@ -148,18 +127,15 @@
 \definecolor{LinkColor}{rgb}{0,0,0.5}
 \definecolor{ListingBackground}{rgb}{0.85,0.85,0.85}
 
-%
 %  2. KOMA-Script Option, Zeilenumbruch bei Bildbeschreibungen.
 %
 \setcapindent{1em}
 
-%
 %  3. Stil der Kopf- und Fusszeilen.
 %     Wir aktivieren mit 'headings' laufende Seitentitel.
 %
 \pagestyle{headings}
 
-%
 %  4. Stil der Überschriften auf normale Schrift.
 %     Wir verwenden für die Überschriften den selben Font wie für den Text.
 %
@@ -181,7 +157,6 @@
 	bookmarksnumbered=true%  Überschriftsnummerierung im PDF Inhalt anzeigen.
 }
 
-%
 %  6. Einstellungen für das 'listings' Paket.
 %
 \lstloadlanguages{TeX} % TeX sprache laden, notwendig wegen option 'savemem'
@@ -201,19 +176,15 @@
 	extendedchars=true,      % Alle Zeichen vom Latin1 Zeichensatz anzeigen.
 	backgroundcolor=\color{ListingBackground}} % Hintergrundfarbe des Quellcodes setzen.
 
-%
 % C. NEUE MAKROS UND UMGEBUNGEN
 % ---------------------------------------------------------------------------
 
-
-%
 %  1. Umgebung für Änerungsliste mit einem speziellen Aufzählungszeichen.
 %
 \newenvironment{ListChanges}%
 	{\begin{list}{$\diamondsuit$}{}}%
 	{\end{list}}
 
-%
 %  2. Ersatz für die \LaTeX und \TeX Befehle für korrekte Darstellung.
 %     Wir verwenden die 'Latin Modern Family' ('lm') als Font, da diese im
 %     vergleich zu 'Computer Modern' ('cm') auch PostScript Dateien
@@ -226,24 +197,15 @@
     {$\mathcal{M}$}\kern-.125em$\mathcal{S}$}
 \def\AmSmath{\AmS{}math}
 
-%
 % D. AKTIONEN
 % ---------------------------------------------------------------------------
-%
 
-%
 %  1. Index erzeugen.
 %
 \makeindex
 
-%
 % E. SILBENTRENNUNG
 % ---------------------------------------------------------------------------
-%
 
 \hyphenation{De-zi-mal-trenn-zeichen In-stal-la-ti-ons-as-sis-tent}
 
-%
-% ===========================================================================
-% EOF
-%
