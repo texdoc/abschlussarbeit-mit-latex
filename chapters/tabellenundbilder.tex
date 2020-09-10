@@ -12,7 +12,7 @@
 \section{Tabellen}
 \index{Tabellen}
 
-Tabellen sind in \DMLLaTeX \ ein Thema für sich. Ich beschreibe hier daher nur die sogenannte \enquote{tabular}\index{begin@\texttt{\textbackslash begin}!tabular} Umgebung. Um die tabular Umgebung nutzen zu können, solltest du zudem im Kopfbereich deines Dokuments das Paket \enquote{array}\index{Paket!array} einbinden. Das machst du mit dem Befehl:
+Tabellen sind in \DMLLaTeX \ ein Thema für sich. Ich beschreibe hier daher vor allem die sogenannte \enquote{tabular}\index{begin@\texttt{\textbackslash begin}!tabular}"=Umgebung. Um die tabular"=Umgebung nutzen zu können, solltest du zudem im Kopfbereich deines Dokuments das Paket \enquote{array}\index{Paket!array} einbinden. Das machst du mit dem Befehl:
 
 \begin{lstlisting}
 \usepackage{array}
@@ -154,7 +154,7 @@ Das Beispiel siehst du als Tabelle \ref{tbl:beispieltabelle3} auf Seite \pageref
 \subsection{Tabellenbreite bestimmen bzw. automatischer Zeilenumbruch}
 \index{Tabellen!Spaltenbeite bestimmen}\index{Tabellen!Automatischer Zeilenumbruch}
 
-Normalerweise werden lange Zeilen nicht automatisch umbrochen, sondern \DMLLaTeX \ schreibt froh und munter über den Seitenrand hinaus. Man kann manuelle Zeilenumbrüche mit \textbackslash \textbackslash ~ einfügen, was hart an Masochismus grenzt, wenn man mehr als eine Hand voll Tabellen hat und das Layout (Ränder, Schriftgröße,...) geändert wird -- was bei größeren Arbeiten durchaus vorkommt, z.B. mal mit und mal ohne Korrekturrand, je nach Bindungsart unterschiedlicher Abstand usw.
+In konventionellen Tabellen werden lange Zeilen nicht automatisch umbrochen, sondern \DMLLaTeX \ schreibt froh und munter über den Seitenrand hinaus. Man kann manuelle Zeilenumbrüche mit \textbackslash \textbackslash \ einfügen, was hart an Masochismus grenzt, wenn man mehr als eine Hand voll Tabellen hat und das Layout (Ränder, Schriftgröße, \ldots) geändert wird -- was bei größeren Arbeiten durchaus vorkommt, z.\,B. mal mit und mal ohne Korrekturrand, je nach Bindungsart unterschiedlicher Abstand usw.
 
 \begin{table}[h]	
 		\begin{tabular}{| l | l |}  
@@ -165,7 +165,7 @@ Normalerweise werden lange Zeilen nicht automatisch umbrochen, sondern \DMLLaTeX
 			Links kurz	&Und rechts absichtlich viel, viel zu langer Test-Text1, Test-Text2, Test-Text3, Test-Text4, Test-Text5, Test-Text6\\
 			\hline			
 		\end{tabular}
-	\caption{Anschauungsbeispiel einer zu breit geratene Tabellenspalte}
+	\caption{Anschauungsbeispiel einer zu breit geratenen Tabellenspalte}
 	\label{tab:Tabelle_zu_breit}
 \end{table}
 
@@ -184,11 +184,11 @@ Normalerweise werden lange Zeilen nicht automatisch umbrochen, sondern \DMLLaTeX
 	\label{tab:Tabelle_zu_breit_manuell}
 \end{table}
 
-Um die Zeilenumbrüche automatisiert setzen zu lassen, muß man die Breite der Spalte(n) mit \enquote{zu viel} Text festlegen. Dabei können entweder absolute Werte verwendet werden, z.B. 5cm oder 10em, oder sog. \textit{command lengths}, sozusagen Variablen, deren Wert von der Dokumentenklasse und Präambel abhängen, z.B. \textbackslash textwidth (Spaltenbreite in aktueller Umgebung). Ersteres ist exakter, aber man muß bei jeder Layoutänderung \textit{alle} Tabellen überprüfen und ggf. alle Spaltenbreiten anpassen. Lästig. Letzteres ist grundsätzlich angenehmer, kann aber im Einzelfall Probleme verursachen, z.B. wenn eine Spalte zu schmal für ein nicht trennbares Wort wird. Also Tabellen im Ausgabeformat genau anschauen. Nebenbei: Man kann in \DMLLaTeX \ rechnen, was wir Anschauungsbeispiel machen, indem wir \textbackslash textwidth mit 0.25 bzw. 0.75 multiplizieren.
+Um die Zeilenumbrüche automatisiert setzen zu lassen, muss man die Breite der Spalte(n) mit \enquote{zu viel} Text vorab festlegen. Dabei können entweder absolute Werte verwendet werden, z.\,B. 5\,cm oder 10\,em, oder sog. \textit{command lengths}, sozusagen Variablen, deren Wert von der Dokumentenklasse und Präambel abhängen, z.\,B. \textbackslash textwidth (Spaltenbreite in aktueller Umgebung). Ersteres ist exakter, aber man muss bei jeder Layoutänderung \textit{alle} Tabellen überprüfen und ggf. alle Spaltenbreiten anpassen. Lästig. Letzteres ist grundsätzlich angenehmer, kann aber im Einzelfall Probleme verursachen, z.\,B. wenn eine Spalte zu schmal für ein nicht trennbares Wort wird. Also Tabellen im Ausgabeformat genau anschauen. Nebenbei: Man kann in \DMLLaTeX \ rechnen, was wir im folgenden Anschauungsbeispiel machen, indem wir \textbackslash textwidth mit 0.2 bzw. 0.74 multiplizieren.
 
 \begin{table}[h]		
-		\begin{tabular}{|p{0.25\textwidth} | p{0.75\textwidth} |}  
-		  % automatisch an normale Textbreite angepaßt
+		\begin{tabular}{|p{0.2\textwidth} | p{0.74\textwidth} |}  
+		  % automatisch an normale Textbreite angepasst
 			\hline
 			Kurze				& Lange Spalteninhalte automatisch umbrochen\\
 			\hline
@@ -199,22 +199,24 @@ Um die Zeilenumbrüche automatisiert setzen zu lassen, muß man die Breite der Spa
 	\label{tab:Tabelle_zu_breit_automatisch}
 \end{table}
 
-Hier siehst Du den code der drei Arten von Tabellendefinitionen:
+Hier siehst Du den Code der drei Arten von Tabellendefinitionen:
 
 \begin{lstlisting}
 \begin{table}[h]	
-	\begin{tabular}{| l | l |} 
-	  % man muß alle Umbrüche manuell machen
+	% alle Umbrüche manuell machen
+	\begin{tabular}{| l | l |}
+
+	% automatisch an normale Textbreite angepasst
 	%\begin{tabular}{|p{0.25\textwidth} | p{0.75\textwidth} |} 
-	  % automatisch an normale Textbreite angepaßt
+
+	% ggf. alle Spaltenbreiten manuell anpassen	  
 	%\begin{tabular}{|p{3cm} | p{6cm}|} 
-	  % man muß ggf. alle Spaltenbreiten manuell anpassen	  
-			\hline
-			Kurze				& Lange Spalteninhalte\\
-			\hline
-			Links kurz	&Und rechts absichtlich viel, viel zu langer Test-Text1, Test-Text2, Test-Text3, Test-Text4, Test-Text5, Test-Text6\\
-			\hline			
-		\end{tabular}
+		\hline
+		Kurze				& Lange Spalteninhalte\\
+		\hline
+		Links kurz	& Und rechts absichtlich viel, viel zu langer Test-Text1, Test-Text2, Test-Text3, Test-Text4, Test-Text5, Test-Text6\\
+		\hline			
+	\end{tabular}
 	\caption{Absichtlich zu breit geratene Tabellenspalte}
 	\label{tab:Tabelle_zu_breit}
 \end{table}
@@ -222,16 +224,39 @@ Hier siehst Du den code der drei Arten von Tabellendefinitionen:
 
 Weitere \textit{command lengths} wie \textbackslash textwidth findest Du im Kochbuch \cite{Kochbuch}, Kapitel 8, Abschnitt Längen.
 
+	Als weit verbreitete Alternative zu \enquote{tabular}"=Umgebung soll an dieser Stelle das Package \enquote{tabularx} erwähnt werden, das es einem ermöglicht, Spalten als umbrechbar zu kennzeichnen, ohne deren exakte Breite festlegen zu müssen. Man legt dabei mit dem ersten Parameter lediglich die Gesamtbreite der Tabelle fest. Der zweite Parameter kann benutzt werden wie der erste (und einzige) Parameter der tabular"=Umgebung. Neben \texttt{l}, \texttt{c} usw. gibt es jetzt noch die Option \texttt{X}, die bedeutet, dass jene Spalte als Block gesetzt werden soll.
+\begin{table}[ht]
+	\begin{tabularx}{\textwidth}{|l|X|}
+		\hline
+		Kurze				& Lange Spalteninhalte automatisch umbrochen\\
+		\hline
+		Links kurz	& Und rechts absichtlich viel, viel zu langer Test-Text1, Test-Text2, Test-Text3, Test-Text4, Test-Text5, Test-Text6\\
+		\hline
+		\end{tabularx}
+	\caption{Mit tabularx gesetzte Tabelle}
+	\label{tab:tabularx}
+\end{table}
+
+\begin{lstlisting}
+\begin{table}[ht]	
+	\begin{tabularx}{\textwidth}{|l|X|}
+		\hline
+		Kurze				& Lange Spalteninhalte\\
+		\hline
+		Links kurz	& Und rechts absichtlich viel, viel zu langer Test-Text1, Test-Text2, Test-Text3, Test-Text4, Test-Text5, Test-Text6\\
+		\hline			
+	\end{tabularx}
+	\caption{Mit tabularx gesetzte Tabelle}
+	\label{tab:tabularx}
+\end{table}
+\end{lstlisting}
+
 \section{Bilder}
 \index{Bilder \see{Grafiken}}\index{Abbildungen \see{Grafiken}}\index{Grafiken}
 
 In dein Dokument kannst du beliebige Bilder einbetten. Dabei kannst du alle Bildformate\index{Grafiken!Format} verwenden, welche in einer PDF-Datei zulässig sind. Dies sind die Formate GIF, PNG und JPEG.
 
 Wenn du jedoch ein DVI- oder eine PostScript-Datei erzeugen möchtest, dann sind nur PostScript- oder Embedded-PostScript-Dateien zulässig.
-
-Das GIF-Format solltest du nicht verwenden, da dies rechtliche Konsequenzen mit sich bringt. Lies dazu den Kommentar unter~\cite{NoGIF}.
-%TODO: Das entsprechende Patent ist 2004 ausgelaufen. Meines Wissens kann gif nun bedenkenlos
-%verwendet werden.
 
 Um Grafiken in dein Dokument einzubetten, solltest du das Paket \enquote{graphicx}\index{Paket!graphicx} im Kopfbereich deines Dokuments einbinden. Dies machst du mit folgendem Befehl:
 
@@ -266,7 +291,7 @@ Dies fügt eine Grafik genau an der Stelle in einem Text ein, an der der Befehl h
 \subsection{Skalieren von Grafiken}
 \index{Grafik!skalieren}
 
-Der Befehl \texttt{\textbackslash includegraphics} kennt noch mehr Parameter als den Dateinamen des einzubettenden Bildes: Einer der häufig gebrauchten ist der \enquote{width} Parameter. Dieser skaliert die Grafik auf die angegebene Breite. Im folgenden Beispiel wird die Grafik auf 5cm Breite skaliert:
+Der Befehl \texttt{\textbackslash includegraphics} kennt noch mehr Parameter als den Dateinamen des einzubettenden Bildes: Einer der häufig gebrauchten ist der \enquote{width} Parameter. Dieser skaliert die Grafik auf die angegebene Breite. Im folgenden Beispiel wird die Grafik auf 5\,cm Breite skaliert:
 
 \begin{lstlisting}
 \includegraphics[width=5cm]{images/apfel.png}

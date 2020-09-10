@@ -9,9 +9,9 @@
 \chapter{Aufbau großer Dokumente}
 \label{sec:aufbaugrosserdokumente}
 
-Bei großen Dokumenten geht schnell der Überblick verloren. Deshalb solltest du dein Dokument in einzelne Dateien aufteilen. Dazu steht dir der Befehl \texttt{\textbackslash include} und \texttt{\textbackslash input} zur Verfügung, mit welchen du eine weitere Datei an dieser Stelle einbinden kannst.
+Bei großen Dokumenten geht schnell der Überblick verloren. Eine Möglichkeit, etwas Struktur reinzubringen, ist, dassdu dein Dokument in einzelne Dateien aufteilst. Dazu stehen dir die Befehle \texttt{\textbackslash include} und \texttt{\textbackslash input} zur Verfügung, mit welchen du eine weitere Datei an dieser Stelle einbinden kannst.
 
-TeXnicCenter unterstützt dich bereits darin, indem er für dein Projekt ein eigenes Unterverzeichnis anlegt. Ich gehe in den folgenden Beispielen davon aus, dass du eine Diplomarbeit zu einem Onlineshop schreibst. Beim Erstellen von deinem TeXnicCenter Projekt (siehe dazu Kapitel \ref{sec:erstellenneuesprojekt} auf Seite \pageref{sec:erstellenneuesprojekt}) gibst du also als Projektname \enquote{onlineshop} an. TeXnicCenter erstellt dir dann in dem gewählen Unterverzeichnis ein Verzeichnis mit dem Namen \enquote{onlineshop} und legt darin die Datei \enquote{onlineshop.tex} an. Diese Datei definiert TeXnicCenter automatisch auch als Hauptdatei.
+TeXnicCenter unterstützt dich bereits darin, indem er für dein Projekt ein eigenes Unterverzeichnis anlegt. Ich gehe in den folgenden Beispielen davon aus, dass du eine Abschlussarbeit zu einem Onlineshop schreibst. Beim Erstellen von deinem TeXnicCenter"=Projekt (siehe dazu Kapitel \ref{sec:erstellenneuesprojekt} auf Seite \pageref{sec:erstellenneuesprojekt}) gibst du also als Projektname \enquote{onlineshop} an. TeXnicCenter erstellt dir dann in dem gewählen Unterverzeichnis ein Verzeichnis mit dem Namen \enquote{onlineshop} und legt darin die Datei \enquote{onlineshop.tex} an. Diese Datei definiert TeXnicCenter automatisch auch als Hauptdatei.
 
 \section{Aufbauen einer Verzeichnisstruktur}
 
@@ -42,7 +42,7 @@ In deiner Hauptdatei fügst du praktisch nur \texttt{\textbackslash include} und 
 Das hat verschiedene Vorteile:
 
 \begin{itemize}
-	\item Durch einfaches Austauschen der einzelnen \texttt{\textbackslash include} Befehle kannst du die Kapitel neu anordnen.
+	\item Durch einfaches Austauschen der einzelnen \texttt{\textbackslash include}"=Befehle kannst du die Kapitel neu anordnen.
 	\item Indem du z.\,B. den Befehl \texttt{\textbackslash includeonly\{kapitel/ersteskapitel\}} als ersten Befehl in Listing \ref{lst:beispiel05} einfügst, wird nur genau das Kapitel \enquote{Erstes Kapitel} erzeugt. Was natürlich sehr viel schneller geht, als wenn das ganze Dokument erstellt werden müsste. Das spart dir viel Zeit, wenn du die Darstellung eines einzelnen Kapitels optimierst.
 	\item Wenn du später ähnliche Dokumente erstellst, kannst du die separate Headerdatei kopieren und wiederverwenden.
 \end{itemize}

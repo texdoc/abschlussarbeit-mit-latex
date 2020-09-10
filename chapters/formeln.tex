@@ -19,22 +19,22 @@ In \DMLLaTeX \ ist eine sehr mächtige Mathematik-Umgebung integriert, mit welche
 \end{equation}
 an dem du erahnen kannst, was möglich ist.
 
-Da das Setzen mathematischer Formeln ein Thema ist, welches allein mehrere Bücher füllen kann, möchte ich dir in diesem Kapitel nur einige wichtige Kommandos zeigen. Weitere Informationen findest du also in Büchern oder im Internet. Neben einigen Manuals, die im Folgenden genannt sind, ist als Nachschlagewerk die umfangreiche und mit Beispielen ausgestattete \TeX-Hilfe der Wikipedia\footnote{\href{http://de.wikipedia.org/wiki/Hilfe:TeX}{http://de.wikipedia.org/wiki/Hilfe:TeX}} zu empfehlen. Sie ist zwar eigentlich für den wikipedia-internen Formelsatz gedacht, aber in den meisten Fällen auch fürs konventionelle \TeX{}en sehr hilfreich.
+Da das Setzen mathematischer Formeln ein Thema ist, welches allein mehrere Bücher füllen kann, möchte ich dir in diesem Kapitel nur einige wichtige Kommandos zeigen. Weitere Informationen findest du also in Büchern oder im Internet. Neben einigen Manuals, die im Folgenden genannt sind, ist als Nachschlagewerk die umfangreiche und mit Beispielen ausgestattete \TeX-Hilfe der Wikipedia\footnote{\href{https://de.wikipedia.org/wiki/Hilfe:TeX}{https://de.wikipedia.org/wiki/Hilfe:TeX}} zu empfehlen. Sie ist zwar eigentlich für den wikipedia-internen Formelsatz gedacht, aber in den meisten Fällen auch fürs konventionelle \TeX{}en sehr hilfreich.
 
 Einige wichtige Symbole und Konstrukte kannst du über das Menü \enquote{Mathe} von TeXnicCenter direkt in deinen Quelltext einfügen. Jedoch hinkt dieses Menü den modernen mathematischen Packages teilweise hinterher, weshalb es geschickter ist, sich die neuesten Manuals aus dem Internet herunterzuladen und zu studieren.
 
-Wenn du komplexere Formeln in deinem Dokument verwendest oder viele mathematische Formeln benötigst, solltest du die Pakete der American Mathematical Society (kurz: \AmS) einbinden und deren relativ kurzgehaltene Manuals lesen. Die \AmSmath-Packages stellen weitere Symbole und spezielle mathematische Umgebungen bereit. Eine detaillierte Erklärung zu den Packages bietet die \AmS\ auf ihrer Website sowie das CTAN.\footnote{Der URL des {\rmfamily\LaTeX}-Teils der Website der \AmS\ lautet \href{http://www.ams.org/tex/amslatex.html}{http://www.ams.org/tex/amslatex.html}; im CTAN, genauer auf \href{http://www.ctan.org/tex-archive/macros/latex/required/amslatex/}{http://www.ctan.org/tex-archive/macros/latex/required/amslatex/} sind ebenfalls kurze Infos zu den einzelnen Packages abrufbar.} Eingebunden werden die Packages beispielsweise durch
+Wenn du komplexere Formeln in deinem Dokument verwendest oder viele mathematische Formeln benötigst, solltest du die Pakete der American Mathematical Society (kurz: \AmS) einbinden und deren relativ kurzgehaltene Manuals lesen. Die \AmSmath-Packages stellen weitere Symbole und spezielle mathematische Umgebungen bereit. Eine detaillierte Erklärung zu den Packages bietet die \AmS\ auf ihrer Website sowie das CTAN.\footnote{Der URL des {\rmfamily\LaTeX}-Teils der Website der \AmS\ lautet \href{https://www.ams.org/tex/amslatex.html}{https://www.ams.org/tex/amslatex.html}; im CTAN, genauer auf \href{https://www.ctan.org/pkg/amslatex}{https://www.ctan.org/pkg/amslatex} sind ebenfalls kurze Infos zu den einzelnen Packages abrufbar.} Eingebunden werden die Packages beispielsweise durch
 
 \begin{lstlisting}
 \usepackage{amsmath, amsthm, amssymb}
 \usepackage{mathtools}
 \end{lstlisting}
 
-Empfehlenswert ist das im Beispiel zuletzt genannte Package \enquote{mathtools}, eine sehr nützliche Erweiterung der \AmSmath-Packages.\footnote{\href{http://texcatalogue.sarovar.org/entries/mathtools.html}{http://texcatalogue.sarovar.org/entries/mathtools.html}}
+Empfehlenswert ist das im Beispiel zuletzt genannte Package \enquote{mathtools}, eine sehr nützliche Erweiterung der \AmSmath-Packages.\footnote{\href{https://www.ctan.org/pkg/mathtools}{https://www.ctan.org/pkg/mathtools}}
 
-Wer sich intensiv mit mathematischen Formeln rumschlagen will, dem wird das Dokument Mathmode\footnote{\href{http://www.ctan.org/tex-archive/info/math/voss/mathmode/Mathmode.pdf}{http://www.ctan.org/tex-archive/info/math/voss/mathmode/Mathmode.pdf}} sehr hilfreich sein. Es geht auf viele Feinheiten ein, die z.\,B. in den \AmSmath-Manuals nicht oder nur sehr kurz abgehandelt werden.
+Wer sich intensiv mit mathematischen Formeln rumschlagen will, dem wird das Dokument Mathmode\footnote{\href{https://www.ctan.org/pkg/voss-mathmode}{https://www.ctan.org/pkg/voss-mathmode}} sehr hilfreich sein. Es geht auf viele Feinheiten ein, die z.\,B. in den \AmSmath-Manuals nicht oder nur sehr kurz abgehandelt werden.
 
-Mit diesen Packages sollte man auch für mathematische Diplomarbeiten -- zumindest bzgl. des Formelsatzes -- gerüstet sein.
+Mit diesen Packages sollte man auch für mathematische Abschlussarbeiten -- zumindest bzgl. des Formelsatzes -- gerüstet sein.
 
 \section{Die Gleichungsumgebungen}
 \subsection{Einbettung in Text}
@@ -114,7 +114,7 @@ Du kannst die Form \texttt{\textbackslash begin\{align*\}} verwenden, wenn du ke
 
 \section{Hoch- und tiefgestellte Ausdrücke}
 
-Einzelne Zeichen kannst du direkt mit einem \texttt{\^} oder \texttt{\_} Zeichen hoch- oder tiefstellen. Um mehrere Zeichen oder komplexe Ausdrücke hoch- oder tiefzustellen, musst du jene in geschweifte Klammern \texttt{\{\}} %ohne umgebende () ist {} besser lesbar
+Einzelne Zeichen kannst du direkt mit einem Zirkumflex (\texttt{\^}) oder einem Unterstrich (\texttt{\_}) hoch- bzw. tiefstellen. Um mehrere Zeichen oder komplexe Ausdrücke hoch- oder tiefzustellen, musst du jene in geschweifte Klammern \texttt{\{\}} %ohne umgebende () ist {} besser lesbar
 einschließen.
 
 %durch fortlaufende Nummern + Buchstaben (statt wiederkehrend dieselben) wird es für Leser leichter, die einzelnen Bsp voneinander zu trennen [anmerkung von seth: das halt' ich fuer'n geruecht. abgesehen davon, soll hier imho gar nix getrennt werden, ist doch immer dasselbe...]
@@ -259,7 +259,7 @@ Ausgespuckt wird hiermit
 	\lg 12.
 \end{equation}
 
-Es können jedoch im Header auch eigene Operatoren definiert, z.B.
+Es können jedoch im Header auch eigene Operatoren definiert, z.\,B.
 \begin{lstlisting}
 \DeclareMathOperator{\rg}{Rang}
 \DeclareMathOperator{\dom}{dom}
@@ -427,7 +427,7 @@ Die Symbole werden folgendermaßen dargestellt:
 	\blacksquare \quad \square 
 \end{equation}
 
-Eine sehr umfangreiche Liste von Symbolen bietet die \enquote{The Comprehensive \DMLLaTeX \ Symbol List}\footnote{\href{http://www.ctan.org/tex-archive/info/symbols/comprehensive/symbols-letter.pdf}{http://www.ctan.org/tex-archive/info/symbols/comprehensive/symbols-letter.pdf}}.
+Eine sehr umfangreiche Liste von Symbolen bietet die \enquote{The Comprehensive \DMLLaTeX \ Symbol List}\footnote{\href{https://www.ctan.org/pkg/comprehensive}{https://www.ctan.org/pkg/comprehensive}}.
 
 \section{Matrizen}
 Für Matrizen stehen verschiedene Umgebungen zur Verfügung. Da jene aber alle sehr ähnlich sind, möchte ich hier auf bloß eine, nämlich \enquote{pmatrix}, anhand eines Beispiels eingehen. Wie bei Tabellen werden Spalten mit dem Und-Zeichen und Zeilen mit zwei Backslashes separiert.
@@ -472,7 +472,7 @@ Code            & Darstellung & Kommentar\\
 \end{tabular}
 
 \subsection{Kursiv oder nicht?}
-Es führt regelmäßig zu Auseinandersetzungen, ob das Differential-d nun kursiv $\int xdx$ gesetzt werden soll oder nicht $\int x\mathrm dx$. Es hängt unter anderem davon ab, ob man das Differential-d nun als Operator -- und jene werden meist nicht kursiv gesetzt --, oder ob man traditionell $dx$ als eine Variable ansieht. Ähnlich sieht es beispielsweise bei der eulerschen Zahl $e$ aus, die man als Konstante oder als Funktion ansehen kann. Ich werde hier keine Schreibweise propagieren, aber wenigstens auf die Unterschiede hinweisen. Richtig sind ja letztendlich beide Schreibweisen, denn beide werden verstanden.
+Es führt regelmäßig zu Auseinandersetzungen, ob das Differential-d nun kursiv $\int xdx$ gesetzt werden soll oder nicht $\int x\mathrm dx$. Es hängt unter anderem davon ab, ob man das Differential-d nun als Operator -- und jene werden meist nicht kursiv gesetzt -- oder ob man traditionell $dx$ als eine Variable ansieht. Ähnlich sieht es beispielsweise bei der eulerschen Zahl $e$ aus, die man als Konstante oder als Funktion ansehen kann. Ich werde hier keine Schreibweise propagieren, aber wenigstens auf die Unterschiede hinweisen. Richtig sind ja letztendlich beide Schreibweisen, denn beide werden verstanden.
 
 \begin{lstlisting}
 \begin{equation*}
@@ -500,13 +500,13 @@ Je nach Geschmack werden auch vor den Differential-ds schmale Leerräume eingefüg
 Traditionell werden einige Mengen, beispielsweise die der natürlichen oder der reellen Zahlen mit einem fetten lateinischen Majuskel symbolisiert. Da sich auf Tafeln (engl. \emph{blackboard}) so schlecht fett schreiben lässt, hat es sich eingebürgert, die Großbuchstaben mit einem Doppelstrich zu versehen. Dies wurde auch im Druck übernommen. Allerdings sind die in \TeX weitverbreiteten \verb|\mathbb|-Symbole eigentlich nicht völlig authentisch, da sie andere Doppelstriche beifügen. Abhilfe schafft hier das package \enquote{dsfont}. Am Beispielcode
 \begin{lstlisting}
 \begin{gather*}
-	\mathbb N  \mathbb Z  \mathbb Q  \mathbb R  \mathbb C  \mathbb P\\
+	\mathbb N \mathbb Z \mathbb Q \mathbb R \mathbb C \mathbb P\\
 	\mathds N \mathds Z \mathds Q \mathds R \mathds C \mathds P
 \end{gather*}
 \end{lstlisting}
 und dem übersetzten Analogon
 \begin{gather*}
-	\mathbb N  \mathbb Z  \mathbb Q  \mathbb R  \mathbb C  \mathbb P\\
+	\mathbb N \mathbb Z \mathbb Q \mathbb R \mathbb C \mathbb P\\
 	\mathds N \mathds Z \mathds Q \mathds R \mathds C \mathds P
 \end{gather*}
 soll dieser Unterschied deutlich werden.
@@ -557,7 +557,7 @@ Nach diesem aufregenden Beispiel nun eine hübschere Variante:
 	ergibt.
 \end{quote}
 
-Man sieht hier u.\,a., dass hinter Formeln auch Punkte und Kommas gesetzt werden.
+Man sieht hier unter anderem, dass hinter Formeln auch Punkte und Kommas gesetzt werden.
 %
 % EOF
 %

@@ -12,7 +12,7 @@
 
 Das grundsätzliche Layout eines \DMLLaTeX-Dokuments wird durch verschiedene Dokumentklassen bestimmt. Es existieren verschiedenste Pakete, welche weitere Dokumentklassen zu den Standardklassen hinzufügen.
 
-Eine interessante Erweiterung von \DMLLaTeX, welche für dieses Dokument verwendet wurde, ist \KOMAScript~\cite{KOMA}\index{KOMA-Script@\KOMAScript}. Wir beschreiben daher von Anfang an den Aufbau mit den \KOMAScript-Klassen. Sie bieten eine Vielzahl von Optionen und einer Anpassung der Standardklassen an die europäische Typographie.
+Eine empfehlenswerte Erweiterung von \DMLLaTeX, welche für auch für das vorliegende Dokument verwendet wurde, ist \KOMAScript~\cite{KOMA}\index{KOMA-Script@\KOMAScript}. Wir beschreiben daher von Anfang an den Aufbau mit den \KOMAScript-Klassen. Sie bieten eine Vielzahl von Optionen und einer Anpassung der Standardklassen an die europäische Typographie.
 
 Hier beschreibe ich die drei am häufigsten verwendeten Klassen und die wichtigsten Unterschiede zwischen diesen.
 
@@ -24,7 +24,7 @@ Pro Dokument kann nur eine Dokumentklasse definiert werden. Diese Deklaration mu
 \documentclass[Optionen]{Name der Klasse}
 \end{lstlisting}
 
-Es existieren dabei verschiedenste Optionen, welche sich auf das Layout des Dokuments auswirken. Sie sind weiter unten im Abschnitt \ref{sec:globaleoptionen} beschrieben und werden auch an alle folgenden \texttt{\textbackslash usepackage} Befehle weitergegeben. 
+Es existieren dabei verschiedenste Optionen, welche sich auf das Layout des Dokuments auswirken. Sie sind weiter unten im Abschnitt \ref{sec:globaleoptionen} beschrieben und werden auch an alle folgenden \texttt{\textbackslash usepackage}"=Befehle weitergegeben. 
 
 Wenn du bei der Dokumentklasse als Option z.\,B. \enquote{pdftex} angibst, wird diese Option auch an den Befehl \texttt{\textbackslash usepackage\{graphicx\}} weitergegeben. Dort musst du diese Option nicht mehr angeben.
 
@@ -247,7 +247,16 @@ Mit der Dokumentklasse \enquote{scrbook} werden die größten Dokumente erstellt. 
 
 Neu hinzu kommt der Befehl \texttt{\textbackslash part}, mit welchem du dein Buch in einzelne Teile unterteilen kannst.
 
-Mögliche Gliederungen in dieser Dokumentklasse sind \texttt{\textbackslash part}, \texttt{\textbackslash chapter}, \texttt{\textbackslash section}, \texttt{\textbackslash subsection}, \texttt{\textbackslash subsubsection}, \texttt{\textbackslash paragraph} und \texttt{\textbackslash subparagraph}.
+Mögliche Gliederungen in dieser Dokumentklasse sind:
+\begin{itemize}
+	\item \texttt{\textbackslash part}
+	\item \texttt{\textbackslash chapter}
+	\item \texttt{\textbackslash section}
+	\item \texttt{\textbackslash subsection}
+	\item \texttt{\textbackslash subsubsection}
+	\item \texttt{\textbackslash paragraph}
+	\item \texttt{\textbackslash subparagraph}.
+\end{itemize}
 
 Das Beispiellisting \ref{lst:book} erzeugt neun Seiten, welche du auf Abbildung \ref{fig:book} siehst.
 

@@ -14,7 +14,7 @@
 
 Die \DMLLaTeX-Distribution \enquote{MiKTeX} musst du nicht konfigurieren. Es handelt sich dabei außer bei dem DVI-Betrachter um Kommandozeilentools. Du solltest nur den Editor TeXnicCenter einrichten (siehe dazu \ref{sec:KonfigurationTeXnicCenter}).
 
-Du solltest jedoch mit dem \enquote{MiKTeX Update Wizard} alle Pakete der Distribution auf den neuesten Stand zu bringen. Wie du das machst beschreibt die Hilfe zu MiKTeX ausführlich\footnote{\enquote{User Guide}$\Rightarrow$\enquote{Maintenance}$\Rightarrow$\enquote{Installing Updates}}.
+Du solltest jedoch mit dem \enquote{MiKTeX Update Wizard} alle Pakete der Distribution auf den neuesten Stand bringen. Wie du das machst, beschreibt die Hilfe zu MiKTeX ausführlich.\footnote{\enquote{User Guide}$\Rightarrow$\enquote{Maintenance}$\Rightarrow$\enquote{Installing Updates}}
 
 \section{TeXnicCenter}
 \label{sec:KonfigurationTeXnicCenter}
@@ -22,17 +22,17 @@ Du solltest jedoch mit dem \enquote{MiKTeX Update Wizard} alle Pakete der Distri
 
 \subsection{TeXnicCenter für die Verwendung mit MiKTeX konfigurieren}
 
-Nach dem ersten Start erscheint der Einrichtungsassistent. Falls du diesen bereits abgebrochen hast, kann man Ihn über das Menü \enquote{Ausgabe}, \enquote{Ausgabeprofile definieren...} und dort in dem Dialog \enquote{Assistent} links unten erneut aufrufen. Doch wie schon gesagt, der Assistent startet normalerweise beim ersten Start vom TeXnicCenter automatisch.
+Nach dem ersten Start erscheint der Einrichtungsassistent. Falls du diesen bereits abgebrochen hast, kann man ihn über das Menü \enquote{Ausgabe}, \enquote{Ausgabeprofile definieren...} und dort in dem Dialog \enquote{Assistent} links unten erneut aufrufen. Doch wie schon gesagt, der Assistent startet normalerweise beim ersten Start vom TeXnicCenter automatisch.
 
 \begin{figure}[hb]
-	\begin{captionbeside}[Start des Konfigurations-Assistenten]{Der Assistent Startet mit dem diesem Screen}[l]
+	\begin{captionbeside}[Start des Konfigurations-Assistenten]{Der Konfigurationsassistent  startet mit diesem Screen.}[l]
 		\includegraphics[width=7cm]{images/konfiguration01.png}
 	\end{captionbeside}
 	\label{fig:konfiguration01}
 \end{figure}
 
 \begin{figure}[hb]
-	\begin{captionbeside}[Frage, für welche Distribution TeXnicCenter eingerichtet werden soll]{Hier teilt dir der Installationsassistent mit, dass er die installierte \enquote{MiKTeX}-Distribution erkannt hat und fragt, ob er den Editor mit dieser \DMLLaTeX-Distribution konfigurieren soll. Du wählst natürlich \enquote{Ja}.}[l]
+	\begin{captionbeside}[Frage, für welche Distribution TeXnicCenter eingerichtet werden soll]{Hier teilt der Installations"=Assistent mit, dass die installierte MiKTeX"=Distribution erkannt wurde und fragt, ob er den Editor mit dieser \DMLLaTeX"=Distribution konfigurieren soll. Du wählst natürlich \enquote{Ja}.}[l]
 		\includegraphics[width=7cm]{images/konfiguration02.png}
 	\end{captionbeside}
 	\label{fig:konfiguration02}
@@ -46,7 +46,7 @@ Nach dem ersten Start erscheint der Einrichtungsassistent. Falls du diesen berei
 \end{figure}
 
 \begin{figure}[ht]
-	\begin{captionbeside}[Anzeige der drei generierten Profile]{Der TeXnicCenter-Assistent teilt dir mit, das er drei Profile generieren wird. Ein DVI-, ein PostScript- und ein PDF-Profil. Wir werden nur das PDF-Profil verwenden.}[l]
+	\begin{captionbeside}[Anzeige der drei generierten Profile]{Der TeXnicCenter-Assistent teilt dir mit, dass er drei Profile generieren wird. Ein DVI-, ein PostScript- und ein PDF-Profil. Wir werden nur das PDF-Profil verwenden.}[l]
 		\includegraphics[width=7cm]{images/konfiguration04.png}
 	\end{captionbeside}
 	\label{fig:konfiguration04}
@@ -57,9 +57,7 @@ Nach dem ersten Start erscheint der Einrichtungsassistent. Falls du diesen berei
 \subsection{Die Rechtschreibprüfung}
 \index{Rechtschreibprufung@Rechtschreibprüfung}
 
-Ein sehr schönes und nützliches Feature, welches dir TeXnicCenter bietet ist die Rechtschreibprüfung. Wähle dazu im Menü \emph{Extras} den Punkt \emph{Optionen} aus. In dem Dialog, der sich geöffnet hat wählst du den Reiter \emph{Rechtschreibung} aus. Dort kannst du die verschiedenen Optionen der Rechtschreibprüfung einstellen.
-
-Die möglichen Einstellparameter sind selbsterklärend, was du sehr gut in Abbildung \ref{fig:rechtschreibung} siehst.
+Ein sehr nützliches Feature, welches dir TeXnicCenter bietet, ist die Rechtschreibprüfung. Wähle dazu im Menü \emph{Extras} den Punkt \emph{Optionen} aus. In dem Dialog, der sich öffnet, wählst du den Reiter \emph{Rechtschreibung} aus. Dort kannst du die verschiedenen Optionen der Rechtschreibprüfung einstellen, wie du in Abbildung \ref{fig:rechtschreibung} siehst.
 
 \begin{figure}
 	\centering
@@ -68,13 +66,8 @@ Die möglichen Einstellparameter sind selbsterklärend, was du sehr gut in Abbildu
 	\label{fig:rechtschreibung}
 \end{figure}
 
-Falls eine gewünschte Sprache fehlt, kannst du zusätzliche Wörterbücher installieren. Wörterbücher diverser Sprachen, auch der neuen und alten deutschen Rechtschreibung, findest du unter folgender Internetadresse zum kostenlosen Download:
+Falls eine gewünschte Sprache fehlt, findest du Wörterbücher weiterer Sprachen unter
+\urlindent{https://extensions.services.openoffice.org/dictionaries}
+zum kostenlosen Download. Entpacke die in der heruntergeladenen ZIP"=Datei enthaltenen Dateien in das Unterverzeichnis \enquote{Language} deiner TeXnicCenter"=Installation, normalerweise ist das:
 
-\url{http://lingucomponent.openoffice.org/download\_dictionary.html}
-
-Entpacke die in der heruntergeladenen ZIP Datei enthaltenen Dateien in das Unterverzeichnis \enquote{Language} deiner TeXnicCenter Installation. Die TeXnicCenter Installation findest du normalerweise in dem folgenden Verzeichnis:
-
-\verb|C:\Programme\TeXnicCenter\Language|
-
-
-
+\verb|C:\Programme\TeXnicCenter\Language|.

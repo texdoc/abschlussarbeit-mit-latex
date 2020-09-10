@@ -10,21 +10,27 @@
 \label{sec:installation}
 \index{Installation|(}
 
-\section{MiKTeX unter Windows}
+\section{MiKTeX}
 \index{Installation!MiKTeX|(}
 
-Für Windows existiert die \DMLLaTeX-Distribution \enquote{MiKTeX}~\cite{MiKTeX}. Diese lässt sich auf einfachste Art und Weise installieren. Die Distribution ist kostenlos und wird unter einer Open-Source-Lizenz vertrieben. Wer mag, kann sich aber auch registrieren lassen, falls er oder sie E-Mail Support wünscht.
+Mit \enquote{MiKTeX}~\cite{MiKTeX} existiert neben \enquote{Tex Live} eine weitere \DMLLaTeX"=Distribution, die mittlerweile für Windows, macOS und Linux verfügbar ist und sich einfach installieren lässt.
+MiKTeX ist freie Software, d.\,h. ist kostenlos und wird unter einer Open-Source-Lizenz vertrieben.
+
+Im Folgenden wird die Installation unter Windows beschrieben. Für andere Systeme werden Tutorials auf der MiKTeX-Website angeboten. Insbesondere für Linux bietet sich stattdessen die Installation von Tex Live an, was sich in der Regel mit einer Zeile erledigen lässt.
 
 \subsection{Herunterladen des Setup-Programms}
 
-Geh auf die Adresse \url{http://www.miktex.org/}. Dort findest du verschiedene Versionen des Installers, welche du herunterladen kannst.
+Unter 
+\urlindent{https://www.miktex.org/}
+findest du verschiedene Versionen des Installers, welche du herunterladen kannst.
 
-Empfehlenswert ist hier der \enquote{Basic MiKTeX Installer}, da er die besonders häufig verwendeten Pakete bereits enthält und diese nicht mehr nachträglich heruntergeladen werden müssen. Diese Installer-Datei ist in der Version 2.7 über 70\,MB groß, weshalb eine schnelle Internetverbindung sich hier als vorteilhaft erweist.
+Empfehlenswert ist hier der \enquote{Basic MiKTeX Installer}, da er die besonders häufig verwendeten Pakete bereits enthält, sodass diese nicht mehr nachträglich heruntergeladen werden müssen. Diese Installer-Datei ist einige Hundert MB groß.
 
 Wähle diesen Link an und lade den Installer herunter.
 
-
 \subsection{Starten des Setups}
+Der im Folgenden dargestellte Ablauf der Installation mag sich im Laufe der Zeit geringfügig ändern. Die jeweils aktuellsten Informationen befinden sich (allerdings nur auf Englisch) unter
+\urlindent[.]{https://miktex.org/howto/install-miktex}
 
 \begin{figure}[hb]
 	\begin{captionbeside}{Nach dem Start des Programms erscheint dieser Screen. Du musst die Lizenzbedingungen akzeptieren.}[l]
@@ -75,7 +81,6 @@ Wähle diesen Link an und lade den Installer herunter.
 	\label{fig:install08}
 \end{figure}
 
-
 \clearpage % Warten bis alle Floats ausgegeben sind.
 
 \subsection{Herunterladen der Pakete}
@@ -83,7 +88,7 @@ Wähle diesen Link an und lade den Installer herunter.
 
 Während der Benutzung von MiKTeX und TeXnicCenter wirst Du bei fehlenden Paketen gefragt, ob sie heruntergeladen werden sollen. Dies ist ein bequemer und minimalistischer Ansatz, da nur genau die Pakete installiert werden, die Du tatsächlich brauchst, und diese immer in der aktuellen Version aus dem Netz geladen werden. 
 
-Alternativ Du kannst natürlich alle verfügbaren Pakete auf einmal herunterladen -- z.B. sinnvoll, wenn Du nur vorübergehend in der Uni breitbandig mit dem Internet verbunden bist und Festplattenplatz keinen Engpass darstellt (die allermeisten Pakete wirst Du nie verwenden, also den davon eingenommenen Platz verschwenden). Auf diese Weise stehen immer alle Pakete zur Verfügung.
+Alternativ Du kannst alle verfügbaren Pakete auf einmal herunterladen. Das ist z.\,B. dann sinnvoll, wenn Du nur vorübergehend breitbandig mit dem Internet verbunden bist und Festplattenplatz keinen Engpass darstellt (die allermeisten Pakete wirst Du nie verwenden, also den davon eingenommenen Platz verschwenden). Auf diese Weise stehen immer alle Pakete zur Verfügung.
 
 Wie du manuell einige oder alle Pakete installieren kannst, ist in den Abbildungen \ref{fig:install10} bis \ref{fig:install05b} beschrieben. 
 
@@ -102,7 +107,7 @@ Wie du manuell einige oder alle Pakete installieren kannst, ist in den Abbildung
 \end{figure}
 
 \begin{figure}
-	\begin{captionbeside}[Download]{Die Pakete werden aus dem Netz geladen und Dir Statusinformationen angezeigt. Klicke danach auf Close. Damit ist die Paketinstallation beendet.}[l]
+	\begin{captionbeside}[Download]{Während die Pakete aus dem Netz geladen werden, werden Dir Statusinformationen angezeigt. Klicke danach auf Close. Damit ist die Paketinstallation beendet.}[l]
 		\includegraphics[width=7cm]{images/MiKTeX-packet-install-03.png}
 	\end{captionbeside}
 	\label{fig:install05b}
@@ -115,11 +120,15 @@ Wie du manuell einige oder alle Pakete installieren kannst, ist in den Abbildung
 \section{Der Editor TeXnicCenter}
 \index{Installation!TeXnicCenter|(}
 
-Um \DMLLaTeX \ Dokumente einfach editieren zu können, bietet sich der Editor \enquote{TeXnicCenter}~\cite{TeXnicCenter} an. Dieser unterstützt einfache Navigation in der Dokumentstruktur, Projektverwaltung und einfachen Aufruf von \DMLLaTeX.
+Um \DMLLaTeX"=Dokumente einfach editieren zu können, bietet sich unter Windows der freie Editor \enquote{TeXnicCenter}~\cite{TeXnicCenter} an. Dieser unterstützt einfache Navigation in der Dokumentstruktur, Projektverwaltung und einfachen Aufruf von \DMLLaTeX.
+
+Alternativen dazu sind die TeX-Editoren \enquote{Kile} und \enquote{Texmaker}, die auch für Linux erhältlich sind; letzterer auch für macOS.
 
 \subsection{Herunterladen von TeXnicCenter}
 
-Auf der Webseite des TeXnicCenter Autors~\cite{TeXnicCenter} wählst du in der Navigation links \enquote{Download} an, und in der folgenden Liste, unter dem Punkt \enquote{End-User Downloads} z.\,B. \enquote{TeXnicCenter Setup, Version 1 Beta 7.01} aus. Vielleicht ist mittlerweile bereits eine neuere Version erschienen. Wichtig ist, dass du die \enquote{Binaries} in Form einer Setup \enquote{.exe} Datei herunterlädst.
+Auf der TeXnicCenter"=Webseite
+\urlindent{https://www.texniccenter.org/}
+wählst du in der Navigation \enquote{Download} an und in der folgenden Liste \enquote{TeXnicCenter 2.02 Stable (64 Bit)} aus. Die 32-Bit-Variante ist nur für sehr alte Computer gedacht. Möglicherweise ist mittlerweile auch eine neuere Version erschienen.
 
 \subsection{Starten des Setups}
 
@@ -133,14 +142,14 @@ Starte das heruntergeladene Setup. Die Installation ist in den Abbildungen \ref{
 \end{figure}
 
 \begin{figure}[hb]
-	\begin{captionbeside}[Anzeige der GPL]{Die GNU Public License~\cite{GPL} muß akzeptiert werden.}[l]
+	\begin{captionbeside}[Anzeige der GPL]{Die GNU General Public License~\cite{GPL} muss akzeptiert werden.}[l]
 		\includegraphics[width=7cm]{images/TeXnicCenter-install-02.png}
 	\end{captionbeside}
 	\label{fig:install21}
 \end{figure}
 
 \begin{figure}[hb]
-	\begin{captionbeside}[Wahl des Installationsverzeichnisses]{Hier wählst du das Verzeichnis aus, in das der Editor installiert werden soll. Am Besten übernimmst du die Vorgabe.}[l]
+	\begin{captionbeside}[Wahl des Installationsverzeichnisses]{Hier wählst du das Verzeichnis aus, in das der Editor installiert werden soll. Am besten übernimmst du die Vorgabe.}[l]
 		\includegraphics[width=7cm]{images/TeXnicCenter-install-03.png}
 	\end{captionbeside}
 	\label{fig:install22}
@@ -154,7 +163,7 @@ Starte das heruntergeladene Setup. Die Installation ist in den Abbildungen \ref{
 \end{figure}
 
 \begin{figure}[hb]
-	\begin{captionbeside}[Wahl des Namens im Startmenü]{Auch bei der Frage nach dem Namen des Eintrags ins Startmenü kannst du die Voreinstellung übernehmen.}[l]
+	\begin{captionbeside}[Wahl des Namens im Startmenü]{Auch bei der Frage nach dem Namen des Startmenüeintrags kannst du die Voreinstellung übernehmen.}[l]
 		\includegraphics[width=7cm]{images/TeXnicCenter-install-05.png}
 	\end{captionbeside}
 	\label{fig:install24}
@@ -175,7 +184,7 @@ Starte das heruntergeladene Setup. Die Installation ist in den Abbildungen \ref{
 \end{figure}
 
 \begin{figure}[thb]
-	\begin{captionbeside}[TeXnicCenter ist installiert]{TeXnicCenter ist installiert.}[l]
+	\begin{captionbeside}[TeXnicCenter ist installiert]{Schließlich wurde TeXnicCenter erfolgreich installiert.}[l]
 		\includegraphics[width=7cm]{images/TeXnicCenter-install-08.png}
 	\end{captionbeside}
 	\label{fig:install27}
@@ -186,17 +195,11 @@ Starte das heruntergeladene Setup. Die Installation ist in den Abbildungen \ref{
 \clearpage % Warten bis alle Floats ausgegeben sind.
 
 
-\section{Adobe Reader}
+\section{PDF-Viewer}
 \index{Installation!Adobe Reader}
 
-Jetzt solltest du noch die neuste Version des \enquote{Adobe Reader} herunterladen. Du benötigst mindestens die Version 5.0 (damals noch \enquote{Acrobat Reader}). Das Programm ist kostenlos und du solltest es nicht mit dem teuren \enquote{Adobe Acrobat} verwechseln, dem Programm, welches PDF-Dateien \emph{erzeugt}. Wir werden mit \DMLLaTeX \ unsere PDFs erzeugen.
+Zur Betrachtung der von uns mittels \DMLLaTeX{} erzeugten PDF-Dateien eignen sich alle gängigen PDF-Viewer. Unter Windows ist der proprietäre \enquote{Adobe Acrobat Reader} vermutlich der verbreitetste. Daneben gibt es freie Betrachter wie \enquote{Evince} oder \enquote{Okular}, die unter allen drei großen Betriebssystemen laufen. 
 
-Dazu gehst du auf die Webseite von Adobe~\cite{Adobe} und suchst nach einem Link \enquote{Download Adobe Reader} oder ähnlichem. Vielleicht findest du auch ein anklickbares \enquote{Get Adobe Reader} Icon. 
-
-Du gelangst auf eine Seite mit einigen weiteren Informationen zum Adobe Reader. Weiter unten findest du drei Schritte zum Download.
-
-Bei den Feldern im ersten Schritt wählst du Deutsch und dein Betriebssystem aus. Die Felder im zweiten Schritt kannst du leer lassen (empfohlen).
-
-Nach dem Klick auf \enquote{Download} startet nach einigen Sekunden der Download von einem kleinen \enquote{Downloadmanager}. Nach dem Start von diesem Programm wird der Adobe Reader heruntergeladen und auf deinem System installiert.
+Mittlerweile können auch Webbrowser wie Firefox oder Chrome bzw. Chromium PDF-Dateien anzeigen, weshalb auf eine Installationsanleitung in dieser Stelle verzichtet wird.
 
 \index{Installation|)}
