@@ -1,12 +1,10 @@
 # Diplomarbeit mit LaTeX
 
-Dieses Repository ist ein Fork der Seite http://drzoom.ch/project/dml/, die mittels https://web.archive.org/web/20080703042806/http://drzoom.ch/project/dml/ wiederhergestellt wurde.
-
 Das Dokument kann mittels `latexmk -pdf diplomarbeit_mit_latex.tex` erstellt werden.
 
-"Diplomarbeit mit LaTeX" ist ein Dokument welches einen einfachen Einstieg in LaTeX (primär unter Windows) beschreibt. In der Anleitung wird die LaTeX-Distribution [MiKTeX](https://miktex.org/) beschrieben in Kombination mit der Umgebung [TeXnicCenter](https://www.texniccenter.org/).
+"Diplomarbeit mit LaTeX" ist ein Dokument welches einen einfachen Einstieg in LaTeX (primÃ¤r unter Windows) beschreibt. In der Anleitung wird die LaTeX-Distribution [MiKTeX](https://miktex.org/) beschrieben in Kombination mit der Umgebung [TeXnicCenter](https://www.texniccenter.org/).
 
-Das Dokument soll einen schnellen Einstieg mit LaTeX ermöglichen. Ein kleines Tutorial führt dich Schritt für Schritt in die Materie ein.
+Das Dokument soll einen schnellen Einstieg mit LaTeX ermÃ¶glichen. Ein kleines Tutorial fÃ¼hrt dich Schritt fÃ¼r Schritt in die Materie ein.
 
 ## Vorarbeiten
 
@@ -14,3 +12,7 @@ Damit das Dokument selbst mittels LaTeX erstellt kann, ist eine vorhergehende La
 ```
 sudo apt-get install latexmk texlive-fonts-recommended texlive-fonts-extra texlive-lang-german texlive-lang-french texlive-latex-base texlive-latex-extra texlive-latex-recommended texlive-science
 ```
+
+## Anmerkungen zur Historie
+
+Dieses Repository ist die aktualisierte Version von <http://drzoom.ch/project/dml/>.
