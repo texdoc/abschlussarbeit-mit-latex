@@ -11,7 +11,7 @@
 
 In \DMLLaTeX \ bieten sich zwei unterschiedliche Wege an, Literaturverzeichnisse
 anzulegen und zu gestalten. Der einfachere Weg, der allerdings nicht sonderlich
-viele Gestaltungsmöglichkeiten offen hält, ist die Nutzung der Umgebung \texttt{thebibliography}. Sollen umfangreichere Literaturverzeichnisse oder gar eine Verbindung zu einer Literatur-Datenbank genutzt werden, so
+viele GestaltungsmÃ¶glichkeiten offen hÃ¤lt, ist die Nutzung der Umgebung \texttt{thebibliography}. Sollen umfangreichere Literaturverzeichnisse oder gar eine Verbindung zu einer Literatur-Datenbank genutzt werden, so
 bietet sich das mit \DMLLaTeX \ mitgelieferte Bib\DMLTeX an, zu dessen Nutzung allerdings etwas Einarbeitung notwendig ist.
 
 \section{Einfache Literaturverzeichnisse}
@@ -22,8 +22,8 @@ einfachen Verzeichniserstellung als auch bei der Erstellung eines Literaturverze
 mit Bib\DMLTeX der Befehl \texttt{$\backslash$cite\{marke\}} benutzt. Die Variable
 \texttt{marke} bezeichnet den Namen des Werkes innerhalb des Literaturverzeichnisses.
 
-Das eigentliche Literaturverzeichnis wird durch Einfügen der folgenden Umgebung an der
-Stelle des Textes, an der es erscheinen soll, eingefügt:
+Das eigentliche Literaturverzeichnis wird durch EinfÃ¼gen der folgenden Umgebung an der
+Stelle des Textes, an der es erscheinen soll, eingefÃ¼gt:
 
 \begin{verbatim}
       \begin{thebibliography}{defaultmarken}
@@ -41,10 +41,10 @@ Folgendes Beispiel soll den Einsatz der Umgebung verdeutlichen:
 
 \begin{verbatim}
 Was er mit den erbeuteten Knochen zu tun hatte, wusste der
-kleine Hund aus einem Buch, dass er in der Stadtbücherei
+kleine Hund aus einem Buch, dass er in der StadtbÃ¼cherei
 gelesen hatte: \emph{"Mein Kochen und ich"} \cite{bjarne}.
 Dieses stand dort direkt neben seinem Lieblingsbuch
-\emph{"Von Hund zu Hund"} \cite{katz} im Bücherregal
+\emph{"Von Hund zu Hund"} \cite{katz} im BÃ¼cherregal
 der Hundeliteratur.\\
 
 \begin{thebibliography}{999}
@@ -55,14 +55,14 @@ der Hundeliteratur.\\
 
 \end{verbatim}
 
-Die Ausgabe sieht folgendermaßen aus:
+Die Ausgabe sieht folgendermaÃŸen aus:
 
 \fbox{\parbox[b]{14.5cm}{
 	
 	Was er mit den erbeuteten Knochen zu tun hatte, wusste der kleine Hund
-	aus einem Buch, dass er in der Stadtbücherei gelesen hatte:
+	aus einem Buch, dass er in der StadtbÃ¼cherei gelesen hatte:
 	\emph{''Mein Kochen und ich''}[1]. Dieses stand dort direkt neben
-	seinem Lieblingsbuch \emph{''Von Hund zu Hund''}[2] im Bücherregal
+	seinem Lieblingsbuch \emph{''Von Hund zu Hund''}[2] im BÃ¼cherregal
 	der Hundeliteratur.
 	\vspace{0.5cm}
 	\\	
@@ -77,15 +77,15 @@ Die Ausgabe sieht folgendermaßen aus:
 
 \section{Aufwendigere Literaturverzeichnisse}
 \index{Literaturverzeichnisse!Literaturverzeichnisse@aufwendigere}
-In sämtlichen wissenschaftlichen Werken, zu denen Diplomarbeiten zählen, sollte großer Wert auf ein vollständiges und den Normen genügendes Literaturverzeichnis gelegt werden. Bib\TeX \ stellt ein äußerst leistungsfähiges Tool dar, mit dessen Hilfe man automatisch Literaturverzeichnisse erstellen kann.
+In sÃ¤mtlichen wissenschaftlichen Werken, zu denen Diplomarbeiten zÃ¤hlen, sollte groÃŸer Wert auf ein vollstÃ¤ndiges und den Normen genÃ¼gendes Literaturverzeichnis gelegt werden. Bib\TeX \ stellt ein Ã¤uÃŸerst leistungsfÃ¤higes Tool dar, mit dessen Hilfe man automatisch Literaturverzeichnisse erstellen kann.
 
 \subsection{Erstellen der Referenzangaben}
 Die eigentlichen Informationen zur verwendeten Literatur werden in einer oder mehreren
-separaten Datei(en) mit der Endung \texttt{.bib} abgelegt. Diese Dateien beinhalten für
+separaten Datei(en) mit der Endung \texttt{.bib} abgelegt. Diese Dateien beinhalten fÃ¼r
 jedes anzugebene Werk einen Eintrag, der je nach Referenzart entsprechende Attribute
 besitzt.
 
-Folgend ein Beispiel für den Eintrag eines Buches:
+Folgend ein Beispiel fÃ¼r den Eintrag eines Buches:
 
 \begin{verbatim}
 @book{bjarne:knochen,
@@ -97,14 +97,14 @@ Folgend ein Beispiel für den Eintrag eines Buches:
        isbn={3-12345-6789},
        month={November},
        year={2004},
-       language={husky-hündisch},
+       language={husky-hÃ¼ndisch},
 }
 \end{verbatim}
 
-Auf dieses Werk würde im Text mit der Referenz \verb|\cite{bjarne:knochen}| referenziert
+Auf dieses Werk wÃ¼rde im Text mit der Referenz \verb|\cite{bjarne:knochen}| referenziert
 werden.
 
-Als Referenzarten stehen unter anderem folgende Typen zur Verfügung:
+Als Referenzarten stehen unter anderem folgende Typen zur VerfÃ¼gung:
 
 \begin{table}[h]
 	\centering
@@ -115,7 +115,7 @@ Als Referenzarten stehen unter anderem folgende Typen zur Verfügung:
 		@booklet &Gedruckte Arbeit ohne einen Verleger oder eine\\
 		 				&publizierende Einrichtung\\
 		\hline
-		@article &Ein in einem Magazin oder Journal veröffentlichter Artikel\\
+		@article &Ein in einem Magazin oder Journal verÃ¶ffentlichter Artikel\\
 		\hline
 		@inbook &Teil eines Buches, ein Kapitel oder ein bestimmter Bereich\\
 						&(Seiten von - bis)\\
@@ -135,7 +135,7 @@ Als Referenzarten stehen unter anderem folgende Typen zur Verfügung:
 
 Je nach Referenzart sind manche Angaben zu einem Werk zwingend erforderlich,
 optional oder nicht erforderlich (bei Fehlen gibt \LaTeX \ eine Warnung aus).
-Einen Überblick über die wichtigsten Attributfelder gibt folgende Tabelle:
+Einen Ãœberblick Ã¼ber die wichtigsten Attributfelder gibt folgende Tabelle:
 
 \begin{table}[ht]
 	\centering
@@ -144,7 +144,7 @@ Einen Überblick über die wichtigsten Attributfelder gibt folgende Tabelle:
 			author &Name des Autors oder der Autoren\\
 			\hline
 			booktitle &Titel eines Buches oder eines Buchteils.Zum Verweis auf ein\\
-								&ganzes Buch steht das Feld \texttt{title} zur Verfügung.\\
+								&ganzes Buch steht das Feld \texttt{title} zur VerfÃ¼gung.\\
 			\hline
 			chapter &Eine Kapitelnummer oder Kapitelbezeichnung.\\
 			\hline
@@ -154,7 +154,7 @@ Einen Überblick über die wichtigsten Attributfelder gibt folgende Tabelle:
 			\hline
 			journal &Name des Journals oder Magazins.\\
 			\hline
-			month &Monat der Veröffentlichung\\
+			month &Monat der VerÃ¶ffentlichung\\
 			\hline
 			pages &Eine oder mehrere Seitenzahlen oder -bereiche,\\
 						&z.\,B. 42--50 oder 12, 43, 67.\\
@@ -178,7 +178,7 @@ Einen Überblick über die wichtigsten Attributfelder gibt folgende Tabelle:
 
 \subsection{Festlegung des Anzeigestils}
 Nachdem die Literaturreferenzen angelegt und in einer oder mehreren Dateien
-definiert wurden, können sie nun unter Angabe eines Anzeigestils, welcher das
+definiert wurden, kÃ¶nnen sie nun unter Angabe eines Anzeigestils, welcher das
 genaue Aussehen des Literaturverzeichnisses definiert, in das Hauptdokument eingebunden werden:
 
 \begin{verbatim}
@@ -190,75 +190,75 @@ genaue Aussehen des Literaturverzeichnisses definiert, in das Hauptdokument eing
 
 \newpage
 
-Eine Übersicht der gebräuchlichsten Styles für deutschsprachige Literaturverzeichnisse
-(Präfix \textit{ger} steht für German) soll folgende Tabelle geben:
+Eine Ãœbersicht der gebrÃ¤uchlichsten Styles fÃ¼r deutschsprachige Literaturverzeichnisse
+(PrÃ¤fix \textit{ger} steht fÃ¼r German) soll folgende Tabelle geben:
 
 \begin{table}[ht]
 	\centering
 		\begin{tabular}{|l|l|}
 			\hline
-				gerabbrv &$[$5$]$ Schneider, W.: \emph{Deutsch fürs Leben - was die Schule zu lehren 				 vergaß.}\\
+				gerabbrv &$[$5$]$ Schneider, W.: \emph{Deutsch fÃ¼rs Leben - was die Schule zu lehren 				 vergaÃŸ.}\\
 				&\ \ \ \ Rowohlt Taschenbuch Verlag GmbH, Februar 2002.\\
 			\hline
-				geralpha &$[$Sch02$]$ Schneider, Wolf: \emph{Deutsch fürs Leben - was die Schule zu
+				geralpha &$[$Sch02$]$ Schneider, Wolf: \emph{Deutsch fÃ¼rs Leben - was die Schule zu
 				lehren}\\
-				&\ \ \ \ \emph{vergaß.} Rowohlt Taschenbuch Verlag GmbH, Februar 2002.\\
+				&\ \ \ \ \emph{vergaÃŸ.} Rowohlt Taschenbuch Verlag GmbH, Februar 2002.\\
 			\hline
-			  gerapali &$[$Schneider 2002$]$ SCHNEIDER, WOLF (2002). \emph{Deutsch fürs Leben - 					was}\\
-			  &\ \ \ \ \ \emph{die Schule zu lehren vergaß.} Rowohlt Taschenbuch Verlag GmbH.\\
+			  gerapali &$[$Schneider 2002$]$ SCHNEIDER, WOLF (2002). \emph{Deutsch fÃ¼rs Leben - 					was}\\
+			  &\ \ \ \ \ \emph{die Schule zu lehren vergaÃŸ.} Rowohlt Taschenbuch Verlag GmbH.\\
 			\hline
 				gerplain &$[$1$]$ HELMUT SCHAEBEN, MARCUS APEL: \emph{GIS 2D, 3D, 4D, nD.}\\
 				&\ \ \ \ \ Informatik Spektrum, Juni 2003.\\
 				&\ \ \ \ \ (im Gegensatz zu \texttt{gerabbrv} wird hier nicht nur der erstgenannte\\
-				&\ \ \ \ \  Autor aufgeführt.\\
+				&\ \ \ \ \  Autor aufgefÃ¼hrt.\\
 			\hline
 			  gerunsrt &wie \texttt{gerabbrv}, allerdings werden die Werke nicht alphabetisch nach\\
-			  &\ \ \ \ \  Autor sortiert, sondern wie in der bib-Datei aufgeführt aufgelistet.\\
+			  &\ \ \ \ \  Autor sortiert, sondern wie in der bib-Datei aufgefÃ¼hrt aufgelistet.\\
 			  \hline
 		\end{tabular}
-	\caption{Style Übersicht}
+	\caption{Style Ãœbersicht}
 	\label{tab:style_uebersicht}
 \end{table}
 
-Um diese Styles nutzen zu können, muß das Paket \textit{germbib} installiert sein (bei MiKTeX-Standardinstallation der Fall) und \textit{bibgerm.sty} mit \textbackslash usepackage\{bibgerm\} im Dokumentenkopf eingebunden werden.
+Um diese Styles nutzen zu kÃ¶nnen, muÃŸ das Paket \textit{germbib} installiert sein (bei MiKTeX-Standardinstallation der Fall) und \textit{bibgerm.sty} mit \textbackslash usepackage\{bibgerm\} im Dokumentenkopf eingebunden werden.
 
 Wer mit den gegebenen Standard-Styles nicht zufrieden ist, der kann sich auch seinen
-eigenen Bib\TeX-Style erstellen. Dieses zu schildern würde hier allerdings den Rahmen
+eigenen Bib\TeX-Style erstellen. Dieses zu schildern wÃ¼rde hier allerdings den Rahmen
 sprengen, deshalb sei hier nur auf das Tutorium von Bernd Raichle \cite{raichle:bibtex_programmierung} verwiesen.
 
 \subsection{Einbinden der Referenzen in den Text und Erstellung des
 Literaturverzeichnisses}
 Nachdem die eigentlichen Angaben zur verwendeten Literatur in der .bib-Datei
-angelegt worden sind, müssen diese Angaben noch mit den passenden Stellen im
-Text, an denen das Werk zitiert wird, verknüpft werden.
-Hierzu wird der Befehl \texttt{cite{}}(für citation) verwendet:
+angelegt worden sind, mÃ¼ssen diese Angaben noch mit den passenden Stellen im
+Text, an denen das Werk zitiert wird, verknÃ¼pft werden.
+Hierzu wird der Befehl \texttt{cite{}}(fÃ¼r citation) verwendet:
 \begin{verbatim}
-	Nähere Informationen finden sich im Buch "Mein Knochen und ich -
+	NÃ¤here Informationen finden sich im Buch "Mein Knochen und ich -
 	wie ich meinen Schatz vergrub" \cite{bjarne:knochen}
 \end{verbatim}
 \newpage
 Die Ausgabe sieht, je nach Einstellung des Anzeigestiles (s. hierzu Tabelle
 \ref{tab:style_uebersicht}) etwa wie folgt aus:
 \begin{verbatim}
-	Nähere Informationen finden sich im Buch "Mein Knochen und ich -
+	NÃ¤here Informationen finden sich im Buch "Mein Knochen und ich -
 	wie ich meinen Schatz vergrub" [Bjar05].
 \end{verbatim}
 Um das eigentliche Literaturverzeichnis zu erstellen und einzubinden, ist folgendes Vorgehen
-nötig:
+nÃ¶tig:
 
-Zuerst lässt man einen \DMLLaTeX-Lauf über das gesamte Dokument laufen, wodurch
-für jede Datei der Projektes eine zugehörige Datei mit der Endung \texttt{.aux}
-erstellt wird. In diesen Dateien sind unter anderem die Literatureinträge
+Zuerst lÃ¤sst man einen \DMLLaTeX-Lauf Ã¼ber das gesamte Dokument laufen, wodurch
+fÃ¼r jede Datei der Projektes eine zugehÃ¶rige Datei mit der Endung \texttt{.aux}
+erstellt wird. In diesen Dateien sind unter anderem die LiteratureintrÃ¤ge
 verzeichnet, auf die in dem jeweiligen Dokument verwiesen wird.
-Anschließend wird das Programm \texttt{Bib\DMLTeX} aufgerufen, welches diese Einträge
+AnschlieÃŸend wird das Programm \texttt{Bib\DMLTeX} aufgerufen, welches diese EintrÃ¤ge
 sammelt, sortiert und in eine Datei mit der Endung \texttt{.bbl} schreibt.
-Bib\DMLTeX kann im \DMLTeX nicCenter sehr bequem über den Menüpunkt \texttt{Ausgabe
+Bib\DMLTeX kann im \DMLTeX nicCenter sehr bequem Ã¼ber den MenÃ¼punkt \texttt{Ausgabe
 $\rightarrow$ Bib\DMLTeX} aufgerufen werden. Nach einem weiteren \DMLLaTeX-Lauf wird
 das fertig sortierte und formatierte Literaturverzeichnisse in das Dokument
 eingebunden.
 
 Falls dir das dauernde Aufrufen von \DMLLaTeX \ bzw. Pdf\DMLTeX \ und die Aufrufe von
 Bib\DMLTeX und makeindex (s. hierzu Kapitel \ref{sec:glossar}) zuviel wird, kannst du diese
-Arbeitsschritte auch über eine Befehlsdatei, ein sogenanntes \texttt{Batchscript}
-automatisieren. Ein Beispiel für eine solche Batchdatei findet sich in Listing
+Arbeitsschritte auch Ã¼ber eine Befehlsdatei, ein sogenanntes \texttt{Batchscript}
+automatisieren. Ein Beispiel fÃ¼r eine solche Batchdatei findet sich in Listing
 \ref{subsec:batchdatei}.

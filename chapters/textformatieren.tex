@@ -9,9 +9,9 @@
 \chapter{Text formatieren}
 \index{Formatieren|(}
 
-\DMLLaTeX \ kennt verschiedenste Arten, auf die ein Text formatiert und strukturiert werden kann. Ich z‰hle hier nur die wichtigsten mit kleinen Beispielen auf.
+\DMLLaTeX \ kennt verschiedenste Arten, auf die ein Text formatiert und strukturiert werden kann. Ich z√§hle hier nur die wichtigsten mit kleinen Beispielen auf.
 
-\section{Abs‰tze und Zeilenumbr¸che}
+\section{Abs√§tze und Zeilenumbr√ºche}
 
 Es spielt keine Rolle, wie genau du den Text innerhalb deines Dokuments formatierst. Die folgenden beiden Listings ergeben also dasselbe Resultat:
 
@@ -25,13 +25,13 @@ auf einer
 einzelnen Zeile.
 \end{lstlisting}
 
-Dabei ignoriert \DMLLaTeX \ ¸berfl¸ssige Leerzeichen und Zeilenumbr¸che. Du kannst den Text in deiner Datei so formatieren, dass er f¸r dich zum Editieren ¸bersichtlich ist.
+Dabei ignoriert \DMLLaTeX \ √ºberfl√ºssige Leerzeichen und Zeilenumbr√ºche. Du kannst den Text in deiner Datei so formatieren, dass er f√ºr dich zum Editieren √ºbersichtlich ist.
 
-\subsection{Abs‰tze}
-\index{Formatieren!Absaetze@Abs‰tze}
+\subsection{Abs√§tze}
+\index{Formatieren!Absaetze@Abs√§tze}
 \index{Absatz}
 
-Um einen Absatz zu erzeugen, f¸gst du einfach mindestens eine Leerzeile zwischen zwei Textstellen in dein Dokument ein:
+Um einen Absatz zu erzeugen, f√ºgst du einfach mindestens eine Leerzeile zwischen zwei Textstellen in dein Dokument ein:
 
 \begin{lstlisting}
 Dies ist der erste Absatz von
@@ -40,7 +40,7 @@ diesem Dokument.
 Das ist der zweite.
 \end{lstlisting}
 
-\DMLLaTeX \ formatiert normalerweise neue Abs‰tze so, dass die erste Zeile des neuen Absatzes ein wenig einger¸ckt wird. Dies entspricht den amerikanischen Absatzregeln. \index{Absatzregeln}\index{Europaeische Absaetze@Europ‰ische Abs‰tze}Um europ‰ische Abs‰tze zu erzeugen, existieren in den \KOMAScript-Dokumentklassen verschiedenste Optionen.
+\DMLLaTeX \ formatiert normalerweise neue Abs√§tze so, dass die erste Zeile des neuen Absatzes ein wenig einger√ºckt wird. Dies entspricht den amerikanischen Absatzregeln. \index{Absatzregeln}\index{Europaeische Absaetze@Europ√§ische Abs√§tze}Um europ√§ische Abs√§tze zu erzeugen, existieren in den \KOMAScript-Dokumentklassen verschiedenste Optionen.
 
 \begin{itemize}
 	\item parskip\index{parskip}\index{Dokumentklasse!Optionen}
@@ -54,15 +54,15 @@ Das ist der zweite.
 	\item parindent\index{parindent}
 \end{itemize}
 
-Voreingestellt ist \enquote{parindent}. Alle Optionen, welche mit \enquote{parskip} beginnen, erzeugen eine ganze Zeile Abstand zwischen zwei Abs‰tzen. Die Optionen, welche mit \enquote{halfparskip} beginnen, erzeugen eine halbe Zeile Zwischenraum. Der Stern, das Plus und Minus steuern u.a., wieviel Leerraum in der letzten Zeile eines Absatzes freibleiben soll.
+Voreingestellt ist \enquote{parindent}. Alle Optionen, welche mit \enquote{parskip} beginnen, erzeugen eine ganze Zeile Abstand zwischen zwei Abs√§tzen. Die Optionen, welche mit \enquote{halfparskip} beginnen, erzeugen eine halbe Zeile Zwischenraum. Der Stern, das Plus und Minus steuern u.a., wieviel Leerraum in der letzten Zeile eines Absatzes freibleiben soll.
 
 Wie du diese Optionen bei der Dokumentklasse setzt, findest du in Kapitel~\ref{sec:globaleoptionen}. Weitere Informationen zu diesen Optionen findest du im \enquote{scrguide}, welchen du in \cite{KOMA} oder lokal auf deiner Festplatte im \enquote{doc} Verzeichnis deiner MiKTeX"=Distribution findest (z.\,B. unter C:\textbackslash texmf\textbackslash doc\textbackslash latex\textbackslash koma-script).
 
-\subsection{Zeilenumbr¸che}
-\index{Formatieren!Zeilenumbrueche@Zeilenumbr¸che}
+\subsection{Zeilenumbr√ºche}
+\index{Formatieren!Zeilenumbrueche@Zeilenumbr√ºche}
 \index{Zeilenumbruch}
 
-Einen einfachen Zeilenumbruch kannst du mit einem doppelten Backslash erzeugen. Dabei wird die Zeile genau an dieser Stelle umbrochen. Zeilenumbr¸che sollten nur in speziellen F‰llen verwendet werden, wie z.\,B. bei Adressen, in Tabellen oder ‰hnlichen Situationen.
+Einen einfachen Zeilenumbruch kannst du mit einem doppelten Backslash erzeugen. Dabei wird die Zeile genau an dieser Stelle umbrochen. Zeilenumbr√ºche sollten nur in speziellen F√§llen verwendet werden, wie z.\,B. bei Adressen, in Tabellen oder √§hnlichen Situationen.
 
 \begin{lstlisting}
 Hans Muster \\
@@ -70,11 +70,11 @@ Mustergasse 12 \\
 1234 Musterhausen
 \end{lstlisting}
 
-\section{‹berschriften}
-\index{Formatieren!Ueberschriften@‹berschriften}
-\index{Ueberschriften@‹berschriften}
+\section{√úberschriften}
+\index{Formatieren!Ueberschriften@√úberschriften}
+\index{Ueberschriften@√úberschriften}
 
-‹berschriften bilden die Struktur des Dokuments. Es existieren folgende ‹berschriftstypen:
+√úberschriften bilden die Struktur des Dokuments. Es existieren folgende √úberschriftstypen:
 \index{chapter@\texttt{\textbackslash chapter}}
 \index{section@\texttt{\textbackslash section}}
 \index{subsection@\texttt{\textbackslash subsection}}
@@ -93,7 +93,7 @@ Mustergasse 12 \\
 
 Der Befehl \texttt{\textbackslash chapter} existiert nur in den Dokumentklassen \enquote{scrbook} und \enquote{scrreprt}. Weiterhin gibt es noch den Befehl \texttt{\textbackslash part}. Mehr zu Dokumentklassen findest du in Kapitel~\ref{sec:dokumentklassen}.
 
-Zu jedem ‹berschriftstyp existiert noch eine Form mit einem \enquote{*}:
+Zu jedem √úberschriftstyp existiert noch eine Form mit einem \enquote{*}:
 
 \begin{enumerate}
 	\item \texttt{\textbackslash chapter*\{Kapitel\}}
@@ -104,7 +104,7 @@ Zu jedem ‹berschriftstyp existiert noch eine Form mit einem \enquote{*}:
 	\item \texttt{\textbackslash subparagraph*\{Unter-Absatz\}}
 \end{enumerate}
 
-Diese Befehle generieren analog zu den ersten Befehlen die entsprechende ‹berschrift, jedoch ohne Nummerierung. Zudem taucht diese ‹berschrift nicht im Inhaltsverzeichnis auf.
+Diese Befehle generieren analog zu den ersten Befehlen die entsprechende √úberschrift, jedoch ohne Nummerierung. Zudem taucht diese √úberschrift nicht im Inhaltsverzeichnis auf.
 
 
 
@@ -112,32 +112,32 @@ Diese Befehle generieren analog zu den ersten Befehlen die entsprechende ‹bersch
 \section{Textstellen hervorheben}
 \index{Formatieren!Hervorheben}
 
-Einzelne Wˆrter oder Textteile kˆnnen \emph{hervorgehoben} werden. Dies machst du mit dem Befehl \texttt{\textbackslash emph}:
+Einzelne W√∂rter oder Textteile k√∂nnen \emph{hervorgehoben} werden. Dies machst du mit dem Befehl \texttt{\textbackslash emph}:
 
 \begin{lstlisting}
-Einzelne Wˆrter oder Textteile kˆnnen \emph{hervorgehoben} werden.
+Einzelne W√∂rter oder Textteile k√∂nnen \emph{hervorgehoben} werden.
 \end{lstlisting}
 
-Neben dieser einfachen Her\-vor\-he\-bung kannst du Wˆrter auch \textbf{fett}\index{Fett}\index{Formatieren!Fett}\index{textbf@\texttt{\textbackslash textbf}}, \textit{kursiv}\index{Kursiv}\index{Formatieren!Kursiv}\index{textit@\texttt{\textbackslash textit}} oder\\ \texttt{monospaced}\index{Monospaced}\index{Formatieren!Monospaced}\index{Feste Zeichenbreite}\index{texttt@\texttt{\textbackslash texttt}} setzen lassen:
+Neben dieser einfachen Her\-vor\-he\-bung kannst du W√∂rter auch \textbf{fett}\index{Fett}\index{Formatieren!Fett}\index{textbf@\texttt{\textbackslash textbf}}, \textit{kursiv}\index{Kursiv}\index{Formatieren!Kursiv}\index{textit@\texttt{\textbackslash textit}} oder\\ \texttt{monospaced}\index{Monospaced}\index{Formatieren!Monospaced}\index{Feste Zeichenbreite}\index{texttt@\texttt{\textbackslash texttt}} setzen lassen:
 
 \begin{lstlisting}
 \textbf{fett}, \textit{kursiv} oder \texttt{monospaced}.
 \textbf{Ganze Textzeile fett}
 \end{lstlisting}
 
-Du solltest jedoch f¸r eine einfache Hervorhebung immer den \texttt{\textbackslash emph} Befehl verwenden. Die Formatierung des \texttt{\textbackslash emph} Befehls l‰sst sich nachtr‰nglich beliebig neu definieren.
+Du solltest jedoch f√ºr eine einfache Hervorhebung immer den \texttt{\textbackslash emph} Befehl verwenden. Die Formatierung des \texttt{\textbackslash emph} Befehls l√§sst sich nachtr√§nglich beliebig neu definieren.
 
 Beachte auch dass fetter Text die Aufmerksamkeit des Lesers auf die so markierte Stelle lenkt. Damit unterbrichst du den normalen Lesefluss. Verwendest du viele fett markierte Textstellen, wird das Lesen deines Dokuments zur Qual.
 
-\section{Listen und Aufz‰hlungen}
-\index{Listen|(}\index{Aufzaehlungen@Aufz‰hlungen|(}
+\section{Listen und Aufz√§hlungen}
+\index{Listen|(}\index{Aufzaehlungen@Aufz√§hlungen|(}
 
-Es gibt verschiedenste Listen und Aufz‰hlungen in \DMLLaTeX. Hier zeige ich die wichtigsten davon:
+Es gibt verschiedenste Listen und Aufz√§hlungen in \DMLLaTeX. Hier zeige ich die wichtigsten davon:
 
-\subsection{Einfache Aufz‰hlung}
-\index{Aufzaehlungen@Aufz‰hlungen!einfache}\index{Einfache Aufzaehlung@einfache Aufz‰hlung}
+\subsection{Einfache Aufz√§hlung}
+\index{Aufzaehlungen@Aufz√§hlungen!einfache}\index{Einfache Aufzaehlung@einfache Aufz√§hlung}
 
-Eine einfache Aufz‰hlung erstellst du folgendermaﬂen:
+Eine einfache Aufz√§hlung erstellst du folgenderma√üen:
 
 \begin{lstlisting}
 \begin{itemize}
@@ -155,10 +155,10 @@ Und so sieht das ganze danach aus:
 	\item Noch ein weiterer Punkt.
 \end{itemize}
 
-\subsection{Nummerierte Aufz‰hlung}
-\index{Aufzaehlungen@Aufz‰hlungen!nummerierte}\index{Nummerierte Aufzaehlung@nummerierte Aufz‰hlung}
+\subsection{Nummerierte Aufz√§hlung}
+\index{Aufzaehlungen@Aufz√§hlungen!nummerierte}\index{Nummerierte Aufzaehlung@nummerierte Aufz√§hlung}
 
-Eine nummerierte Aufz‰hlung erstellst du folgendermaﬂen:
+Eine nummerierte Aufz√§hlung erstellst du folgenderma√üen:
 
 \begin{lstlisting}
 \begin{enumerate}
@@ -176,10 +176,10 @@ Und so sieht das ganze fertig aus:
 	\item Noch ein dritter nummerierter Punkt.
 \end{enumerate}
 
-\subsection{Verschachtelte Aufz‰hlungen}
-\index{Aufzaehlungen@Aufz‰hlungen!verschachtelte}\index{Verschachtelte Aufzaehlungen@verschachtelte Aufz‰hlungen}
+\subsection{Verschachtelte Aufz√§hlungen}
+\index{Aufzaehlungen@Aufz√§hlungen!verschachtelte}\index{Verschachtelte Aufzaehlungen@verschachtelte Aufz√§hlungen}
 
-Diese Aufz‰hlungstypen lassen sich beliebig verschachteln:
+Diese Aufz√§hlungstypen lassen sich beliebig verschachteln:
 
 \begin{lstlisting}
 \begin{enumerate}
@@ -211,20 +211,20 @@ Und so sieht das ganze fertig aus:
 \subsection{Beschreibungslisten}
 \index{Listen!Beschreibungslisten}\index{Beschreibungslisten}
 
-Eine weitere Form einer Aufz‰hlung ist die Beschreibungsliste. Hier ist ein Beispiel einer Beschreibungsliste:
+Eine weitere Form einer Aufz√§hlung ist die Beschreibungsliste. Hier ist ein Beispiel einer Beschreibungsliste:
 
 \begin{lstlisting}
 \begin{description}
-	\item[Apfel] Eine Frucht die meistens auf groﬂen B‰umen w‰chst,
+	\item[Apfel] Eine Frucht die meistens auf gro√üen B√§umen w√§chst,
 		welche man ernten kann und welche ganz lecker schmeckt.
-		Teilweise ist auch ein Wurm drin. Da dies ein l‰ngerer Satz ist,
+		Teilweise ist auch ein Wurm drin. Da dies ein l√§ngerer Satz ist,
 		erkennt man, wie weitere Zeilen mit einem fixen Abstand 
 		umbrochen werden.
 	\item[Wurm] Ist teilweise im Apfel drin.
 		Um auch hier den Abstand beim Umbruch in eine neue 
-		Zeile zu sehen, schreibe ich einen l‰ngeren Satz.
-		Mit einem bisschen Gl¸ck ist die Beschreibung hier
-		l‰nger als eine Zeile.
+		Zeile zu sehen, schreibe ich einen l√§ngeren Satz.
+		Mit einem bisschen Gl√ºck ist die Beschreibung hier
+		l√§nger als eine Zeile.
 	\item[Birne] Siehe dazu \emph{Apfel}, nur mit anderer
 		Form und Geschmack.
 \end{description}
@@ -233,17 +233,17 @@ Eine weitere Form einer Aufz‰hlung ist die Beschreibungsliste. Hier ist ein Beis
 Und so sieht das ganze fertig aus:
 
 \begin{description}
-	\item[Apfel] Eine Frucht die meistens auf groﬂen B‰umen w‰chst,
+	\item[Apfel] Eine Frucht die meistens auf gro√üen B√§umen w√§chst,
 		welche man ernten kann und welche ganz lecker schmeckt.
-		Teilweise ist auch ein Wurm drin. Da dies ein l‰ngerer Satz ist,
+		Teilweise ist auch ein Wurm drin. Da dies ein l√§ngerer Satz ist,
 		erkennt man, wie weitere Zeilen mit einem fixen Abstand 
 		umbrochen werden.
 	\item[Wurm] Ist teilweise im Apfel drin.
 		Um auch hier den Abstand beim Umbruch in eine neue Zeile zu sehen,
-		schreibe ich einen l‰ngeren Satz. Mit einem bisschen Gl¸ck ist die
-		Beschreibung hier l‰nger als eine Zeile.
+		schreibe ich einen l√§ngeren Satz. Mit einem bisschen Gl√ºck ist die
+		Beschreibung hier l√§nger als eine Zeile.
 	\item[Birne] Siehe dazu \emph{Apfel}, nur mit anderer Form und Geschmack.
 \end{description}
 
-\index{Listen|)}\index{Aufzaehlungen@Aufz‰hlungen|)}
+\index{Listen|)}\index{Aufzaehlungen@Aufz√§hlungen|)}
 \index{Formatieren|)}

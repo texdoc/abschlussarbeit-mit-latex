@@ -6,18 +6,18 @@
 % See the file diplomarbeit_mit_latex.tex for copying conditions.
 %
 
-\chapter{Aufbau großer Dokumente}
+\chapter{Aufbau groÃŸer Dokumente}
 \label{sec:aufbaugrosserdokumente}
 
-Bei großen Dokumenten geht schnell der Überblick verloren. Eine Möglichkeit, etwas Struktur reinzubringen, ist, dassdu dein Dokument in einzelne Dateien aufteilst. Dazu stehen dir die Befehle \texttt{\textbackslash include} und \texttt{\textbackslash input} zur Verfügung, mit welchen du eine weitere Datei an dieser Stelle einbinden kannst.
+Bei groÃŸen Dokumenten geht schnell der Ãœberblick verloren. Eine MÃ¶glichkeit, etwas Struktur reinzubringen, ist, dassdu dein Dokument in einzelne Dateien aufteilst. Dazu stehen dir die Befehle \texttt{\textbackslash include} und \texttt{\textbackslash input} zur VerfÃ¼gung, mit welchen du eine weitere Datei an dieser Stelle einbinden kannst.
 
-TeXnicCenter unterstützt dich bereits darin, indem er für dein Projekt ein eigenes Unterverzeichnis anlegt. Ich gehe in den folgenden Beispielen davon aus, dass du eine Abschlussarbeit zu einem Onlineshop schreibst. Beim Erstellen von deinem TeXnicCenter"=Projekt (siehe dazu Kapitel \ref{sec:erstellenneuesprojekt} auf Seite \pageref{sec:erstellenneuesprojekt}) gibst du also als Projektname \enquote{onlineshop} an. TeXnicCenter erstellt dir dann in dem gewählen Unterverzeichnis ein Verzeichnis mit dem Namen \enquote{onlineshop} und legt darin die Datei \enquote{onlineshop.tex} an. Diese Datei definiert TeXnicCenter automatisch auch als Hauptdatei.
+TeXnicCenter unterstÃ¼tzt dich bereits darin, indem er fÃ¼r dein Projekt ein eigenes Unterverzeichnis anlegt. Ich gehe in den folgenden Beispielen davon aus, dass du eine Abschlussarbeit zu einem Onlineshop schreibst. Beim Erstellen von deinem TeXnicCenter"=Projekt (siehe dazu Kapitel \ref{sec:erstellenneuesprojekt} auf Seite \pageref{sec:erstellenneuesprojekt}) gibst du also als Projektname \enquote{onlineshop} an. TeXnicCenter erstellt dir dann in dem gewÃ¤hlen Unterverzeichnis ein Verzeichnis mit dem Namen \enquote{onlineshop} und legt darin die Datei \enquote{onlineshop.tex} an. Diese Datei definiert TeXnicCenter automatisch auch als Hauptdatei.
 
 \section{Aufbauen einer Verzeichnisstruktur}
 
-In diesem Unterverzeichnis legst du jetzt folgende Verzeichnisse an: bilder, listings, bibliographie und kapitel. Natürlich kannst du jede beliebige Bezeichnung verwenden. Ich persönlich bevorzuge englische Namen: images, listings, bibliography und chapters. 
+In diesem Unterverzeichnis legst du jetzt folgende Verzeichnisse an: bilder, listings, bibliographie und kapitel. NatÃ¼rlich kannst du jede beliebige Bezeichnung verwenden. Ich persÃ¶nlich bevorzuge englische Namen: images, listings, bibliography und chapters. 
 
-Jetzt sieht dein Verzeichnisbaum folgendermaßen aus:
+Jetzt sieht dein Verzeichnisbaum folgendermaÃŸen aus:
 
 \begin{verbatim}
 onlineshop -+- bibliographie
@@ -33,7 +33,7 @@ onlineshop -+- bibliographie
 
 \subsection{Die Hauptdatei}
 
-In deiner Hauptdatei fügst du praktisch nur \texttt{\textbackslash include} und ein \texttt{\textbackslash input} Befehl ein, welche weitere Dateien einbinden. So eine Hauptdatei siehst du in Listing \ref{lst:beispiel05}.
+In deiner Hauptdatei fÃ¼gst du praktisch nur \texttt{\textbackslash include} und ein \texttt{\textbackslash input} Befehl ein, welche weitere Dateien einbinden. So eine Hauptdatei siehst du in Listing \ref{lst:beispiel05}.
 
 \lstinputlisting[caption=Hauptdatei des Projekts (onlineshop.tex),
 	label=lst:beispiel05, frame=tb]%
@@ -43,19 +43,19 @@ Das hat verschiedene Vorteile:
 
 \begin{itemize}
 	\item Durch einfaches Austauschen der einzelnen \texttt{\textbackslash include}"=Befehle kannst du die Kapitel neu anordnen.
-	\item Indem du z.\,B. den Befehl \texttt{\textbackslash includeonly\{kapitel/ersteskapitel\}} als ersten Befehl in Listing \ref{lst:beispiel05} einfügst, wird nur genau das Kapitel \enquote{Erstes Kapitel} erzeugt. Was natürlich sehr viel schneller geht, als wenn das ganze Dokument erstellt werden müsste. Das spart dir viel Zeit, wenn du die Darstellung eines einzelnen Kapitels optimierst.
-	\item Wenn du später ähnliche Dokumente erstellst, kannst du die separate Headerdatei kopieren und wiederverwenden.
+	\item Indem du z.\,B. den Befehl \texttt{\textbackslash includeonly\{kapitel/ersteskapitel\}} als ersten Befehl in Listing \ref{lst:beispiel05} einfÃ¼gst, wird nur genau das Kapitel \enquote{Erstes Kapitel} erzeugt. Was natÃ¼rlich sehr viel schneller geht, als wenn das ganze Dokument erstellt werden mÃ¼sste. Das spart dir viel Zeit, wenn du die Darstellung eines einzelnen Kapitels optimierst.
+	\item Wenn du spÃ¤ter Ã¤hnliche Dokumente erstellst, kannst du die separate Headerdatei kopieren und wiederverwenden.
 \end{itemize}
 
-Wie du auch siehst, kannst du die Dateiendung \enquote{.tex} beim \texttt{\textbackslash include} und beim \texttt{\textbackslash input} Befehl weglassen. \DMLLaTeX \ fügt diese Endung automatisch an den Dateinamen an.
+Wie du auch siehst, kannst du die Dateiendung \enquote{.tex} beim \texttt{\textbackslash include} und beim \texttt{\textbackslash input} Befehl weglassen. \DMLLaTeX \ fÃ¼gt diese Endung automatisch an den Dateinamen an.
 
 \subsection{Der Unterschied zwischen \texttt{\textbackslash include} und \texttt{\textbackslash input}}
 
 Wenn du nocheinmal das Listing \ref{lst:beispiel05} betrachtest, siehst du, dass ich den Kopfbereich mit dem \texttt{\textbackslash input}-, die Kapitel aber mit dem \texttt{\textbackslash include}- Befehl eingebunden habe.
 
-Der \texttt{\textbackslash input} Befehl fügt die angegebene Datei genau an der angegebenen Stelle ein, der \texttt{\textbackslash include} Befehl macht jedoch noch mehr. Bevor die Datei an der angegebenen Stelle eingebunden wird, wird noch ein \texttt{\textbackslash clearpage} Befehl eingefügt. Dieser Befehl schreibt ausstehende Dinge wie Fußnoten und Floats (siehe Kapitel \ref{sec:tabellenundbilder}) noch fertig und beginnt eine neue Seite. Am Ende der eingefügten Datei merkt sich \DMLLaTeX \ alle Zählerstände usw. und speichert sie als \enquote{.aux} Datei ab.
+Der \texttt{\textbackslash input} Befehl fÃ¼gt die angegebene Datei genau an der angegebenen Stelle ein, der \texttt{\textbackslash include} Befehl macht jedoch noch mehr. Bevor die Datei an der angegebenen Stelle eingebunden wird, wird noch ein \texttt{\textbackslash clearpage} Befehl eingefÃ¼gt. Dieser Befehl schreibt ausstehende Dinge wie FuÃŸnoten und Floats (siehe Kapitel \ref{sec:tabellenundbilder}) noch fertig und beginnt eine neue Seite. Am Ende der eingefÃ¼gten Datei merkt sich \DMLLaTeX \ alle ZÃ¤hlerstÃ¤nde usw. und speichert sie als \enquote{.aux} Datei ab.
 
-Fügst du jetzt den Befehl \texttt{\textbackslash includeonly} am Anfang des Hauptdokuments ein, damit nur ein einzelnes Kapitel erzeugt wird, dann rekonstruiert \DMLLaTeX \ aus diesen \enquote{.aux} Dateien die Zählerstände und nummeriert das einzelne Kapitel genauso, als würde es mitten in deinem Dokument stehen.
+FÃ¼gst du jetzt den Befehl \texttt{\textbackslash includeonly} am Anfang des Hauptdokuments ein, damit nur ein einzelnes Kapitel erzeugt wird, dann rekonstruiert \DMLLaTeX \ aus diesen \enquote{.aux} Dateien die ZÃ¤hlerstÃ¤nde und nummeriert das einzelne Kapitel genauso, als wÃ¼rde es mitten in deinem Dokument stehen.
 
 \subsection{Der Header}
 
@@ -67,7 +67,7 @@ Jetzt erstellst du eine neue Datei und speicherst sie in deinem Projektverzeichn
 
 \subsection{Die Kapitel}
 
-Für jedes Kapitel erstellst du jetzt eine separate Datei. Diese Dateien solltest du nicht nummerieren, sondern nach ihrem Inhalt benennen, sonst erweist sich das einfache Verschieben oder Austauschen der einzelnen Kapitel als sehr verwirrend. Wenn plötzlich die Kapitel in der Reihenfolge 3, 2, 5, 1 und 4 in dem Hauptdokument eingebunden werden, geht schnell die Übersicht verloren.
+FÃ¼r jedes Kapitel erstellst du jetzt eine separate Datei. Diese Dateien solltest du nicht nummerieren, sondern nach ihrem Inhalt benennen, sonst erweist sich das einfache Verschieben oder Austauschen der einzelnen Kapitel als sehr verwirrend. Wenn plÃ¶tzlich die Kapitel in der Reihenfolge 3, 2, 5, 1 und 4 in dem Hauptdokument eingebunden werden, geht schnell die Ãœbersicht verloren.
 
 Eine solche Kapiteldatei siehst du z.\,B. in Listing \ref{lst:beispiel07}
 
@@ -80,7 +80,7 @@ Eine solche Kapiteldatei siehst du z.\,B. in Listing \ref{lst:beispiel07}
 
 Am Schluss erstellst du noch die Titelseite in einer separaten Datei. Dabei kannst du z.\,B. die Umgebung \enquote{titlepage} verwenden.
 
-Eine Datei, welche die Titelseite enthält, siehst du z.\,B. in Listing \ref{lst:beispiel08}. Du siehst auch das nach der Titelseite auch das Inhaltsverzeichnis, das Abbildungs- und Tabellenverzeichnis eingefügt wird.
+Eine Datei, welche die Titelseite enthÃ¤lt, siehst du z.\,B. in Listing \ref{lst:beispiel08}. Du siehst auch das nach der Titelseite auch das Inhaltsverzeichnis, das Abbildungs- und Tabellenverzeichnis eingefÃ¼gt wird.
 
 \lstinputlisting[
 	caption=Titelseite des Projekts (titelseite.tex im Verzeichnis \enquote{kapitel}),
@@ -89,15 +89,15 @@ Eine Datei, welche die Titelseite enthält, siehst du z.\,B. in Listing \ref{lst:
 
 \section{Weitere Aufteilungen}
 
-\subsection{Große Kapitel}
+\subsection{GroÃŸe Kapitel}
 
-Falls die einzelnen Kapitel zu groß werden, kannst du auch im Unterverzeichnis \enquote{kapitel} für jedes Kapitel weitere Unterverzeichnisse anlegen und dort die einzelnen Abschnitte als Dateien anlegen.
+Falls die einzelnen Kapitel zu groÃŸ werden, kannst du auch im Unterverzeichnis \enquote{kapitel} fÃ¼r jedes Kapitel weitere Unterverzeichnisse anlegen und dort die einzelnen Abschnitte als Dateien anlegen.
 
-Dazu erstellst du eine Datei, welche alle diese Abschnitte mit einem \texttt{\textbackslash input} Befehl einbindest. Für diese feineren Unterteilungen innerhalb eines Kapitels solltest du nicht den\\ \texttt{\textbackslash include} Befehl verwenden, weil dieser immer einen Seitenumbruch einfügen würde.
+Dazu erstellst du eine Datei, welche alle diese Abschnitte mit einem \texttt{\textbackslash input} Befehl einbindest. FÃ¼r diese feineren Unterteilungen innerhalb eines Kapitels solltest du nicht den\\ \texttt{\textbackslash include} Befehl verwenden, weil dieser immer einen Seitenumbruch einfÃ¼gen wÃ¼rde.
 
 \subsection{Viele Bilder}
 
-Auch im Verzeichnis mit den Bildern kannst du mit weiteren Unterverzeichnissen die Übersicht zurückgewinnen. Eine Aufteilung kannst du z.\,B. nach Kapiteln oder nach Kategorien, denen man die Bilder zuordnen könnte, machen.
+Auch im Verzeichnis mit den Bildern kannst du mit weiteren Unterverzeichnissen die Ãœbersicht zurÃ¼ckgewinnen. Eine Aufteilung kannst du z.\,B. nach Kapiteln oder nach Kategorien, denen man die Bilder zuordnen kÃ¶nnte, machen.
 
 %
 % EOF

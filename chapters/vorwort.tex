@@ -15,29 +15,29 @@
 \enquote{Es gibt Alternativen zu WYSIWYG\footnote{What You See Is What You Get} Textverarbeitungen}.
 \end{quote}
 
-Während einer Abschlussarbeit steht man meist unter starkem Zeitdruck. Einen großen Teil der Zeit, welche du zur Verfügung hast, brauchst du, um die Dokumentation zu deiner Arbeit zu schreiben. Es lohnt sich, Gedanken darüber machen, welches die geeignetste Anwendung für ein solch meist umfangreiches Dokument ist. Denn man möchte schließlich vermeiden, seine Zeit mit ärgerlichen Programmabstürzen, falschen Seitennummerierungen und unerklärlichen Effekten, die sich nicht beheben lassen, zu verschwenden.\footnote{Ich beziehe mich in diesen Ausführungen auf Programme wie z.\,B. Microsoft Word. Selbstverständlich gibt es sehr gute WYSIWYG Programme. Es existieren auch sehr gute WYSIWYG-Erweiterungen und -Editoren, welche \DMLLaTeX"=Code direkt grafisch darstellen.}
+WÃ¤hrend einer Abschlussarbeit steht man meist unter starkem Zeitdruck. Einen groÃŸen Teil der Zeit, welche du zur VerfÃ¼gung hast, brauchst du, um die Dokumentation zu deiner Arbeit zu schreiben. Es lohnt sich, Gedanken darÃ¼ber machen, welches die geeignetste Anwendung fÃ¼r ein solch meist umfangreiches Dokument ist. Denn man mÃ¶chte schlieÃŸlich vermeiden, seine Zeit mit Ã¤rgerlichen ProgrammabstÃ¼rzen, falschen Seitennummerierungen und unerklÃ¤rlichen Effekten, die sich nicht beheben lassen, zu verschwenden.\footnote{Ich beziehe mich in diesen AusfÃ¼hrungen auf Programme wie z.\,B. Microsoft Word. SelbstverstÃ¤ndlich gibt es sehr gute WYSIWYG Programme. Es existieren auch sehr gute WYSIWYG-Erweiterungen und -Editoren, welche \DMLLaTeX"=Code direkt grafisch darstellen.}
 
-Meistens beginnen die Probleme ab einer bestimmten Größe des Dokuments, aber dann ist es oft zu spät, um die Anwendung zu wechseln.
+Meistens beginnen die Probleme ab einer bestimmten GrÃ¶ÃŸe des Dokuments, aber dann ist es oft zu spÃ¤t, um die Anwendung zu wechseln.
 
-Ich möchte dir daher einen einfachen Weg aufzeigen, wie du deine Abschlussarbeit oder die Dokumentation dazu mit \DMLLaTeX\footnote{Ausgesprochen wird \DMLLaTeX{} \enquote{laa-tech}, wobei das \emph{X}, der große griechische Buchstabe \emph{Chi}, ein stimmloser uvularer Frikativ ist, also wie in \enquote{ach} oder \enquote{Loch} ausgesprochen werden sollte. Da dieser Laut nach einem \emph{e} jedoch für Deutschsprachler ungewohnt ist, wird im deutschsprachigen Raum oft anstelle dessen ein stimmloser palataler Frikativ, also ein Ich-Laut wie in \enquote{Technik} verwendet.} erstellen kannst. Dabei beschreibe ich detailliert den Weg von der Installation einer \DMLLaTeX-Distribution bis zum ersten lauf\/fähigen Dokument (schwerpunktmäßig unter Windows). Weiter beschreibt dieses Dokument häufig benötigte Formatierungen und Themen, welche im Zusammenhang mit Abschlussarbeiten wie einer Diplomarbeit wichtig sind.
+Ich mÃ¶chte dir daher einen einfachen Weg aufzeigen, wie du deine Abschlussarbeit oder die Dokumentation dazu mit \DMLLaTeX\footnote{Ausgesprochen wird \DMLLaTeX{} \enquote{laa-tech}, wobei das \emph{X}, der groÃŸe griechische Buchstabe \emph{Chi}, ein stimmloser uvularer Frikativ ist, also wie in \enquote{ach} oder \enquote{Loch} ausgesprochen werden sollte. Da dieser Laut nach einem \emph{e} jedoch fÃ¼r Deutschsprachler ungewohnt ist, wird im deutschsprachigen Raum oft anstelle dessen ein stimmloser palataler Frikativ, also ein Ich-Laut wie in \enquote{Technik} verwendet.} erstellen kannst. Dabei beschreibe ich detailliert den Weg von der Installation einer \DMLLaTeX-Distribution bis zum ersten lauf\/fÃ¤higen Dokument (schwerpunktmÃ¤ÃŸig unter Windows). Weiter beschreibt dieses Dokument hÃ¤ufig benÃ¶tigte Formatierungen und Themen, welche im Zusammenhang mit Abschlussarbeiten wie einer Diplomarbeit wichtig sind.
 
 \section{Zu diesem Dokument}
 
-Im vorliegenden Dokument werden Anführungszeichen im Schweizer Stil \enquote{ und } verwendet (im Gegensatz zu den deutschen "`~und~"').
+Im vorliegenden Dokument werden AnfÃ¼hrungszeichen im Schweizer Stil \enquote{ und } verwendet (im Gegensatz zu den deutschen "`~und~"').
 
-\subsection{Unterstützung, Vorschläge und Ergänzungen} %Unterstützung hierhin verschoben, weil einiges doppelt anzugeben gewesen wäre 
+\subsection{UnterstÃ¼tzung, VorschlÃ¤ge und ErgÃ¤nzungen} %UnterstÃ¼tzung hierhin verschoben, weil einiges doppelt anzugeben gewesen wÃ¤re 
 
-Ich schreibe dieses Dokument in der Hoffnung, dass es nützlich ist. Daher freue ich mich natürlich über Fehlerberichtigungen und Ergänzungen, welche in das Konzept dieses Dokuments passen. Falls du mir gerne helfen möchtest, findest du einige Anregungen und weitere Details im Abschnitt \ref{sec:hilfe-gesucht}.
+Ich schreibe dieses Dokument in der Hoffnung, dass es nÃ¼tzlich ist. Daher freue ich mich natÃ¼rlich Ã¼ber Fehlerberichtigungen und ErgÃ¤nzungen, welche in das Konzept dieses Dokuments passen. Falls du mir gerne helfen mÃ¶chtest, findest du einige Anregungen und weitere Details im Abschnitt \ref{sec:hilfe-gesucht}.
 
-Bevor du Fehler meldest oder Vorschläge machst, solltest du kontrollieren, ob du die neueste Version dieses Dokuments hast, welche du unter
+Bevor du Fehler meldest oder VorschlÃ¤ge machst, solltest du kontrollieren, ob du die neueste Version dieses Dokuments hast, welche du unter
 
-\urlindent[\footnote{Die ursprüngliche Website http://drzoom.ch/project/dml/ und die Mailingliste existieren nicht mehr.}]{https://github.com/texdoc/diplomarbeit-mit-latex}
+\urlindent[\footnote{Die ursprÃ¼ngliche Website http://drzoom.ch/project/dml/ und die Mailingliste existieren nicht mehr.}]{https://github.com/texdoc/diplomarbeit-mit-latex}
 
-findest. Dort kannst du auch Fragen stellen und Vorschläge machen.
+findest. Dort kannst du auch Fragen stellen und VorschlÃ¤ge machen.
 
 \subsection{Dank}
 
-Folgende Personen haben mich beim Schreiben dieses Dokumentes unterstützt. Ich danke ihnen für Korrekturen, Verbesserungen und Kritik. Dadurch ist diese Anleitung wesentlich lesenswerter geworden. 
+Folgende Personen haben mich beim Schreiben dieses Dokumentes unterstÃ¼tzt. Ich danke ihnen fÃ¼r Korrekturen, Verbesserungen und Kritik. Dadurch ist diese Anleitung wesentlich lesenswerter geworden. 
 
 \begin{itemize}
 	\item \enquote{seth}
@@ -51,9 +51,9 @@ Folgende Personen haben mich beim Schreiben dieses Dokumentes unterstützt. Ich d
 	\item Uwe Bieling
 \end{itemize}
 
-\subsection{Ausstehende und durchgeführte Änderungen an diesem Dokument}
+\subsection{Ausstehende und durchgefÃ¼hrte Ã„nderungen an diesem Dokument}
 
-In Anhang \ref{sec:aendeungen} befindet sich eine Liste, welche die Änderungen zwischen den verschiedenen Versionen dieses Dokuments aufzeigt. Daneben findest du eine Liste mit ausstehenden Fragen und Änderungen im Anhang \ref{sec:ausstehendes}.
+In Anhang \ref{sec:aendeungen} befindet sich eine Liste, welche die Ã„nderungen zwischen den verschiedenen Versionen dieses Dokuments aufzeigt. Daneben findest du eine Liste mit ausstehenden Fragen und Ã„nderungen im Anhang \ref{sec:ausstehendes}.
 
 %
 % EOF

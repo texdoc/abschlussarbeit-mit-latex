@@ -12,7 +12,7 @@
 \section{Tabellen}
 \index{Tabellen}
 
-Tabellen sind in \DMLLaTeX \ ein Thema für sich. Ich beschreibe hier daher vor allem die sogenannte \enquote{tabular}\index{begin@\texttt{\textbackslash begin}!tabular}"=Umgebung. Um die tabular"=Umgebung nutzen zu können, solltest du zudem im Kopfbereich deines Dokuments das Paket \enquote{array}\index{Paket!array} einbinden. Das machst du mit dem Befehl:
+Tabellen sind in \DMLLaTeX \ ein Thema fÃ¼r sich. Ich beschreibe hier daher vor allem die sogenannte \enquote{tabular}\index{begin@\texttt{\textbackslash begin}!tabular}"=Umgebung. Um die tabular"=Umgebung nutzen zu kÃ¶nnen, solltest du zudem im Kopfbereich deines Dokuments das Paket \enquote{array}\index{Paket!array} einbinden. Das machst du mit dem Befehl:
 
 \begin{lstlisting}
 \usepackage{array}
@@ -37,14 +37,14 @@ Hier die erste Beispieltabelle:
 
 Die einzelnen Spalten\index{Tabellen!Spalten} werden also mit dem \enquote{\texttt{\&}}-Zeichen getrennt und eine neue Tabellenzeile beginnt mit einem doppelten Backslash.
 
-Direkt hinter dem Befehl \texttt{\textbackslash begin\{tabular\}} befindet sich der Parameter \texttt{\{llr\}}. Das bedeutet soviel wie: drei Spalten, die ersten beiden linksbündig formatiert, die letzte rechtsbündig. Je nach Buchstabe in diesem Parameter kann man die Spalten unterschiedlich formatieren. Einige Beispiele:
+Direkt hinter dem Befehl \texttt{\textbackslash begin\{tabular\}} befindet sich der Parameter \texttt{\{llr\}}. Das bedeutet soviel wie: drei Spalten, die ersten beiden linksbÃ¼ndig formatiert, die letzte rechtsbÃ¼ndig. Je nach Buchstabe in diesem Parameter kann man die Spalten unterschiedlich formatieren. Einige Beispiele:
 
 \begin{description}
-	\item[\texttt{l}] Linksbündig formatierte Spalte.
+	\item[\texttt{l}] LinksbÃ¼ndig formatierte Spalte.
 	\item[\texttt{c}] Zentriert formatierte Spalte.
-	\item[\texttt{r}] Rechtsbündig formatierte Spalte.
+	\item[\texttt{r}] RechtsbÃ¼ndig formatierte Spalte.
 	\item[\texttt{p\{5cm\}}] Die Spalte ist genau 5cm breit.
-	\item[\texttt{|}] Fügt hier eine vertikale Linie ein.
+	\item[\texttt{|}] FÃ¼gt hier eine vertikale Linie ein.
 \end{description}
 
 Das Beispiel oben siehst du als Tabelle \ref{tbl:beispieltabelle1}.
@@ -65,9 +65,9 @@ Das Beispiel oben siehst du als Tabelle \ref{tbl:beispieltabelle1}.
 \label{sec:linienintabellen}
 \index{Linien in Tabellen}\index{Tabellen!Linien}
 
-Es ist auch möglich, Linien in der Tabelle einzubauen. Für horizontale Linien verwendet man dabei den Befehl \texttt{\textbackslash hline}, für die vertikalen Linien macht man ein \enquote{\texttt{|}}-Zeichen zwischen die Spaltenangabe.
+Es ist auch mÃ¶glich, Linien in der Tabelle einzubauen. FÃ¼r horizontale Linien verwendet man dabei den Befehl \texttt{\textbackslash hline}, fÃ¼r die vertikalen Linien macht man ein \enquote{\texttt{|}}-Zeichen zwischen die Spaltenangabe.
 
-Solche \enquote{Klötzchentabellen} solltest du jedoch möglichst vermeiden. Eine sehr gute Anleitung findest du unter~\cite{TabSatz}. Axel Reichert erklärt in diesem Dokument anhand von vielen Beispielen wie man Tabellen lesbar, eindeutig und übersichtlich gestalten kann.
+Solche \enquote{KlÃ¶tzchentabellen} solltest du jedoch mÃ¶glichst vermeiden. Eine sehr gute Anleitung findest du unter~\cite{TabSatz}. Axel Reichert erklÃ¤rt in diesem Dokument anhand von vielen Beispielen wie man Tabellen lesbar, eindeutig und Ã¼bersichtlich gestalten kann.
 
 Das Beispiel mit einigen Linien:
 
@@ -110,7 +110,7 @@ Das Beispiel siehst du als Tabelle \ref{tbl:beispieltabelle2}.
 \subsection{Mehrere Spalten zusammenfassen}
 \index{Tabellen!Spalten zusammenfassen}\index{Spalten zusammenfassen}
 
-Falls du mehrere Spalten zusammenfassen möchtest, kannst du das mit dem Befehl
+Falls du mehrere Spalten zusammenfassen mÃ¶chtest, kannst du das mit dem Befehl
 \\
  \texttt{\textbackslash multicolumn} machen. Der Befehl hat drei Argumente: Die Anzahl der Spalten, welche zusammengefasst werden sollen, die Ausrichtung der Spalte und der Text, welcher in diesem Bereich angezeigt werden soll. Hier ein Beispiel:
 
@@ -154,11 +154,11 @@ Das Beispiel siehst du als Tabelle \ref{tbl:beispieltabelle3} auf Seite \pageref
 \subsection{Tabellenbreite bestimmen bzw. automatischer Zeilenumbruch}
 \index{Tabellen!Spaltenbeite bestimmen}\index{Tabellen!Automatischer Zeilenumbruch}
 
-In konventionellen Tabellen werden lange Zeilen nicht automatisch umbrochen, sondern \DMLLaTeX \ schreibt froh und munter über den Seitenrand hinaus. Man kann manuelle Zeilenumbrüche mit \textbackslash \textbackslash \ einfügen, was hart an Masochismus grenzt, wenn man mehr als eine Hand voll Tabellen hat und das Layout (Ränder, Schriftgröße, \ldots) geändert wird -- was bei größeren Arbeiten durchaus vorkommt, z.\,B. mal mit und mal ohne Korrekturrand, je nach Bindungsart unterschiedlicher Abstand usw.
+In konventionellen Tabellen werden lange Zeilen nicht automatisch umbrochen, sondern \DMLLaTeX \ schreibt froh und munter Ã¼ber den Seitenrand hinaus. Man kann manuelle ZeilenumbrÃ¼che mit \textbackslash \textbackslash \ einfÃ¼gen, was hart an Masochismus grenzt, wenn man mehr als eine Hand voll Tabellen hat und das Layout (RÃ¤nder, SchriftgrÃ¶ÃŸe, \ldots) geÃ¤ndert wird -- was bei grÃ¶ÃŸeren Arbeiten durchaus vorkommt, z.\,B. mal mit und mal ohne Korrekturrand, je nach Bindungsart unterschiedlicher Abstand usw.
 
 \begin{table}[h]	
 		\begin{tabular}{| l | l |}  
-		  % man muß alle Umbrüche manuell machen
+		  % man muÃŸ alle UmbrÃ¼che manuell machen
 			\hline
 			Kurze				& Lange Spalteninhalte\\
 			\hline
@@ -171,20 +171,20 @@ In konventionellen Tabellen werden lange Zeilen nicht automatisch umbrochen, son
 
 \begin{table}[h]	
 		\begin{tabular}{| l | l |}  
-		  % man muß alle Umbrüche manuell machen
+		  % man muÃŸ alle UmbrÃ¼che manuell machen
 			\hline
-			Kurze				& Lange Spalteninhalte mit manuell eingefügten Zeilenumbrüchen:\\
+			Kurze				& Lange Spalteninhalte mit manuell eingefÃ¼gten ZeilenumbrÃ¼chen:\\
 			\hline
 			Links kurz	&Und rechts absichtlich viel, viel zu langer\\
 									&Test-Text1, Test-Text2, Test-Text3, Test-Text4,\\
 									&Test-Text5, Test-Text6\\
 			\hline						
 		\end{tabular}
-	\caption{Eigentlich zu breite Tabellenspalte mit manuell eingefügten Zeilenumbrüchen formatiert. Hat eine andere, aber sehr ähnliche Breite wie der Text, was nicht sonderlich hübsch ist.}
+	\caption{Eigentlich zu breite Tabellenspalte mit manuell eingefÃ¼gten ZeilenumbrÃ¼chen formatiert. Hat eine andere, aber sehr Ã¤hnliche Breite wie der Text, was nicht sonderlich hÃ¼bsch ist.}
 	\label{tab:Tabelle_zu_breit_manuell}
 \end{table}
 
-Um die Zeilenumbrüche automatisiert setzen zu lassen, muss man die Breite der Spalte(n) mit \enquote{zu viel} Text vorab festlegen. Dabei können entweder absolute Werte verwendet werden, z.\,B. 5\,cm oder 10\,em, oder sog. \textit{command lengths}, sozusagen Variablen, deren Wert von der Dokumentenklasse und Präambel abhängen, z.\,B. \textbackslash textwidth (Spaltenbreite in aktueller Umgebung). Ersteres ist exakter, aber man muss bei jeder Layoutänderung \textit{alle} Tabellen überprüfen und ggf. alle Spaltenbreiten anpassen. Lästig. Letzteres ist grundsätzlich angenehmer, kann aber im Einzelfall Probleme verursachen, z.\,B. wenn eine Spalte zu schmal für ein nicht trennbares Wort wird. Also Tabellen im Ausgabeformat genau anschauen. Nebenbei: Man kann in \DMLLaTeX \ rechnen, was wir im folgenden Anschauungsbeispiel machen, indem wir \textbackslash textwidth mit 0.2 bzw. 0.74 multiplizieren.
+Um die ZeilenumbrÃ¼che automatisiert setzen zu lassen, muss man die Breite der Spalte(n) mit \enquote{zu viel} Text vorab festlegen. Dabei kÃ¶nnen entweder absolute Werte verwendet werden, z.\,B. 5\,cm oder 10\,em, oder sog. \textit{command lengths}, sozusagen Variablen, deren Wert von der Dokumentenklasse und PrÃ¤ambel abhÃ¤ngen, z.\,B. \textbackslash textwidth (Spaltenbreite in aktueller Umgebung). Ersteres ist exakter, aber man muss bei jeder LayoutÃ¤nderung \textit{alle} Tabellen Ã¼berprÃ¼fen und ggf. alle Spaltenbreiten anpassen. LÃ¤stig. Letzteres ist grundsÃ¤tzlich angenehmer, kann aber im Einzelfall Probleme verursachen, z.\,B. wenn eine Spalte zu schmal fÃ¼r ein nicht trennbares Wort wird. Also Tabellen im Ausgabeformat genau anschauen. Nebenbei: Man kann in \DMLLaTeX \ rechnen, was wir im folgenden Anschauungsbeispiel machen, indem wir \textbackslash textwidth mit 0.2 bzw. 0.74 multiplizieren.
 
 \begin{table}[h]		
 		\begin{tabular}{|p{0.2\textwidth} | p{0.74\textwidth} |}  
@@ -203,7 +203,7 @@ Hier siehst Du den Code der drei Arten von Tabellendefinitionen:
 
 \begin{lstlisting}
 \begin{table}[h]	
-	% alle Umbrüche manuell machen
+	% alle UmbrÃ¼che manuell machen
 	\begin{tabular}{| l | l |}
 
 	% automatisch an normale Textbreite angepasst
@@ -222,9 +222,9 @@ Hier siehst Du den Code der drei Arten von Tabellendefinitionen:
 \end{table}
 \end{lstlisting}
 
-Weitere \textit{command lengths} wie \textbackslash textwidth findest Du im Kochbuch \cite{Kochbuch}, Kapitel 8, Abschnitt Längen.
+Weitere \textit{command lengths} wie \textbackslash textwidth findest Du im Kochbuch \cite{Kochbuch}, Kapitel 8, Abschnitt LÃ¤ngen.
 
-	Als weit verbreitete Alternative zu \enquote{tabular}"=Umgebung soll an dieser Stelle das Package \enquote{tabularx} erwähnt werden, das es einem ermöglicht, Spalten als umbrechbar zu kennzeichnen, ohne deren exakte Breite festlegen zu müssen. Man legt dabei mit dem ersten Parameter lediglich die Gesamtbreite der Tabelle fest. Der zweite Parameter kann benutzt werden wie der erste (und einzige) Parameter der tabular"=Umgebung. Neben \texttt{l}, \texttt{c} usw. gibt es jetzt noch die Option \texttt{X}, die bedeutet, dass jene Spalte als Block gesetzt werden soll.
+	Als weit verbreitete Alternative zu \enquote{tabular}"=Umgebung soll an dieser Stelle das Package \enquote{tabularx} erwÃ¤hnt werden, das es einem ermÃ¶glicht, Spalten als umbrechbar zu kennzeichnen, ohne deren exakte Breite festlegen zu mÃ¼ssen. Man legt dabei mit dem ersten Parameter lediglich die Gesamtbreite der Tabelle fest. Der zweite Parameter kann benutzt werden wie der erste (und einzige) Parameter der tabular"=Umgebung. Neben \texttt{l}, \texttt{c} usw. gibt es jetzt noch die Option \texttt{X}, die bedeutet, dass jene Spalte als Block gesetzt werden soll.
 \begin{table}[ht]
 	\begin{tabularx}{\textwidth}{|l|X|}
 		\hline
@@ -254,9 +254,9 @@ Weitere \textit{command lengths} wie \textbackslash textwidth findest Du im Koch
 \section{Bilder}
 \index{Bilder \see{Grafiken}}\index{Abbildungen \see{Grafiken}}\index{Grafiken}
 
-In dein Dokument kannst du beliebige Bilder einbetten. Dabei kannst du alle Bildformate\index{Grafiken!Format} verwenden, welche in einer PDF-Datei zulässig sind. Dies sind die Formate GIF, PNG und JPEG.
+In dein Dokument kannst du beliebige Bilder einbetten. Dabei kannst du alle Bildformate\index{Grafiken!Format} verwenden, welche in einer PDF-Datei zulÃ¤ssig sind. Dies sind die Formate GIF, PNG und JPEG.
 
-Wenn du jedoch ein DVI- oder eine PostScript-Datei erzeugen möchtest, dann sind nur PostScript- oder Embedded-PostScript-Dateien zulässig.
+Wenn du jedoch ein DVI- oder eine PostScript-Datei erzeugen mÃ¶chtest, dann sind nur PostScript- oder Embedded-PostScript-Dateien zulÃ¤ssig.
 
 Um Grafiken in dein Dokument einzubetten, solltest du das Paket \enquote{graphicx}\index{Paket!graphicx} im Kopfbereich deines Dokuments einbinden. Dies machst du mit folgendem Befehl:
 
@@ -270,14 +270,14 @@ Jetzt kannst du mit dem Befehl \texttt{\textbackslash includegraphics}\index{inc
 \includegraphics{images/apfel.png}
 \end{lstlisting}
 
-Dabei gibt \enquote{images/apfel.png} den Pfad relativ zu deinem Dokument und den Dateinamen des Bildes an, welches du einfügen möchtest.
+Dabei gibt \enquote{images/apfel.png} den Pfad relativ zu deinem Dokument und den Dateinamen des Bildes an, welches du einfÃ¼gen mÃ¶chtest.
 
-Am Besten legst du in deinem Dokumentverzeichnis ein Unterverzeichnis \enquote{images} an. Dann kopierst alle Bilder, welche du in deinem Dokument verwendest, in dieses Verzeichnis. So ist es einfacher, den Überblick in der Verzeichnisstruktur zu behalten. Sprechende Namen bei den Bilddateien sind sicher auch sehr hilfreich.
+Am Besten legst du in deinem Dokumentverzeichnis ein Unterverzeichnis \enquote{images} an. Dann kopierst alle Bilder, welche du in deinem Dokument verwendest, in dieses Verzeichnis. So ist es einfacher, den Ãœberblick in der Verzeichnisstruktur zu behalten. Sprechende Namen bei den Bilddateien sind sicher auch sehr hilfreich.
 
-\subsection{Einfügen einer Grafik in einem Float}
+\subsection{EinfÃ¼gen einer Grafik in einem Float}
 \index{Grafiken!Float}\index{begin@\texttt{\textbackslash begin}!figure}
 
-Dies fügt eine Grafik genau an der Stelle in einem Text ein, an der der Befehl hierzu steht. Normalerweise fügt man Grafiken jedoch auch in einer speziellen Umgebung in den Text ein, so dass man die Grafik mit einem Titel versehen und Referenzen darauf setzen kann. Deshalb hier eine sogenannte Float-Umgebung, welche die Grafik in das Dokument einbettet, in der Mitte der Seite zentriert, ein Label\index{Grafiken!Label}\index{Grafiken!Beschriftung} definiert und beschriftet:
+Dies fÃ¼gt eine Grafik genau an der Stelle in einem Text ein, an der der Befehl hierzu steht. Normalerweise fÃ¼gt man Grafiken jedoch auch in einer speziellen Umgebung in den Text ein, so dass man die Grafik mit einem Titel versehen und Referenzen darauf setzen kann. Deshalb hier eine sogenannte Float-Umgebung, welche die Grafik in das Dokument einbettet, in der Mitte der Seite zentriert, ein Label\index{Grafiken!Label}\index{Grafiken!Beschriftung} definiert und beschriftet:
 
 \begin{lstlisting}
 \begin{figure}[htb]
@@ -291,7 +291,7 @@ Dies fügt eine Grafik genau an der Stelle in einem Text ein, an der der Befehl h
 \subsection{Skalieren von Grafiken}
 \index{Grafik!skalieren}
 
-Der Befehl \texttt{\textbackslash includegraphics} kennt noch mehr Parameter als den Dateinamen des einzubettenden Bildes: Einer der häufig gebrauchten ist der \enquote{width} Parameter. Dieser skaliert die Grafik auf die angegebene Breite. Im folgenden Beispiel wird die Grafik auf 5\,cm Breite skaliert:
+Der Befehl \texttt{\textbackslash includegraphics} kennt noch mehr Parameter als den Dateinamen des einzubettenden Bildes: Einer der hÃ¤ufig gebrauchten ist der \enquote{width} Parameter. Dieser skaliert die Grafik auf die angegebene Breite. Im folgenden Beispiel wird die Grafik auf 5\,cm Breite skaliert:
 
 \begin{lstlisting}
 \includegraphics[width=5cm]{images/apfel.png}
@@ -309,7 +309,7 @@ Und noch ein letztes Beispiel, welches die Grafik auf 50\% der Textbreite skalie
 \includegraphics[width=0.50\textwidth]{images/apfel.png}
 \end{lstlisting}
 
-Weiter ist es möglich, die Grafik zuzuschneiden und zu rotieren. Diese und weitere Optionen findest du in der Dokumentation zum \enquote{graphicx} Paket. Die Dokumentation befindet sich im \enquote{doc} Verzeichnis deiner MiKTeX Installation.
+Weiter ist es mÃ¶glich, die Grafik zuzuschneiden und zu rotieren. Diese und weitere Optionen findest du in der Dokumentation zum \enquote{graphicx} Paket. Die Dokumentation befindet sich im \enquote{doc} Verzeichnis deiner MiKTeX Installation.
 
 
 
@@ -319,12 +319,12 @@ Weiter ist es möglich, die Grafik zuzuschneiden und zu rotieren. Diese und weite
 
 Sowohl bei den Tabellen wie auch bei den Grafiken (Abbildungen) verwendest du eine sogenannte \enquote{float}-Umgebung, um die Tabelle oder die Abbildung in den Text einzubetten.
 
-Dabei entscheidet \DMLLaTeX \ selbständig, wo genau die Abbildung im endgültigen Dokument erscheint. Um innerhalb deines Textes auf die Tabelle oder die Abbildung zu verweisen, verwendest du Referenzen.
+Dabei entscheidet \DMLLaTeX \ selbstÃ¤ndig, wo genau die Abbildung im endgÃ¼ltigen Dokument erscheint. Um innerhalb deines Textes auf die Tabelle oder die Abbildung zu verweisen, verwendest du Referenzen.
 
-An welcher Stelle ein Float platziert werden kann, kannst du mit optionalen Argumenten bei der Float-Umgebung steuern. Diese Argumente sind jedoch höchstens Vorschläge, keine Anweisungen. Hier ein Beispiel:
+An welcher Stelle ein Float platziert werden kann, kannst du mit optionalen Argumenten bei der Float-Umgebung steuern. Diese Argumente sind jedoch hÃ¶chstens VorschlÃ¤ge, keine Anweisungen. Hier ein Beispiel:
 
 \begin{lstlisting}
-Gerade im Herbst ist die Erntezeit der Äpfel. Ein Apfel siehst du 
+Gerade im Herbst ist die Erntezeit der Ã„pfel. Ein Apfel siehst du 
 auf Abbildung \ref{fig:apfel} auf Seite \pageref{fig:apfel}.
 
 \begin{figure}[hb]
@@ -335,16 +335,16 @@ auf Abbildung \ref{fig:apfel} auf Seite \pageref{fig:apfel}.
 \end{figure}
 \end{lstlisting}
 
-In Zeile 4 dieses Beispiels siehst du hinten an dem Befehl \texttt{\textbackslash begin\{figure\}} den optionalen Parameter \texttt{\[hb.\]} Das besagt soviel wie: bette diese Grafik möglichst hier (h) oder unten an der Seite (b) ein. Die möglichen Buchstaben sind:
+In Zeile 4 dieses Beispiels siehst du hinten an dem Befehl \texttt{\textbackslash begin\{figure\}} den optionalen Parameter \texttt{\[hb.\]} Das besagt soviel wie: bette diese Grafik mÃ¶glichst hier (h) oder unten an der Seite (b) ein. Die mÃ¶glichen Buchstaben sind:
 
 \begin{description}
-\item[h] Here. Möglichst an der Stelle, an der du den Float im Text eingebettet hast.
+\item[h] Here. MÃ¶glichst an der Stelle, an der du den Float im Text eingebettet hast.
 \item[t] Top. Oben an der Seite.
 \item[b] Bottom. Unten an der Seite.
 \item[p] Page. Auf einer separaten Seite.
 \end{description}
 
-In Zeile 9 wird ein Label \enquote{fig:apfel} definiert. Dadurch kannst du an einer beliebigen Stelle in deinem Dokument auf deine Tabelle oder Abbildung verweisen. Jede als Float eingefügte Abbildung wird fortlaufend nummeriert. Mit dem Befehl \texttt{\textbackslash ref} kannst du auf die eingefügte Abbildung bzw. Abbildungsnummer verweisen, mit dem Befehl \texttt{\textbackslash pageref} auf die Seite, auf der die Abbildung eingefügt wurde.
+In Zeile 9 wird ein Label \enquote{fig:apfel} definiert. Dadurch kannst du an einer beliebigen Stelle in deinem Dokument auf deine Tabelle oder Abbildung verweisen. Jede als Float eingefÃ¼gte Abbildung wird fortlaufend nummeriert. Mit dem Befehl \texttt{\textbackslash ref} kannst du auf die eingefÃ¼gte Abbildung bzw. Abbildungsnummer verweisen, mit dem Befehl \texttt{\textbackslash pageref} auf die Seite, auf der die Abbildung eingefÃ¼gt wurde.
 
 
 
