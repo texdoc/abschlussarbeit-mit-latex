@@ -10,19 +10,19 @@
 % ---------------------------------------------------------------------------
 
 %  1. Definieren der Dokumentklasse.
-%     Wir verwenden die KOMA-Script Klasse 'scrbook' f�r ein Buch.
+%     Wir verwenden die KOMA-Script Klasse 'scrbook' für ein Buch.
 %
 \documentclass[%
 	pdftex,%              PDFTex verwenden da wir ausschliesslich ein PDF erzeugen.
 	a4paper,%             Wir verwenden A4 Papier.
 	oneside,%             Einseitiger Druck.
-	12pt,%                Grosse Schrift, besser geeignet f�r A4.
-	parskip=half,%        Halbe Zeile Abstand zwischen Abs�tzen.
+	12pt,%                Grosse Schrift, besser geeignet für A4.
+	parskip=half,%        Halbe Zeile Abstand zwischen Absätzen.
 	%chapterprefix,%       Kapitel mit 'Kapitel' anschreiben.
 	headsepline,%         Linie nach Kopfzeile.
 	footsepline,%         Linie vor Fusszeile.
-	bibliography=totoc,%  Literaturverzeichnis im Inhaltsverzeichnis nummeriert einf�gen.
-	index=totoc,%         Index ins Inhaltsverzeichnis einf�gen.
+	bibliography=totoc,%  Literaturverzeichnis im Inhaltsverzeichnis nummeriert einfügen.
+	index=totoc,%         Index ins Inhaltsverzeichnis einfügen.
 	ngerman%              Sprache des Dokumentes
 ]{scrbook}
 % das package listings benutzt altes komascript, siehe
@@ -39,74 +39,74 @@
 \makeatother
 
 %  2. Festlegen der Zeichencodierung des Dokuments und des Zeichensatzes.
-%     Wir verwenden 'Latin1' (ISO-8859-1) f�r das Dokument,
-%     und die 'T1' codierung f�r die Schrift.
+%     Wir verwenden 'Latin1' (ISO-8859-1) für das Dokument,
+%     und die 'T1' codierung für die Schrift.
 %
-\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
-%  3. Packet f�r die Index-Erstellung laden.
+%  3. Packet für die Index-Erstellung laden.
 %
 \usepackage{makeidx}
 
-%  4. Paket f�r die Lokalisierung ins Deutsche laden.
+%  4. Paket für die Lokalisierung ins Deutsche laden.
 %     Wir verwenden neue deutsche Rechtschreibung mit 'ngerman'.
 %
 \usepackage[main=ngerman,french]{babel}
 
-%  5. Paket f�r Anf�hrungszeichen laden.
-%     Wir setzen den Stil auf 'swiss', und verwenden so die Schweizer Anf�hrungszeichen.
+%  5. Paket für Anführungszeichen laden.
+%     Wir setzen den Stil auf 'swiss', und verwenden so die Schweizer Anführungszeichen.
 %
 \usepackage[style=swiss]{csquotes}
 
-%  6. Paket f�r erweiterte Tabelleneigenschaften.
+%  6. Paket für erweiterte Tabelleneigenschaften.
 %
 \usepackage{array}
 
-%  7. Paket um Grafiken im Dokument einbetten zu k�nnen.
-%     Im PDF sind GIF, PNG, und PDF Grafiken m�glich.
+%  7. Paket um Grafiken im Dokument einbetten zu können.
+%     Im PDF sind GIF, PNG, und PDF Grafiken möglich.
 %
 \usepackage{graphicx}
 
-%  8. Pakete f�r mathematischen Textsatz.
+%  8. Pakete für mathematischen Textsatz.
 %
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{dsfont}
 %\usepackage{mathtools}
 
-%  9. Paket um Textteile drehen zu k�nnen.
+%  9. Paket um Textteile drehen zu können.
 %
 \usepackage{rotating}
 
-% 10. Paket f�r Farben an verschieden Stellen. 
-%     Wir definieren zus�tzliche benannte Farben.
+% 10. Paket für Farben an verschieden Stellen. 
+%     Wir definieren zusätzliche benannte Farben.
 %
 \usepackage{color}
 
-% 11. Paket f�r spezielle PDF features.
+% 11. Paket für spezielle PDF features.
 %
 \usepackage[%
 	pdftitle={Diplomarbeit mit LaTeX},%                        Titel des PDF Dokuments.
 	pdfauthor={Tobias Erbsland, Andreas Nitsch},%              Autor des PDF Dokuments.
-	pdfsubject={Eine Einf�hrung in LaTeX},%                    Thema des PDF Dokuments.
+	pdfsubject={Eine Einführung in LaTeX},%                    Thema des PDF Dokuments.
 	pdfcreator={MiKTeX, LaTeX with hyperref and KOMA-Script},% Erzeuger des PDF Dokuments.
-	pdfkeywords={Diplomarbeit, Anleitung, Einstieg,%           Schl�sselw�rter f�r das PDF.
-		LaTeX, MiKTeX, Einf�hrung, TeXnicCenter, Windows,%     (Diese werden von Suchmaschinen
-		Installation, Start, Tutorial},%                        auch f�r PDF Dokumente indexiert.)
-	pdfpagemode=UseOutlines,%                                  Inhaltsverzeichnis anzeigen beim �ffnen
+	pdfkeywords={Diplomarbeit, Anleitung, Einstieg,%           Schlüsselwörter für das PDF.
+		LaTeX, MiKTeX, Einführung, TeXnicCenter, Windows,%     (Diese werden von Suchmaschinen
+		Installation, Start, Tutorial},%                        auch für PDF Dokumente indexiert.)
+	pdfpagemode=UseOutlines,%                                  Inhaltsverzeichnis anzeigen beim Öffnen
 	pdfdisplaydoctitle=true,%                                  Dokumenttitel statt Dateiname anzeigen.
 	pdflang=de%                                               Sprache des Dokuments.
 ]{hyperref}
 
 % 12. Paket um Quellcode sauber zu formatieren.
 %     Mit der option 'savemem' verschieben wir das laden von 
-%     einzelnen Programmiersprachen auf einen sp�teren Zeitpunkt.
+%     einzelnen Programmiersprachen auf einen späteren Zeitpunkt.
 %
 \usepackage[savemem]{listings}
 
-% 13a. Privates Paket f�r die Schriftart 'Goudy Sans' laden.
-%      Dieses Paket ist nur f�r die publizierte Version des Dokuments gedacht
+% 13a. Privates Paket für die Schriftart 'Goudy Sans' laden.
+%      Dieses Paket ist nur für die publizierte Version des Dokuments gedacht
 %      und an dieser Stelle mit den nachfolgenden Anweisungen auskommentiert.
 %
 %\usepackage{goudysans}
@@ -121,7 +121,7 @@
 % ---------------------------------------------------------------------------
 
 %  1. Definieren von eigenen benannten Farben.
-%     F�r sp�tere Verwendung in dem Dokument, definieren wir einzelne
+%     Für spätere Verwendung in dem Dokument, definieren wir einzelne
 %     benannte Farben.
 %
 \definecolor{LinkColor}{rgb}{0,0,0.5}
@@ -136,8 +136,8 @@
 %
 \pagestyle{headings}
 
-%  4. Stil der �berschriften auf normale Schrift.
-%     Wir verwenden f�r die �berschriften den selben Font wie f�r den Text.
+%  4. Stil der Überschriften auf normale Schrift.
+%     Wir verwenden für die Überschriften den selben Font wie für den Text.
 %
 \setkomafont{sectioning}{\normalfont\bfseries}       % Titel mit Normalschrift
 \setkomafont{captionlabel}{\normalfont\bfseries}     % Fette Beschriftungen 
@@ -145,7 +145,7 @@
 \setkomafont{descriptionlabel}{\normalfont\bfseries} % Fette Beschreibungstitel
 
 %
-%  5. Farbeinstellungen f�r die Links im PDF Dokument.
+%  5. Farbeinstellungen für die Links im PDF Dokument.
 %
 \hypersetup{%
 	colorlinks=true,%        Aktivieren von farbigen Links im Dokument (keine Rahmen)
@@ -154,23 +154,38 @@
 	filecolor=LinkColor,%    Farbe festlegen.
 	menucolor=LinkColor,%    Farbe festlegen.
 	urlcolor=LinkColor,%     Farbe von URL's im Dokument.
-	bookmarksnumbered=true%  �berschriftsnummerierung im PDF Inhalt anzeigen.
+	bookmarksnumbered=true%  Überschriftsnummerierung im PDF Inhalt anzeigen.
 }
 
-%  6. Einstellungen f�r das 'listings' Paket.
+%  6. Einstellungen für das 'listings' Paket.
 %
 \lstloadlanguages{TeX} % TeX sprache laden, notwendig wegen option 'savemem'
 \lstset{%
 	language=[LaTeX]TeX,     % Sprache des Quellcodes ist TeX
+	literate=                % https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings#Encoding_issue
+		{á}{{\'a}}1 {é}{{\'e}}1 {í}{{\'i}}1 {ó}{{\'o}}1 {ú}{{\'u}}1
+		{Á}{{\'A}}1 {É}{{\'E}}1 {Í}{{\'I}}1 {Ó}{{\'O}}1 {Ú}{{\'U}}1
+		{à}{{\`a}}1 {è}{{\`e}}1 {ì}{{\`i}}1 {ò}{{\`o}}1 {ù}{{\`u}}1
+		{À}{{\`A}}1 {È}{{\'E}}1 {Ì}{{\`I}}1 {Ò}{{\`O}}1 {Ù}{{\`U}}1
+		{ä}{{\"a}}1 {ë}{{\"e}}1 {ï}{{\"i}}1 {ö}{{\"o}}1 {ü}{{\"u}}1
+		{Ä}{{\"A}}1 {Ë}{{\"E}}1 {Ï}{{\"I}}1 {Ö}{{\"O}}1 {Ü}{{\"U}}1
+		{â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
+		{Â}{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+		{Ã}{{\~A}}1 {ã}{{\~a}}1 {Õ}{{\~O}}1 {õ}{{\~o}}1
+		{œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
+		{ű}{{\H{u}}}1 {Ű}{{\H{U}}}1 {ő}{{\H{o}}}1 {Ő}{{\H{O}}}1
+		{ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
+		{€}{{\euro}}1 {£}{{\pounds}}1 {«}{{\guillemotleft}}1
+		{»}{{\guillemotright}}1 {ñ}{{\~n}}1 {Ñ}{{\~N}}1 {¿}{{?`}}1,
 	numbers=left,            % Zelennummern links
 	stepnumber=1,            % Jede Zeile nummerieren.
 	numbersep=5pt,           % 5pt Abstand zum Quellcode
-	numberstyle=\tiny,       % Zeichengr�sse 'tiny' f�r die Nummern.
+	numberstyle=\tiny,       % Zeichengrösse 'tiny' für die Nummern.
 	breaklines=true,         % Zeilen umbrechen wenn notwendig.
-	breakautoindent=true,    % Nach dem Zeilenumbruch Zeile einr�cken.
+	breakautoindent=true,    % Nach dem Zeilenumbruch Zeile einrücken.
 	postbreak=\space,        % Bei Leerzeichen umbrechen.
-	tabsize=2,               % Tabulatorgr�sse 2
-	basicstyle=\ttfamily\footnotesize, % Nichtproportionale Schrift, klein f�r den Quellcode
+	tabsize=2,               % Tabulatorgrösse 2
+	basicstyle=\ttfamily\footnotesize, % Nichtproportionale Schrift, klein für den Quellcode
 	showspaces=false,        % Leerzeichen nicht anzeigen.
 	showstringspaces=false,  % Leerzeichen auch in Strings ('') nicht anzeigen.
 	extendedchars=true,      % Alle Zeichen vom Latin1 Zeichensatz anzeigen.
@@ -179,16 +194,16 @@
 % C. NEUE MAKROS UND UMGEBUNGEN
 % ---------------------------------------------------------------------------
 
-%  1. Umgebung f�r �nerungsliste mit einem speziellen Aufz�hlungszeichen.
+%  1. Umgebung für Änerungsliste mit einem speziellen Aufzählungszeichen.
 %
 \newenvironment{ListChanges}%
 	{\begin{list}{$\diamondsuit$}{}}%
 	{\end{list}}
 
-%  2. Ersatz f�r die \LaTeX und \TeX Befehle f�r korrekte Darstellung.
+%  2. Ersatz für die \LaTeX und \TeX Befehle für korrekte Darstellung.
 %     Wir verwenden die 'Latin Modern Family' ('lm') als Font, da diese im
 %     vergleich zu 'Computer Modern' ('cm') auch PostScript Dateien
-%     anbieten, was zu einer sch�neren Darstellung im PDF f�hrt.
+%     anbieten, was zu einer schöneren Darstellung im PDF führt.
 %
 \newcommand{\DMLLaTeX}{{\fontfamily{lmr}\selectfont\LaTeX}}
 \newcommand{\DMLTeX}{{\fontfamily{lmr}\selectfont\TeX}}

@@ -10,7 +10,7 @@
 \label{sec:grundlagen}
 \index{Grundlagen|(}
 
-\DMLLaTeX \ ist einfacher zu erlernen, als du vielleicht denkst. Anders als grafische Tools, welche WYSIWYG\footnote{What You See Is What You Get} bieten (wollen), beschreibst du ähnlich wie bei HTML die Struktur deines Dokuments in einer speziellen Sprache. Danach \enquote{kompilierst} du das Dokument und erzeugst dadurch das fertige Dokument, zum Beispiel eine PDF-Datei.
+\DMLLaTeX \ ist einfacher zu erlernen, als du vielleicht denkst. Anders als grafische Tools, welche WYSIWYG\footnote{What You See Is What You Get} bieten (wollen), beschreibst du Ã¤hnlich wie bei HTML die Struktur deines Dokuments in einer speziellen Sprache. Danach \enquote{kompilierst} du das Dokument und erzeugst dadurch das fertige Dokument, zum Beispiel eine PDF-Datei.
 
 
 \section{Das erste kleine LaTeX"=Dokument}
@@ -25,24 +25,24 @@ Starte jetzt im TeXnicCenter ein neues Projekt. Dazu gehst du auf \enquote{Datei
 	\begin{center}
 		\includegraphics[width=3cm]{images/beispiel1_01.png}
 	\end{center}
-	\caption{Auswählen von \enquote{Neues Projekt...} über das Menü}
+	\caption{AuswÃ¤hlen von \enquote{Neues Projekt...} Ã¼ber das MenÃ¼}
 	\label{fig:beispiel1_01}
 \end{figure}
 
 
-Ein Dialogfenster öffnet sich, in dem du den Projekttyp\index{Projekttyp} auswählen kannst. Es steht nur \enquote{Leeres Projekt} zur Verfügung. Klicke dieses Icon an und wähle rechts das Basisverzeichnis aus. Für jedes \DMLLaTeX"=Dokument wird ein neues Unterverzeichnis in diesem Basisverzeichnis erstellt.
+Ein Dialogfenster Ã¶ffnet sich, in dem du den Projekttyp\index{Projekttyp} auswÃ¤hlen kannst. Es steht nur \enquote{Leeres Projekt} zur VerfÃ¼gung. Klicke dieses Icon an und wÃ¤hle rechts das Basisverzeichnis aus. FÃ¼r jedes \DMLLaTeX"=Dokument wird ein neues Unterverzeichnis in diesem Basisverzeichnis erstellt.
 
 Ich empfehle dir Folgendes: Lege auf deinem Datenlaufwerk (z.\,B. M:\textbackslash ) ein Verzeichnis \enquote{Dokumente} an. Darin erstellst du z.\,B. noch ein Unterverzeichnis \enquote{LaTeX}.
 
 Gib dieses Verzeichnis nun als \enquote{Basisverzeichnis} im Projektdialog an.
 
-Jetzt kannst du einen Projektnamen eingeben. Gib z.\,B. \enquote{Beispiel1} als Projektnamen ein. Während du den Projektnamen eingibst, siehst du, dass das Basisverzeichnis im unteren Feld um diesen Projektnamen erweitert wird. Siehe dazu Abbildung \ref{fig:beispiel1_02}.
+Jetzt kannst du einen Projektnamen eingeben. Gib z.\,B. \enquote{Beispiel1} als Projektnamen ein. WÃ¤hrend du den Projektnamen eingibst, siehst du, dass das Basisverzeichnis im unteren Feld um diesen Projektnamen erweitert wird. Siehe dazu Abbildung \ref{fig:beispiel1_02}.
 
 \begin{figure}[ht]
 	\begin{center}
 		\includegraphics[width=5cm]{images/beispiel1_02.png}
 	\end{center}
-	\caption{Der Dialog für ein neues Projekt}
+	\caption{Der Dialog fÃ¼r ein neues Projekt}
 	\label{fig:beispiel1_02}
 \end{figure}
 
@@ -61,25 +61,25 @@ Schreibe jetzt folgende Zeilen in die leere Datei:
 Die Zeilen 5--11 sind der Kopfbereich der Datei. Hier definieren wir Folgendes:
 
 \begin{description}
-\item[Zeile 5] Der Befehl \texttt{\textbackslash documentclass}\index{documentclass@\texttt{\textbackslash documentclass}} definiert unsere Dokumentklasse\index{Dokumentklasse}. Wir verwenden hier die Klasse \enquote{scrartcl}, welche für kleinere Artikel gedacht ist. Neben der \KOMAScript{} Klasse \enquote{scrartcl} gibt es z.\,B. noch \enquote{scrbook}, \enquote{scrreprt}, \enquote{scrlettr} und andere weniger übliche.
-\item[Zeile 6] Mit dem Paket \enquote{ngerman}\index{Paket!ngerman}, welches wir hier laden, werden verschiedene Titel ins Deutsche übersetzt. So z.\,B. \enquote{Table of Contents} in \enquote{Inhaltsverzeichnis}. Zudem aktiviert dieses Paket die korrekte Silbentrennung für die neue deutsche Rechtschreibung.
+\item[Zeile 5] Der Befehl \texttt{\textbackslash documentclass}\index{documentclass@\texttt{\textbackslash documentclass}} definiert unsere Dokumentklasse\index{Dokumentklasse}. Wir verwenden hier die Klasse \enquote{scrartcl}, welche fÃ¼r kleinere Artikel gedacht ist. Neben der \KOMAScript{} Klasse \enquote{scrartcl} gibt es z.\,B. noch \enquote{scrbook}, \enquote{scrreprt}, \enquote{scrlettr} und andere weniger Ã¼bliche.
+\item[Zeile 6] Mit dem Paket \enquote{ngerman}\index{Paket!ngerman}, welches wir hier laden, werden verschiedene Titel ins Deutsche Ã¼bersetzt. So z.\,B. \enquote{Table of Contents} in \enquote{Inhaltsverzeichnis}. Zudem aktiviert dieses Paket die korrekte Silbentrennung fÃ¼r die neue deutsche Rechtschreibung.
 
-Falls du lieber die alte deutsche Rechtschreibung verwenden möchtest, dann solltest du statt dem Paket \enquote{ngerman} das Paket \enquote{german}\index{Paket!german} einbinden.
-\item[Zeile 7] \enquote{inputenc}\index{Paket!inputenc} binden wir ein, damit die deutschen Zeichen ä, ö, ü, Ä, Ö, Ü und ß automatisch erkannt werden und wir diese nicht als \enquote{''a} usw. schreiben müssen.
-\item[Zeile 8] Das Paket \enquote{fontenc} mit der Option \enquote{T1}, ändert die Fontkodierung auf das \enquote{T1} Format. %TODO: Erläuterung, wozu dieses gut sein soll
+Falls du lieber die alte deutsche Rechtschreibung verwenden mÃ¶chtest, dann solltest du statt dem Paket \enquote{ngerman} das Paket \enquote{german}\index{Paket!german} einbinden.
+\item[Zeile 7] \enquote{inputenc}\index{Paket!inputenc} binden wir ein, damit die deutschen Zeichen Ã¤, Ã¶, Ã¼, Ã„, Ã–, Ãœ und ÃŸ automatisch erkannt werden und wir diese nicht als \enquote{''a} usw. schreiben mÃ¼ssen.
+\item[Zeile 8] Das Paket \enquote{fontenc} mit der Option \enquote{T1}, Ã¤ndert die Fontkodierung auf das \enquote{T1} Format. %TODO: ErlÃ¤uterung, wozu dieses gut sein soll
 
-Normalerweise verwendet \DMLLaTeX \ Schriftarten mit einem Umfang von 128 Zeichen. Darin sind z.\,B. keine Umlaute oder Buchstaben mit Akzenten enthalten. Diese werden jeweils aus dem Buchstaben und Akzent zusammengesetzt. Also \enquote{a} und \enquote{\textasciicircum} ergibt \enquote{â}.
+Normalerweise verwendet \DMLLaTeX \ Schriftarten mit einem Umfang von 128 Zeichen. Darin sind z.\,B. keine Umlaute oder Buchstaben mit Akzenten enthalten. Diese werden jeweils aus dem Buchstaben und Akzent zusammengesetzt. Also \enquote{a} und \enquote{\textasciicircum} ergibt \enquote{Ã¢}.
 
-Mittlerweile stehen für die meisten Schriften in den \DMLLaTeX-Distributionen erweiterte \enquote{europäische} Versionen zur Verfügung (In der \enquote{T1-Codierung}). Diese Schriften enthalten bis zu 256 Zeichen. Dort sind auch Umlaute und akzentuierte Zeichen vorgefertigt enthalten. Das führt zu einer höheren typographischen Qualität der Dokumente und löst auch einige Probleme mit der Silbentrennung.
+Mittlerweile stehen fÃ¼r die meisten Schriften in den \DMLLaTeX-Distributionen erweiterte \enquote{europÃ¤ische} Versionen zur VerfÃ¼gung (In der \enquote{T1-Codierung}). Diese Schriften enthalten bis zu 256 Zeichen. Dort sind auch Umlaute und akzentuierte Zeichen vorgefertigt enthalten. Das fÃ¼hrt zu einer hÃ¶heren typographischen QualitÃ¤t der Dokumente und lÃ¶st auch einige Probleme mit der Silbentrennung.
 \item[Zeile 10 und 11] Hier definieren wir den Titel\index{Dokumenttitel} und den Autor\index{Autor} des Dokuments.
 \end{description}
 
 Die Zeilen 13--23 bilden dann den eigentlichen Inhalt des Dokuments. Der Dokumentinhalt wird immer durch die Zeilen \enquote{\textbackslash begin\{document\}} und \enquote{\textbackslash end\{document\}} eingeschlossen.
 
 \begin{description}
-\item[Zeile 15] Mit diesem Befehl wird der Titel\index{Titel erstellen}\index{Erstellen!Titel} unseres Dokumentes erstellt. Die nötigen Angaben dazu liefern die Zeilen 11 und 12. Wird nirgendwo ein festes Datum\index{Festes Datum}\index{Datum!fest} angegeben, wird das aktuellen Datum\index{Aktuelles Datum}\index{Datum!aktuelles} genommen. In unserem Fall erscheint dann das aktuelle Datum auf der Titelseite.
-\item[Zeile 17] \texttt{\textbackslash tableofcontents}\index{tableofcontents@\texttt{\textbackslash tableofcontents}} fügt an dieser Stelle das Inhaltsverzeichnis\index{Inhaltsverzeichnis} ein. Wir müssen uns in keiner Weise um das Inhaltsverzeichnis kümmern. Es wird automatisch aus den Überschriften generiert.
-\item[Zeile 19] Hier defininieren wir die erste Überschrift.
+\item[Zeile 15] Mit diesem Befehl wird der Titel\index{Titel erstellen}\index{Erstellen!Titel} unseres Dokumentes erstellt. Die nÃ¶tigen Angaben dazu liefern die Zeilen 11 und 12. Wird nirgendwo ein festes Datum\index{Festes Datum}\index{Datum!fest} angegeben, wird das aktuellen Datum\index{Aktuelles Datum}\index{Datum!aktuelles} genommen. In unserem Fall erscheint dann das aktuelle Datum auf der Titelseite.
+\item[Zeile 17] \texttt{\textbackslash tableofcontents}\index{tableofcontents@\texttt{\textbackslash tableofcontents}} fÃ¼gt an dieser Stelle das Inhaltsverzeichnis\index{Inhaltsverzeichnis} ein. Wir mÃ¼ssen uns in keiner Weise um das Inhaltsverzeichnis kÃ¼mmern. Es wird automatisch aus den Ãœberschriften generiert.
+\item[Zeile 19] Hier defininieren wir die erste Ãœberschrift.
 \item[Zeile 21] Ein kleiner Absatz mit Text rundet unser kleines Beispieldokument ab.
 \end{description}
 
@@ -96,14 +96,14 @@ Kontrolliere vor dem ersten Kompilieren, ob du als Ausgabeformat \enquote{PDF} e
 	\label{fig:beispiel1_03}
 \end{figure}
 
-Stelle dieses Pulldownmenü auf \enquote{LaTeX => PDF} ein. Ein anderer Weg ist über das Menü: \enquote{Ausgabe} $\Rightarrow$ \enquote{Aktives Ausgabeprofil wählen...}.
+Stelle dieses PulldownmenÃ¼ auf \enquote{LaTeX => PDF} ein. Ein anderer Weg ist Ã¼ber das MenÃ¼: \enquote{Ausgabe} $\Rightarrow$ \enquote{Aktives Ausgabeprofil wÃ¤hlen...}.
 
 \subsection{Speichern und Kompilieren}
 \index{Speichern}\index{Kompilieren}
 
-Speichere die Datei jetzt mit \enquote{Ctrl+S} oder über das Menü \enquote{Datei} $\Rightarrow$ \enquote{Speichern} oder durch einen Klick auf das Diskettensymbol in der Symbolleiste.
+Speichere die Datei jetzt mit \enquote{Ctrl+S} oder Ã¼ber das MenÃ¼ \enquote{Datei} $\Rightarrow$ \enquote{Speichern} oder durch einen Klick auf das Diskettensymbol in der Symbolleiste.
 
-Jetzt kannst du den Kompiliervorgang mit der Taste \enquote{F7} starten oder über das Menü \enquote{Ausgabe} $\Rightarrow$ \enquote{Projekt compilieren} oder auch über die Symbolleiste.
+Jetzt kannst du den Kompiliervorgang mit der Taste \enquote{F7} starten oder Ã¼ber das MenÃ¼ \enquote{Ausgabe} $\Rightarrow$ \enquote{Projekt compilieren} oder auch Ã¼ber die Symbolleiste.
 
 Im Statusbereich laufen jetzt diverse Meldungen vorbei. Nach einigen Sekunden oder Minuten, je nachdem, wie schnell dein Computer ist, ist der Kompiliervorgang vorbei. Im Statusfenster siehst du z.\,B. folgende Ausgabe:
 
@@ -113,9 +113,9 @@ LaTeX-Ergebnis: 0 Fehler, 1 Warnung(en), 0 zu volle/leere Box(en), 1 Seite(n)
 
 Es sollten beim Kompiliervorgang keine Fehler aufgetreten sein. Hast du trotzdem Fehler, kontrollierst du am besten noch einmal deinen Text. Vielleicht haben sich ja Tippfehler eingeschlichen.
 
-Mit der Taste \enquote{F9} springst du von einem Fehler zum nächsten. Dabei springt der Cursor an die Stelle in deinem Dokument, an welcher der Fehler \emph{vermutet} wird. Natürlich kann sich der Fehler auch einige Zeilen davor oder danach befinden.
+Mit der Taste \enquote{F9} springst du von einem Fehler zum nÃ¤chsten. Dabei springt der Cursor an die Stelle in deinem Dokument, an welcher der Fehler \emph{vermutet} wird. NatÃ¼rlich kann sich der Fehler auch einige Zeilen davor oder danach befinden.
 
-Sind alle Fehler behoben, kannst du mit \enquote{F5} oder über das Menü \enquote{Ausgabe} $\Rightarrow$ \enquote{Ausgabe betrachten} das fertige Dokument betrachten. Dazu wird der Adobe Reader gestartet und das fertige Dokument angezeigt (siehe dazu Abbildung \ref{fig:beispiel1_04}).
+Sind alle Fehler behoben, kannst du mit \enquote{F5} oder Ã¼ber das MenÃ¼ \enquote{Ausgabe} $\Rightarrow$ \enquote{Ausgabe betrachten} das fertige Dokument betrachten. Dazu wird der Adobe Reader gestartet und das fertige Dokument angezeigt (siehe dazu Abbildung \ref{fig:beispiel1_04}).
 
 \begin{figure}[ht]
 	\begin{center}
@@ -125,8 +125,8 @@ Sind alle Fehler behoben, kannst du mit \enquote{F5} oder über das Menü \enquote
 	\label{fig:beispiel1_04}
 \end{figure}
 
-Den Adobe Reader musst du während der Arbeit mit dem TeXnicCenter nicht mehr schließen. Wenn du Änderungen am Dokument machst und dieses übersetzen lässt, kannst du mit \enquote{F5} die Anzeige im bereits geöffneten Adobe Reader einfach auffrischen lassen. Dies geht auch wesentlich schneller, als wenn jedesmal der Adobe Reader gestartet werden müsste.
-%TODO: Hier wäre ein Hinweis auf die Vorschau im DVI-Viewer schön -> hier automatischer Refresh
+Den Adobe Reader musst du wÃ¤hrend der Arbeit mit dem TeXnicCenter nicht mehr schlieÃŸen. Wenn du Ã„nderungen am Dokument machst und dieses Ã¼bersetzen lÃ¤sst, kannst du mit \enquote{F5} die Anzeige im bereits geÃ¶ffneten Adobe Reader einfach auffrischen lassen. Dies geht auch wesentlich schneller, als wenn jedesmal der Adobe Reader gestartet werden mÃ¼sste.
+%TODO: Hier wÃ¤re ein Hinweis auf die Vorschau im DVI-Viewer schÃ¶n -> hier automatischer Refresh
 
 \index{Grundlagen|)}
 
@@ -140,7 +140,7 @@ Alle \DMLLaTeX \ Befehle beginnen mit einem \enquote{Backslash}, zudem gibt es e
 	\textbackslash
 \end{lstlisting}
 
-Die Sonderzeichen, welche du nicht direkt verwenden darfst, liste ich hier kurz auf. Später erfährst du, wie man diese Sonderzeichen in den Text einbauen kann und welchen Zweck sie haben. Verzichte am Anfang einfach auf diese Zeichen.
+Die Sonderzeichen, welche du nicht direkt verwenden darfst, liste ich hier kurz auf. SpÃ¤ter erfÃ¤hrst du, wie man diese Sonderzeichen in den Text einbauen kann und welchen Zweck sie haben. Verzichte am Anfang einfach auf diese Zeichen.
 
 \begin{lstlisting}
 	% # $ & ~ _ ^ \ { } "
@@ -149,11 +149,11 @@ Die Sonderzeichen, welche du nicht direkt verwenden darfst, liste ich hier kurz 
 \section{Kommentare mit \%}
 \index{Kommentare}\index{Prozentzeichen}
 
-Das Prozentzeichen (\%) wird für Kommentare innerhalb deiner Datei verwendet. Damit kannst du für dich Anmerkungen machen und Dinge kommentieren. 
+Das Prozentzeichen (\%) wird fÃ¼r Kommentare innerhalb deiner Datei verwendet. Damit kannst du fÃ¼r dich Anmerkungen machen und Dinge kommentieren. 
 
 Wenn du spezielle Pakete in deinem \DMLLaTeX \ Dokument einbindest, solltest du z.\,B. mit einem kurzen Kommentar beschreiben, was dieses Paket macht.
 
-Falls du ein Prozentzeichen in deinen Text einbauen möchtest, musst du einen Backslash vor das Prozentzeichen setzen.
+Falls du ein Prozentzeichen in deinen Text einbauen mÃ¶chtest, musst du einen Backslash vor das Prozentzeichen setzen.
 
 \begin{lstlisting}
 %
