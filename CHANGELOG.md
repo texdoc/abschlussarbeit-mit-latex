@@ -26,32 +26,32 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 
 - (te) Einen Hinweis zu fett gesetzten Texten ergänzt.
-- (te) Neue Umgebung `\DMLLaTeX` und `\DMLTeX` erstellt, welche 
-  unabhängig von der gewählten Schriftart das DMLLaTeX- und das 
-	DMLTeX-Logo korrekt setzen
+- (te) Neue Umgebung `\DMLLaTeX` und `\DMLTeX` erstellt, welche
+  unabhängig von der gewählten Schriftart das DMLLaTeX- und das
+  DMLTeX-Logo korrekt setzen
 
 ### Changed
 
 - (te) Im Text "File" durch "Datei" ersetzt
 - (te) Installation überprüft und Link zu MiKTeX-installer angepasst
 - (te) Kapitel "Literaturempfehlungen" überarbeitet:
-  Sprache vereinfacht, Rechtschreibprüfungsabschnitt ins 
-	Konfigurationskapitel verschoben;
+  Sprache vereinfacht, Rechtschreibprüfungsabschnitt ins
+  Konfigurationskapitel verschoben;
   Buch "Der DMLLaTeX-Begleiter" hinzugefügt.
 - (te, se) Kapitel "Mathematischer Textsatz" (vorher "Formeln") überarbeitet
-- (te) `header.tex` überarbeitet: detailiertere Kommentare eingefügt 
-  und Optionen der Pakete angepasst oder verändert damit DML mit 
+- (te) `header.tex` überarbeitet: detailiertere Kommentare eingefügt
+  und Optionen der Pakete angepasst oder verändert damit DML mit
   MiKTeX 2.6 optimal kompiliert werden kann
-- (te) Statt einem richtigen @-Zeichen, `at` in die E-Mail Adressen 
+- (te) Statt einem richtigen @-Zeichen, `at` in die E-Mail Adressen
   im Titel engefügt, da Spammer offensichtlich auch PDFs durchsuchen
 
 ## [1.11.0] - 2006-04-02
 
 ### Added
 
-- (te) Kapitel über das Paket `csquotes` von Uwe Bieling in das neue 
+- (te) Kapitel über das Paket `csquotes` von Uwe Bieling in das neue
   Kapitel "Nützliche Pakete" eingefügt
-- (te) Neue Version da wieder viele Änderungen an dem Dokument 
+- (te) Neue Version da wieder viele Änderungen an dem Dokument
   gemacht wurden. Leider haben die entsprechenden Personen diese hier
   nicht eingetragen.
 
@@ -78,58 +78,58 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Changed
 
-- überall die Zeile `\usepackage[german,ngerman]{babel}` durch 
+- überall die Zeile `\usepackage[german,ngerman]{babel}` durch
   `\usepackage{ngerman}` ersetzt (nach einer Anregung von Christian
   Günther)
-- In der Hauptdatei dieses Dokuments die `\input`- durch 
+- In der Hauptdatei dieses Dokuments die `\input`- durch
   `\include`-Befehle ersetzt
-- Im Kapitel "Aufbau großer Dokumente" in einem Abschnitt die 
+- Im Kapitel "Aufbau großer Dokumente" in einem Abschnitt die
   Unterschiede zwischen `\input` und `\include` erklärt
 
 ## [1.8.0] - 2003-02-09
 
 ### Added
 
-- Hinweis auf das Dokument `tabsatz` im Abschnitt 
+- Hinweis auf das Dokument `tabsatz` im Abschnitt
   "Linien in Tabellen" eingefügt
 - Hinweis zu WYSIWYG-Programmen im Motivations-Kapitel
 
 ### Changed
 
-- Satzspiegel und die Schriftgröße verändert -- versucht, Vorgaben 
+- Satzspiegel und die Schriftgröße verändert -- versucht, Vorgaben
   des KOMA-Script-Pakets umzusetzen
-- Schriftgröße auf 12 Punkte erhöht wegen hoffentlich besserer 
+- Schriftgröße auf 12 Punkte erhöht wegen hoffentlich besserer
   Lesbarkeit
-- Den Ausdruck KOMA-Script an allen Stellen im Dokument durch 
+- Den Ausdruck KOMA-Script an allen Stellen im Dokument durch
   `\KOMAScript{}` ersetzt
-- Die `center`-Umgebung bei Tabellen und Grafiken durch `\centering` 
+- Die `center`-Umgebung bei Tabellen und Grafiken durch `\centering`
   ersetzt
 - Kapitel "Dokumentklassen" um zwei Kapitel vorgezogen
-- Alle Dokumentklassen direkt durch KOMA-Script-Dokumentklassen 
+- Alle Dokumentklassen direkt durch KOMA-Script-Dokumentklassen
   ersetzt;
   Da es sich um eine deutsche Dokumentation handelt, führe ich direkt
-  die KOMA-Script-Dokumentklassen ein. 
-  Diese sind für Anfänger wesentlich besser geeignet und bieten mehr 
+  die KOMA-Script-Dokumentklassen ein.
+  Diese sind für Anfänger wesentlich besser geeignet und bieten mehr
   Optionen.
-- Den Hinweis für einen europäischen Absatz geändert, und die 
+- Den Hinweis für einen europäischen Absatz geändert, und die
   Klassenoptionen von KOMA-Script eingefügt
 - Das Paket `pslatex` durch `mathptmx`, `helvet` und `courier` ersetzt
 - In Kapitel "Separate Titelseite in einem Artikel" den Hack für eine
-  separate Titelseite durch einen Hinweis auf die entsprechende 
+  separate Titelseite durch einen Hinweis auf die entsprechende
   Klassenoption ersetzt
 
 ### Fixed
 
-- Rechtschreibkorrekturen und Änderungen an der Formulierung im 
+- Rechtschreibkorrekturen und Änderungen an der Formulierung im
   Installations-Kapitel (nach Anregungen von Christian Faulhammer)
-- Backslash korrigiert; statt `\backslash` wird nun überall 
+- Backslash korrigiert; statt `\backslash` wird nun überall
   `\textbackslash` verwendet.
 - Den Link zur KOMA-Script-Webseite korrigiert
 - Jedes `z.B.` durch `z.\,B.` ersetzt.
 
 ### Removed
 
-- `\title` und `\author` aus diesem Dokument und aus dem 
+- `\title` und `\author` aus diesem Dokument und aus dem
   Beispiellisting mit eigener Titelseite entfernt
 
 ## [1.7.0] - 2003-01-24
@@ -148,7 +148,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
-- Paket `hyperref` für eine einfache Navigation innerhalb des 
+- Paket `hyperref` für eine einfache Navigation innerhalb des
   PDF-Dokuments (Bookmarks, anklickbare Links) hinzugefügt
 
 ## [1.4.0]
