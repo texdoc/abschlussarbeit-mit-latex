@@ -25,9 +25,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 	DMLTeX-Logo korrekt setzen
 
 ### Changed
-- (te) Im Text \enquote{File} durch \enquote{Datei} ersetzt
+- (te) Im Text "File" durch "Datei" ersetzt
 - (te) Installation überprüft und Link zu MiKTeX-installer angepasst
-- (te) Kapitel \enquote{Literaturempfehlungen} überarbeitet:
+- (te) Kapitel "Literaturempfehlungen" überarbeitet:
   Sprache vereinfacht, Rechtschreibprüfungsabschnitt ins 
 	Konfigurationskapitel verschoben;
   Buch "Der DMLLaTeX-Begleiter" hinzugefügt.
