@@ -13,14 +13,12 @@
 \index{Tabellen}
 
 Tabellen sind in \DMLLaTeX \ ein Thema für sich. Ich beschreibe hier daher vor allem die sogenannte \enquote{tabular}\index{begin@\texttt{\textbackslash begin}!tabular}"=Umgebung. Um die tabular"=Umgebung nutzen zu können, solltest du zudem im Kopfbereich deines Dokuments das Paket \enquote{array}\index{Paket!array} einbinden. Das machst du mit dem Befehl:
-
 \begin{lstlisting}
 \usepackage{array}
 \end{lstlisting}
 
 Hier die erste Beispieltabelle:
 \index{begin@\texttt{\textbackslash begin}!table}
-
 \begin{lstlisting}
 \begin{table}
 	\centering
@@ -70,7 +68,6 @@ Es ist auch möglich, Linien in der Tabelle einzubauen. Für horizontale Linien 
 Solche \enquote{Klötzchentabellen} solltest du jedoch möglichst vermeiden. Eine sehr gute Anleitung findest du unter~\cite{TabSatz}. Axel Reichert erklärt in diesem Dokument anhand von vielen Beispielen wie man Tabellen lesbar, eindeutig und übersichtlich gestalten kann.
 
 Das Beispiel mit einigen Linien:
-
 \begin{lstlisting}
 \begin{table}
 	\centering
@@ -113,7 +110,6 @@ Das Beispiel siehst du als Tabelle \ref{tbl:beispieltabelle2}.
 Falls du mehrere Spalten zusammenfassen möchtest, kannst du das mit dem Befehl
 \\
  \texttt{\textbackslash multicolumn} machen. Der Befehl hat drei Argumente: Die Anzahl der Spalten, welche zusammengefasst werden sollen, die Ausrichtung der Spalte und der Text, welcher in diesem Bereich angezeigt werden soll. Hier ein Beispiel:
-
 \begin{lstlisting}
 \begin{table}
 	\begin{tabular}{|l|l|l|}
@@ -156,7 +152,7 @@ Das Beispiel siehst du als Tabelle \ref{tbl:beispieltabelle3} auf Seite \pageref
 
 In konventionellen Tabellen werden lange Zeilen nicht automatisch umbrochen, sondern \DMLLaTeX \ schreibt froh und munter über den Seitenrand hinaus. Man kann manuelle Zeilenumbrüche mit \textbackslash \textbackslash \ einfügen, was hart an Masochismus grenzt, wenn man mehr als eine Hand voll Tabellen hat und das Layout (Ränder, Schriftgröße, \ldots) geändert wird -- was bei größeren Arbeiten durchaus vorkommt, z.\,B. mal mit und mal ohne Korrekturrand, je nach Bindungsart unterschiedlicher Abstand usw.
 
-\begin{table}[h]	
+\begin{table}[ht]	
 		\begin{tabular}{| l | l |}  
 		  % man muß alle Umbrüche manuell machen
 			\hline
@@ -169,7 +165,7 @@ In konventionellen Tabellen werden lange Zeilen nicht automatisch umbrochen, son
 	\label{tab:Tabelle_zu_breit}
 \end{table}
 
-\begin{table}[h]	
+\begin{table}[ht]	
 		\begin{tabular}{| l | l |}  
 		  % man muß alle Umbrüche manuell machen
 			\hline
@@ -186,7 +182,7 @@ In konventionellen Tabellen werden lange Zeilen nicht automatisch umbrochen, son
 
 Um die Zeilenumbrüche automatisiert setzen zu lassen, muss man die Breite der Spalte(n) mit \enquote{zu viel} Text vorab festlegen. Dabei können entweder absolute Werte verwendet werden, z.\,B. 5\,cm oder 10\,em, oder sog. \textit{command lengths}, sozusagen Variablen, deren Wert von der Dokumentenklasse und Präambel abhängen, z.\,B. \textbackslash textwidth (Spaltenbreite in aktueller Umgebung). Ersteres ist exakter, aber man muss bei jeder Layoutänderung \textit{alle} Tabellen überprüfen und ggf. alle Spaltenbreiten anpassen. Lästig. Letzteres ist grundsätzlich angenehmer, kann aber im Einzelfall Probleme verursachen, z.\,B. wenn eine Spalte zu schmal für ein nicht trennbares Wort wird. Also Tabellen im Ausgabeformat genau anschauen. Nebenbei: Man kann in \DMLLaTeX \ rechnen, was wir im folgenden Anschauungsbeispiel machen, indem wir \textbackslash textwidth mit 0.2 bzw. 0.74 multiplizieren.
 
-\begin{table}[h]		
+\begin{table}[ht]		
 		\begin{tabular}{|p{0.2\textwidth} | p{0.74\textwidth} |}  
 		  % automatisch an normale Textbreite angepasst
 			\hline
@@ -200,9 +196,8 @@ Um die Zeilenumbrüche automatisiert setzen zu lassen, muss man die Breite der S
 \end{table}
 
 Hier siehst Du den Code der drei Arten von Tabellendefinitionen:
-
 \begin{lstlisting}
-\begin{table}[h]	
+\begin{table}[ht]	
 	% alle Umbrüche manuell machen
 	\begin{tabular}{| l | l |}
 
@@ -236,7 +231,6 @@ Weitere \textit{command lengths} wie \textbackslash textwidth findest Du im Koch
 	\caption{Mit tabularx gesetzte Tabelle}
 	\label{tab:tabularx}
 \end{table}
-
 \begin{lstlisting}
 \begin{table}[ht]	
 	\begin{tabularx}{\textwidth}{|l|X|}
@@ -259,13 +253,11 @@ In dein Dokument kannst du beliebige Bilder einbetten. Dabei kannst du alle Bild
 Wenn du jedoch ein DVI- oder eine PostScript-Datei erzeugen möchtest, dann sind nur PostScript- oder Embedded-PostScript-Dateien zulässig.
 
 Um Grafiken in dein Dokument einzubetten, solltest du das Paket \enquote{graphicx}\index{Paket!graphicx} im Kopfbereich deines Dokuments einbinden. Dies machst du mit folgendem Befehl:
-
 \begin{lstlisting}
 \usepackage{graphicx}
 \end{lstlisting}
 
 Jetzt kannst du mit dem Befehl \texttt{\textbackslash includegraphics}\index{includegraphics@\texttt{\textbackslash includegraphics}} Grafiken in dein Dokument einbetten:
-
 \begin{lstlisting}
 \includegraphics{images/apfel.png}
 \end{lstlisting}
@@ -278,7 +270,6 @@ Am Besten legst du in deinem Dokumentverzeichnis ein Unterverzeichnis \enquote{i
 \index{Grafiken!Float}\index{begin@\texttt{\textbackslash begin}!figure}
 
 Dies fügt eine Grafik genau an der Stelle in einem Text ein, an der der Befehl hierzu steht. Normalerweise fügt man Grafiken jedoch auch in einer speziellen Umgebung in den Text ein, so dass man die Grafik mit einem Titel versehen und Referenzen darauf setzen kann. Deshalb hier eine sogenannte Float-Umgebung, welche die Grafik in das Dokument einbettet, in der Mitte der Seite zentriert, ein Label\index{Grafiken!Label}\index{Grafiken!Beschriftung} definiert und beschriftet:
-
 \begin{lstlisting}
 \begin{figure}[htb]
 	\centering
@@ -292,27 +283,21 @@ Dies fügt eine Grafik genau an der Stelle in einem Text ein, an der der Befehl 
 \index{Grafik!skalieren}
 
 Der Befehl \texttt{\textbackslash includegraphics} kennt noch mehr Parameter als den Dateinamen des einzubettenden Bildes: Einer der häufig gebrauchten ist der \enquote{width} Parameter. Dieser skaliert die Grafik auf die angegebene Breite. Im folgenden Beispiel wird die Grafik auf 5\,cm Breite skaliert:
-
 \begin{lstlisting}
 \includegraphics[width=5cm]{images/apfel.png}
 \end{lstlisting}
 
 Dieses Beispiel skaliert die Grafik genau auf die Textbreite: \index{Grafiken!Textbreite}
-
 \begin{lstlisting}
 \includegraphics[width=\textwidth]{images/apfel.png}
 \end{lstlisting}
 
 Und noch ein letztes Beispiel, welches die Grafik auf 50\% der Textbreite skaliert:
-
 \begin{lstlisting}
 \includegraphics[width=0.50\textwidth]{images/apfel.png}
 \end{lstlisting}
 
 Weiter ist es möglich, die Grafik zuzuschneiden und zu rotieren. Diese und weitere Optionen findest du in der Dokumentation zum \enquote{graphicx} Paket. Die Dokumentation befindet sich im \enquote{doc} Verzeichnis deiner MiKTeX Installation.
-
-
-
 
 \section{Floats}
 \index{Floats}
@@ -322,7 +307,6 @@ Sowohl bei den Tabellen wie auch bei den Grafiken (Abbildungen) verwendest du ei
 Dabei entscheidet \DMLLaTeX \ selbständig, wo genau die Abbildung im endgültigen Dokument erscheint. Um innerhalb deines Textes auf die Tabelle oder die Abbildung zu verweisen, verwendest du Referenzen.
 
 An welcher Stelle ein Float platziert werden kann, kannst du mit optionalen Argumenten bei der Float-Umgebung steuern. Diese Argumente sind jedoch höchstens Vorschläge, keine Anweisungen. Hier ein Beispiel:
-
 \begin{lstlisting}
 Gerade im Herbst ist die Erntezeit der Äpfel. Ein Apfel siehst du 
 auf Abbildung \ref{fig:apfel} auf Seite \pageref{fig:apfel}.

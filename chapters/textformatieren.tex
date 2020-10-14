@@ -14,7 +14,6 @@
 \section{Absätze und Zeilenumbrüche}
 
 Es spielt keine Rolle, wie genau du den Text innerhalb deines Dokuments formatierst. Die folgenden beiden Listings ergeben also dasselbe Resultat:
-
 \begin{lstlisting}
 Ein Beispieltext auf einer einzelnen Zeile.
 \end{lstlisting}
@@ -32,7 +31,6 @@ Dabei ignoriert \DMLLaTeX \ überflüssige Leerzeichen und Zeilenumbrüche. Du k
 \index{Absatz}
 
 Um einen Absatz zu erzeugen, fügst du einfach mindestens eine Leerzeile zwischen zwei Textstellen in dein Dokument ein:
-
 \begin{lstlisting}
 Dies ist der erste Absatz von
 diesem Dokument.
@@ -63,7 +61,6 @@ Wie du diese Optionen bei der Dokumentklasse setzt, findest du in Kapitel~\ref{s
 \index{Zeilenumbruch}
 
 Einen einfachen Zeilenumbruch kannst du mit einem doppelten Backslash erzeugen. Dabei wird die Zeile genau an dieser Stelle umbrochen. Zeilenumbrüche sollten nur in speziellen Fällen verwendet werden, wie z.\,B. bei Adressen, in Tabellen oder ähnlichen Situationen.
-
 \begin{lstlisting}
 Hans Muster \\
 Mustergasse 12 \\
@@ -113,13 +110,11 @@ Diese Befehle generieren analog zu den ersten Befehlen die entsprechende Übersc
 \index{Formatieren!Hervorheben}
 
 Einzelne Wörter oder Textteile können \emph{hervorgehoben} werden. Dies machst du mit dem Befehl \texttt{\textbackslash emph}:
-
 \begin{lstlisting}
 Einzelne Wörter oder Textteile können \emph{hervorgehoben} werden.
 \end{lstlisting}
 
 Neben dieser einfachen Her\-vor\-he\-bung kannst du Wörter auch \textbf{fett}\index{Fett}\index{Formatieren!Fett}\index{textbf@\texttt{\textbackslash textbf}}, \textit{kursiv}\index{Kursiv}\index{Formatieren!Kursiv}\index{textit@\texttt{\textbackslash textit}} oder\\ \texttt{monospaced}\index{Monospaced}\index{Formatieren!Monospaced}\index{Feste Zeichenbreite}\index{texttt@\texttt{\textbackslash texttt}} setzen lassen:
-
 \begin{lstlisting}
 \textbf{fett}, \textit{kursiv} oder \texttt{monospaced}.
 \textbf{Ganze Textzeile fett}
@@ -138,7 +133,6 @@ Es gibt verschiedenste Listen und Aufzählungen in \DMLLaTeX. Hier zeige ich die
 \index{Aufzaehlungen@Aufzählungen!einfache}\index{Einfache Aufzaehlung@einfache Aufzählung}
 
 Eine einfache Aufzählung erstellst du folgendermaßen:
-
 \begin{lstlisting}
 \begin{itemize}
 	\item Der erste Punkt.
@@ -159,7 +153,6 @@ Und so sieht das ganze danach aus:
 \index{Aufzaehlungen@Aufzählungen!nummerierte}\index{Nummerierte Aufzaehlung@nummerierte Aufzählung}
 
 Eine nummerierte Aufzählung erstellst du folgendermaßen:
-
 \begin{lstlisting}
 \begin{enumerate}
 	\item Ein nummerierter Punkt.
@@ -180,7 +173,6 @@ Und so sieht das ganze fertig aus:
 \index{Aufzaehlungen@Aufzählungen!verschachtelte}\index{Verschachtelte Aufzaehlungen@verschachtelte Aufzählungen}
 
 Diese Aufzählungstypen lassen sich beliebig verschachteln:
-
 \begin{lstlisting}
 \begin{enumerate}
 	\item Ein nummerierter Punkt.
@@ -212,7 +204,6 @@ Und so sieht das ganze fertig aus:
 \index{Listen!Beschreibungslisten}\index{Beschreibungslisten}
 
 Eine weitere Form einer Aufzählung ist die Beschreibungsliste. Hier ist ein Beispiel einer Beschreibungsliste:
-
 \begin{lstlisting}
 \begin{description}
 	\item[Apfel] Eine Frucht die meistens auf großen Bäumen wächst,

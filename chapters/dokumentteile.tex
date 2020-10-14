@@ -26,7 +26,6 @@ Diese einzelnen Teile kannst du mit \DMLLaTeX \ einfach einfügen, bzw. aufbauen
 Um eine Titelseite aufzubauen, hast du mehrere Möglichkeiten. Im Kapitel \ref{sec:grundlagen} wird der einfachste Weg mit dem Kommando \texttt{\textbackslash maketitle} aufgezeigt.
 
 Dabei setzt man im Header oder zumindest vor dem Befehl die notwendigen Angaben:
-
 \begin{lstlisting}
 \title{Diplomarbeit}
 \author{Hans Muster}
@@ -51,7 +50,6 @@ Falls du in einem Artikel eine separate Titelseite wünschst, kannst du das übe
 Die Umgebung \enquote{titlepage} eignet sich vor allem dafür, wenn du eine eigene Titelseite erstellen möchtest. Dabei musst du jedoch einige der unterliegenden {\rmfamily\TeX} Kommandos kennen, welche die Grundlage von \DMLLaTeX \ bilden.
 
 Hier als Beispiel die Titelseite dieses Dokuments:
-
 \begin{lstlisting}[frame=tb, caption=Titelseite dieses Dokuments]
 \begin{titlepage}
 	\vspace*{7cm}
@@ -88,7 +86,6 @@ Inhaltsverzeichnisse werden in \DMLLaTeX \ automatisch erzeugt. Es ist möglich 
 Beim nächsten Durchlauf werden diese Dateien für das Inhaltsverzeichnis und die anderen Verzeichnisse verwendet. Da sich die Seitennummerierung dadurch verändern kann (weil z.\,B. das Inhaltsverzeichnis um fünf Zeilen wächst), wird evtl. ein weiterer Durchlauf notwendig.
 
 Die Seitenverweise sind daher frühestens nach dem zweiten oder sogar dritten Durchlauf des Dokuments korrekt. Bevor du also die endgültige Fassung deines Dokuments erstellst, solltest du das Dokument sooft kompilieren, bis keine Warnungen wie die folgende mehr auftreten:
-
 \begin{lstlisting}
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 \end{lstlisting}
@@ -97,20 +94,16 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 \index{Inhaltsverzeichnis}
 
 Das Inhaltsverzeichnis wird aus den Überschriften des Dokuments gebildet. Du kannst es mit folgendem Befehl in dein Dokument einbetten:
-
 \begin{lstlisting}
 \tableofcontents
 \end{lstlisting}
 
-\newpage
 Falls du möchtest, dass ein bestimmter Abschnitt nicht im Inhaltsverzeichnis auftaucht, kannst du die \enquote{*}-Schreibweise verwenden:
-
 \begin{lstlisting}
 \subsection*{Nicht im Inhaltsverzeichnis}
 \end{lstlisting}
 
 Möglicherweise ist der Titel im Dokument zu lang für das Inhaltsverzeichnis. Du hast daher die Möglichkeit den Eintrag, welcher im Inhaltsverzeichnis gemacht wird, vom Titel im Dokument zu trennen:
-
 \begin{lstlisting}
 \subsection[Kurzer Titel im Inhaltsverz.]{Hier der Lange
 	Titel, welcher leider im Inhaltsverzeichnis keinen Platz gefunden
@@ -124,7 +117,6 @@ Möglicherweise ist der Titel im Dokument zu lang für das Inhaltsverzeichnis. D
 Das Abbildungsverzeichnis und das Tabellenverzeichnis werden aus den \texttt{\textbackslash caption} Einträgen innerhalb der \enquote{figure} und \enquote{table} Floats gebildet. 
 
 Die beiden Verzeichnisse kannst du folgendermaßen in dein Dokument einbetten:
-
 \begin{lstlisting}
 \listoffigures
 \listoftables
@@ -138,7 +130,6 @@ Die beiden Verzeichnisse kannst du folgendermaßen in dein Dokument einbetten:
 Oft hat ein Dokument noch Anhänge. Das sind Kapitel oder Anschnitte, welche zusätzliche Informationen zu dem Thema des Dokuments erhalten, z.\,B. Tabellen, Diagramme oder große Grafiken, welche oft aus dem Dokument referenziert werden, jedoch nicht in ein bestimmtes Kapitel des Dokuments passen. Ein Beispiel hierfür ist die API-Referenz einer Software.
 
 Der Anhang wird mit dem Befehl \texttt{\textbackslash appendix}\index{appendix@\texttt{\textbackslash appendix}} eingeleitet. Nach diesem Befehl werden die Kapitel oder Abschnitte mit Großbuchstaben nummeriert.
-
 \begin{lstlisting}[frame=tb, caption=Dokumentstruktur mit Anhang]
 \section{Dokumentinhalt}
 \subsection{Untertitel des Dokumentinhalts}
