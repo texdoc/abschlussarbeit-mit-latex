@@ -1,7 +1,7 @@
 %
-% Diplomarbeit mit LaTeX
+% Abschlussarbeit mit LaTeX
 % ===========================================================================
-% This is part of the book "Diplomarbeit mit LaTeX".
+% This is part of the book "Abschlussarbeit mit LaTeX".
 % Copyright (c) 2002, 2003, 2005 Tobias Erbsland, Andreas Nitsch
 % See the file main.tex for copying conditions.
 %
@@ -13,7 +13,7 @@ Bei größeren Dokumenten, insbesondere zu komplexen Themen, kann es recht
 sinnvoll sein, Begriffe, die nicht jedem geläufig sind und oft benutzt
 werden, gesondert zu erklären.
 
-Selbst beim Schreiben einer Diplomarbeit kann es für den Autor selbst
+Selbst beim Schreiben einer Abschlussarbeit kann es für den Autor selbst
 sehr sinnvoll sein, Begrifflichkeiten zu erklären, um sich selber vollständig
 über ihre Bedeutung klar zu werden. Dem Leser jedenfalls wird mit einem Glossar
 unter Umständen eine große (Verständnis-) Hilfe geboten und lästiges
@@ -46,8 +46,8 @@ Einträge anzuwenden, wird das Programm \texttt{makeindex} benutzt, dessen Aufru
 etwas langatmig ist. In der Windows-Eingabeaufforderung (Start $\rightarrow$ Alle Programme
 $\rightarrow$ Zubehör $\rightarrow$ Eingabeaufforderung) ist folgende Kommandozeile einzugeben:
 \begin{verbatim}
-		makeindex -s diplomarbeit_akki.ist -t diplomarbeit_akki.glg -o
-								 diplomarbeit_akki.gls diplomarbeit_akki.glo
+		makeindex -s abschlussarbeit_akki.ist -t abschlussarbeit_akki.glg -o
+								 abschlussarbeit_akki.gls abschlussarbeit_akki.glo
 \end{verbatim}
 Makeindex erzeugt eine Datei mit der Endung ''.gls'', in welcher das fertig formatierte Glossar
 enthalten ist. Dieses kann mit dem Befehl
@@ -55,10 +55,10 @@ enthalten ist. Dieses kann mit dem Befehl
 	\renewcommand{\glossaryname}{Glossar}
 	\printglossary
 \end{verbatim}
-an jeder beliebigen Stelle der Diplomarbeit eingefügt werden und wird dort nach einem weiteren
+an jeder beliebigen Stelle der Abschlussarbeit eingefügt werden und wird dort nach einem weiteren
 \DMLLaTeX-Lauf ausgegeben. Das Kommando \texttt{renewcommand} dient an dieser Stelle dazu, die
 automatisch eingefügte Überschrift des Glossars neu zu setzen, da diese standardmäßig auf
-englich erscheint (''Glossary'') und bei einer deutschsprachigen Diplomarbeit besser in deutsch
+englich erscheint (''Glossary'') und bei einer deutschsprachigen Abschlussarbeit besser in deutsch
 gehalten sein sollte.
 
 Ein Beispiel für das Einbinden eines Glossars findet sich in Listing
