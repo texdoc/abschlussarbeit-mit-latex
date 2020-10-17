@@ -1,15 +1,12 @@
-%
 % Headerdatei der Diplomarbeit
-%
-%
 
 \documentclass[
+		pdftex,
 		a4paper,
 		12pt,
 		twoside,
 		openright,
 		parskip,
-		draft,
 		ngerman,
 		chapterprefix,%       Kapitel anschreiben als Kapitel
 ]{scrreprt}
@@ -21,6 +18,7 @@
 
 %Eingabe von ü,ä,ö,ß erlauben
 \usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
 
 %Zum Einbinden von Grafiken
 \usepackage{graphics}
@@ -36,5 +34,22 @@
 
 %Darstellung des Glossars einstellen
 \usepackage[style=super, nonumberlist, toc=true]{glossaries}
+
+\usepackage[%
+	pdftitle={Der Beruf des Spürhundes in Gegenwart und Zukunft},%
+	pdfauthor={Bjarne Friedjof Blue},%
+	pdfcreator={LaTeX with hyperref and KOMA-Script},%
+	pdfpagemode=UseOutlines,% Inhaltsverzeichnis anzeigen beim Öffnen
+	pdflang=de%
+]{hyperref}
+\hypersetup{%
+	colorlinks=true,%        Aktivieren von farbigen Links im Dokument (keine Rahmen)
+	linkcolor=blue,%         Farbe festlegen.
+	citecolor=blue,%         Farbe festlegen.
+	filecolor=blue,%         Farbe festlegen.
+	menucolor=blue,%         Farbe festlegen.
+	urlcolor=blue,%          Farbe von URL's im Dokument.
+	bookmarksnumbered=true%  Überschriftsnummerierung im PDF Inhalt anzeigen.
+}
 
 \makeglossaries
