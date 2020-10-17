@@ -1,13 +1,17 @@
-%
-%
 % Hauptdatei der Diplomarbeit
-%
-%
 
 \input{kapitel/header}
 
-\begin{document}
+\newglossaryentry{Schnauze}{
+	name={Schnauze},
+	description={Fachausdruck für die Hundenase.}
+}
+\newglossaryentry{Knochen}{
+	name={Knochen},
+	description={Lieblingsspeise eines jeden Hundes. Besonderer Beliebtheit erfreuen sich Rinderknochen.}
+}
 
+\begin{document}
 
 %Alle in der Datenbank existierenden Einträge werden bearbeitet
 \nocite{*}
@@ -50,7 +54,7 @@
 \newpage
 \addcontentsline{toc}{chapter}{Literaturverzeichnis}
 \bibliography{referenzen}
-\bibliographystyle{geralpha}
+\bibliographystyle{alpha}
 
 \appendix
 \end{document}
