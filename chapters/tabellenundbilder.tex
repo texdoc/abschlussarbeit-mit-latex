@@ -12,7 +12,7 @@
 \section{Tabellen}
 \index{Tabellen}
 
-Tabellen sind in \DMLLaTeX \ ein Thema für sich. Ich beschreibe hier daher vor allem die sogenannte \enquote{tabular}\index{begin@\texttt{\textbackslash begin}!tabular}"=Umgebung. Um die tabular"=Umgebung nutzen zu können, solltest du zudem im Kopfbereich deines Dokuments das Paket \enquote{array}\index{Paket!array} einbinden. Das machst du mit dem Befehl:
+Tabellen sind in \DMLLaTeX{} ein Thema für sich. Ich beschreibe hier daher vor allem die sogenannte \enquote{tabular}\index{begin@\texttt{\textbackslash begin}!tabular}"=Umgebung. Um die tabular"=Umgebung nutzen zu können, solltest du zudem im Kopfbereich deines Dokuments das Paket \enquote{array}\index{Paket!array} einbinden. Das machst du mit dem Befehl:
 \begin{lstlisting}
 \usepackage{array}
 \end{lstlisting}
@@ -150,7 +150,7 @@ Das Beispiel siehst du als Tabelle \ref{tbl:beispieltabelle3} auf Seite \pageref
 \subsection{Tabellenbreite bestimmen bzw. automatischer Zeilenumbruch}
 \index{Tabellen!Spaltenbeite bestimmen}\index{Tabellen!Automatischer Zeilenumbruch}
 
-In konventionellen Tabellen werden lange Zeilen nicht automatisch umbrochen, sondern \DMLLaTeX \ schreibt froh und munter über den Seitenrand hinaus. Man kann manuelle Zeilenumbrüche mit \textbackslash \textbackslash \ einfügen, was hart an Masochismus grenzt, wenn man mehr als eine Hand voll Tabellen hat und das Layout (Ränder, Schriftgröße, \ldots) geändert wird -- was bei größeren Arbeiten durchaus vorkommt, z.\,B. mal mit und mal ohne Korrekturrand, je nach Bindungsart unterschiedlicher Abstand usw.
+In konventionellen Tabellen werden lange Zeilen nicht automatisch umbrochen, sondern \DMLLaTeX{} schreibt froh und munter über den Seitenrand hinaus. Man kann manuelle Zeilenumbrüche mit \textbackslash \textbackslash \ einfügen, was hart an Masochismus grenzt, wenn man mehr als eine Hand voll Tabellen hat und das Layout (Ränder, Schriftgröße, \ldots) geändert wird -- was bei größeren Arbeiten durchaus vorkommt, z.\,B. mal mit und mal ohne Korrekturrand, je nach Bindungsart unterschiedlicher Abstand usw.
 
 \begin{table}[ht]	
 		\begin{tabular}{| l | l |}  
@@ -180,7 +180,7 @@ In konventionellen Tabellen werden lange Zeilen nicht automatisch umbrochen, son
 	\label{tab:Tabelle_zu_breit_manuell}
 \end{table}
 
-Um die Zeilenumbrüche automatisiert setzen zu lassen, muss man die Breite der Spalte(n) mit \enquote{zu viel} Text vorab festlegen. Dabei können entweder absolute Werte verwendet werden, z.\,B. 5\,cm oder 10\,em, oder sog. \textit{command lengths}, sozusagen Variablen, deren Wert von der Dokumentenklasse und Präambel abhängen, z.\,B. \textbackslash textwidth (Spaltenbreite in aktueller Umgebung). Ersteres ist exakter, aber man muss bei jeder Layoutänderung \textit{alle} Tabellen überprüfen und ggf. alle Spaltenbreiten anpassen. Lästig. Letzteres ist grundsätzlich angenehmer, kann aber im Einzelfall Probleme verursachen, z.\,B. wenn eine Spalte zu schmal für ein nicht trennbares Wort wird. Also Tabellen im Ausgabeformat genau anschauen. Nebenbei: Man kann in \DMLLaTeX \ rechnen, was wir im folgenden Anschauungsbeispiel machen, indem wir \textbackslash textwidth mit 0.2 bzw. 0.74 multiplizieren.
+Um die Zeilenumbrüche automatisiert setzen zu lassen, muss man die Breite der Spalte(n) mit \enquote{zu viel} Text vorab festlegen. Dabei können entweder absolute Werte verwendet werden, z.\,B. 5\,cm oder 10\,em, oder sog. \textit{command lengths}, sozusagen Variablen, deren Wert von der Dokumentenklasse und Präambel abhängen, z.\,B. \textbackslash textwidth (Spaltenbreite in aktueller Umgebung). Ersteres ist exakter, aber man muss bei jeder Layoutänderung \textit{alle} Tabellen überprüfen und ggf. alle Spaltenbreiten anpassen. Lästig. Letzteres ist grundsätzlich angenehmer, kann aber im Einzelfall Probleme verursachen, z.\,B. wenn eine Spalte zu schmal für ein nicht trennbares Wort wird. Also Tabellen im Ausgabeformat genau anschauen. Nebenbei: Man kann in \DMLLaTeX{} rechnen, was wir im folgenden Anschauungsbeispiel machen, indem wir \textbackslash textwidth mit 0.2 bzw. 0.74 multiplizieren.
 
 \begin{table}[ht]		
 		\begin{tabular}{|p{0.2\textwidth} | p{0.74\textwidth} |}  
@@ -304,7 +304,7 @@ Weiter ist es möglich, die Grafik zuzuschneiden und zu rotieren. Diese und weit
 
 Sowohl bei den Tabellen wie auch bei den Grafiken (Abbildungen) verwendest du eine sogenannte \enquote{float}-Umgebung, um die Tabelle oder die Abbildung in den Text einzubetten.
 
-Dabei entscheidet \DMLLaTeX \ selbständig, wo genau die Abbildung im endgültigen Dokument erscheint. Um innerhalb deines Textes auf die Tabelle oder die Abbildung zu verweisen, verwendest du Referenzen.
+Dabei entscheidet \DMLLaTeX{} selbständig, wo genau die Abbildung im endgültigen Dokument erscheint. Um innerhalb deines Textes auf die Tabelle oder die Abbildung zu verweisen, verwendest du Referenzen.
 
 An welcher Stelle ein Float platziert werden kann, kannst du mit optionalen Argumenten bei der Float-Umgebung steuern. Diese Argumente sind jedoch höchstens Vorschläge, keine Anweisungen. Hier ein Beispiel:
 \begin{lstlisting}

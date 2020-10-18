@@ -23,10 +23,10 @@ Durchsuchen der gesamten Arbeit nach einer Begriffserklärung wird vermieden.
 Zum Erstellen eines Glossars gehören, wie beim Erstellen des Literaturverzeichnisses,
  prinzipiell drei Schritte.
 Im ersten Schritt werden die einzelnen Glossareinträge innerhalb des Textes
-angelegt. Durch einen \DMLLaTeX-Lauf werden diese Glossareinträge in
+angelegt. Durch einen \DMLLaTeX"=Lauf werden diese Glossareinträge in
 einer Datei mit der Endung ''.glo'' gesammelt, durch den Aufruf des
-Zusatzprogrammes \emph{makeindex} sortiert und in das \DMLLaTeX-Dokument
-eingebunden. Durch einen weiteren \DMLLaTeX-Lauf wird hiernach das fertige
+Zusatzprogrammes \emph{makeindex} sortiert und in das \DMLLaTeX"=Dokument
+eingebunden. Durch einen weiteren \DMLLaTeX"=Lauf wird hiernach das fertige
 Dokument erzeugt.
 \vspace{1em}
 \\
@@ -39,7 +39,7 @@ Die Definition erfolgt durch den Befehl \texttt{glossary}:
 												 Beliebtheit erfreuen sich Rinderknochen.}
 	}
 \end{verbatim}
-Nach einem  \DMLLaTeX-Durchlauf  werden die Zwischendateien mit den Endungen ''.glo'' und
+Nach einem  \DMLLaTeX"=Durchlauf werden die Zwischendateien mit den Endungen ''.glo'' und
 ''.ist''erzeugt, welche die aus den Dateien extrahierten Einträgen bzw. die
 Formatierungsbeschreibung des Glossars enthalten. Um diese Formatierung auf die extrahierten
 Einträge anzuwenden, wird das Programm \texttt{makeindex} benutzt, dessen Aufruf leider
@@ -56,7 +56,7 @@ enthalten ist. Dieses kann mit dem Befehl
 	\printglossary
 \end{verbatim}
 an jeder beliebigen Stelle der Diplomarbeit eingefügt werden und wird dort nach einem weiteren
-\DMLLaTeX-Lauf ausgegeben. Das Kommando \texttt{renewcommand} dient an dieser Stelle dazu, die
+\DMLLaTeX"=Lauf ausgegeben. Das Kommando \texttt{renewcommand} dient an dieser Stelle dazu, die
 automatisch eingefügte Überschrift des Glossars neu zu setzen, da diese standardmäßig auf
 englich erscheint (''Glossary'') und bei einer deutschsprachigen Diplomarbeit besser in deutsch
 gehalten sein sollte.
@@ -97,5 +97,5 @@ Aussehen des Glossars beeinflussen kann. Folgende Einstellungen können im Heade
 \vspace{1em}
 \\
 Weitere Möglichkeiten, Glossare nach eigenen Vorstellungen zu gestalten, finden sich im
-Dokument ''glossary.dvi -- glossary.sty: \DMLLaTeX \ Package to Assist Generating Glossaries''\footnote{Dieses Dokument befindet sich im Mik\TeX"=Verzeichnis: \verb~/miktex/doc/latex/glossary~.}. 
+Dokument ''glossary.dvi -- glossary.sty: \DMLLaTeX{} Package to Assist Generating Glossaries''\footnote{Dieses Dokument befindet sich im Mik\TeX"=Verzeichnis: \verb~/miktex/doc/latex/glossary~.}. 
 Als durchaus optisch ansprechend und übersichtlich haben sich die Glossar"=Einstellungen erwiesen, wie sie im Beispiellisting \ref{subsec:header} angeführt sind.

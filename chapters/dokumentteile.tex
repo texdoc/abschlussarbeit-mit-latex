@@ -18,7 +18,7 @@ Ein Dokument besteht normalerweise aus einzelnen, in sich geschlossenen Dokument
 	\item Anhang
 \end{itemize}
 
-Diese einzelnen Teile kannst du mit \DMLLaTeX \ einfach einfügen, bzw. aufbauen.
+Diese einzelnen Teile kannst du mit \DMLLaTeX{} einfach einfügen, bzw. aufbauen.
 
 \section{Anpassen der Titelseite}
 \index{Titelseite}\index{Anpassen!Titelseite}
@@ -47,7 +47,7 @@ Falls du in einem Artikel eine separate Titelseite wünschst, kannst du das übe
 \subsection{Eine eigene Titelseite erstellen}
 \index{Eigene Titelseite}
 
-Die Umgebung \enquote{titlepage} eignet sich vor allem dafür, wenn du eine eigene Titelseite erstellen möchtest. Dabei musst du jedoch einige der unterliegenden {\rmfamily\TeX} Kommandos kennen, welche die Grundlage von \DMLLaTeX \ bilden.
+Die Umgebung \enquote{titlepage} eignet sich vor allem dafür, wenn du eine eigene Titelseite erstellen möchtest. Dabei musst du jedoch einige der unterliegenden {\rmfamily\TeX} Kommandos kennen, welche die Grundlage von \DMLLaTeX{} bilden.
 
 Hier als Beispiel die Titelseite dieses Dokuments:
 \begin{lstlisting}[frame=tb, caption=Titelseite dieses Dokuments]
@@ -79,9 +79,9 @@ Hier als Beispiel die Titelseite dieses Dokuments:
 \section{Verzeichnisse}
 \index{Verzeichnisse|(}
 
-Inhaltsverzeichnisse werden in \DMLLaTeX \ automatisch erzeugt. Es ist möglich ein Inhaltsverzeichnis, ein Abbildungsverzeichnis und ein Tabellenverzeichnis ohne großen Aufwand in das Dokument einzubetten.
+Inhaltsverzeichnisse werden in \DMLLaTeX{} automatisch erzeugt. Es ist möglich ein Inhaltsverzeichnis, ein Abbildungsverzeichnis und ein Tabellenverzeichnis ohne großen Aufwand in das Dokument einzubetten.
 
-\DMLLaTeX \ geht dabei folgendermaßen vor: beim ersten Durchlauf werden die Seitennummern und Titel aller relevanten Überschriften und Beschriftungen in einer separaten Datei gespeichert (.aux). Aus dieser Datei werden am Schluss einzelne Dateien mit den verschiedenen Inhaltsverzeichnissen erstellt (.toc, .lot, .lof).
+\DMLLaTeX{} geht dabei folgendermaßen vor: beim ersten Durchlauf werden die Seitennummern und Titel aller relevanten Überschriften und Beschriftungen in einer separaten Datei gespeichert (.aux). Aus dieser Datei werden am Schluss einzelne Dateien mit den verschiedenen Inhaltsverzeichnissen erstellt (.toc, .lot, .lof).
 
 Beim nächsten Durchlauf werden diese Dateien für das Inhaltsverzeichnis und die anderen Verzeichnisse verwendet. Da sich die Seitennummerierung dadurch verändern kann (weil z.\,B. das Inhaltsverzeichnis um fünf Zeilen wächst), wird evtl. ein weiterer Durchlauf notwendig.
 

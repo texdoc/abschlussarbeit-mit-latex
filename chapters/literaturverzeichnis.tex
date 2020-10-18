@@ -9,17 +9,17 @@
 \chapter{Literaturverzeichnisse und Glossare}
 \label{sec:literaturverzeichnisse}
 
-In \DMLLaTeX \ bieten sich zwei unterschiedliche Wege an, Literaturverzeichnisse
+In \DMLLaTeX{} bieten sich zwei unterschiedliche Wege an, Literaturverzeichnisse
 anzulegen und zu gestalten. Der einfachere Weg, der allerdings nicht sonderlich
 viele Gestaltungsmöglichkeiten offen hält, ist die Nutzung der Umgebung \texttt{thebibliography}. Sollen umfangreichere Literaturverzeichnisse oder gar eine Verbindung zu einer Literatur-Datenbank genutzt werden, so
-bietet sich das mit \DMLLaTeX \ mitgelieferte Bib\DMLTeX an, zu dessen Nutzung allerdings etwas Einarbeitung notwendig ist.
+bietet sich das mit \DMLLaTeX{} mitgelieferte Bib\DMLTeX{} an, zu dessen Nutzung allerdings etwas Einarbeitung notwendig ist.
 
 \section{Einfache Literaturverzeichnisse}
 \index{Literaturverzeichnisse!Literaturverzeichnisse@einfache}
 
 Zum Verweisen auf einen Eintrag im Literaturverzeichnis wird sowohl bei der folgenden
 einfachen Verzeichniserstellung als auch bei der Erstellung eines Literaturverzeichnisses
-mit Bib\DMLTeX der Befehl \texttt{$\backslash$cite\{marke\}} benutzt. Die Variable
+mit Bib\DMLTeX{} der Befehl \texttt{$\backslash$cite\{marke\}} benutzt. Die Variable
 \texttt{marke} bezeichnet den Namen des Werkes innerhalb des Literaturverzeichnisses.
 
 Das eigentliche Literaturverzeichnis wird durch Einfügen der folgenden Umgebung an der
@@ -246,19 +246,19 @@ Die Ausgabe sieht, je nach Einstellung des Anzeigestiles (s. hierzu Tabelle
 Um das eigentliche Literaturverzeichnis zu erstellen und einzubinden, ist folgendes Vorgehen
 nötig:
 
-Zuerst lässt man einen \DMLLaTeX-Lauf über das gesamte Dokument laufen, wodurch
+Zuerst lässt man einen \DMLLaTeX"=Lauf über das gesamte Dokument laufen, wodurch
 für jede Datei der Projektes eine zugehörige Datei mit der Endung \texttt{.aux}
 erstellt wird. In diesen Dateien sind unter anderem die Literatureinträge
 verzeichnet, auf die in dem jeweiligen Dokument verwiesen wird.
 Anschließend wird das Programm \texttt{Bib\DMLTeX} aufgerufen, welches diese Einträge
 sammelt, sortiert und in eine Datei mit der Endung \texttt{.bbl} schreibt.
-Bib\DMLTeX kann im \DMLTeX nicCenter sehr bequem über den Menüpunkt \texttt{Ausgabe
-$\rightarrow$ Bib\DMLTeX} aufgerufen werden. Nach einem weiteren \DMLLaTeX-Lauf wird
+Bib\DMLTeX{} kann im \DMLTeX nicCenter sehr bequem über den Menüpunkt \texttt{Ausgabe
+$\rightarrow$ Bib\DMLTeX} aufgerufen werden. Nach einem weiteren \DMLLaTeX"=Lauf wird
 das fertig sortierte und formatierte Literaturverzeichnisse in das Dokument
 eingebunden.
 
-Falls dir das dauernde Aufrufen von \DMLLaTeX \ bzw. Pdf\DMLTeX \ und die Aufrufe von
-Bib\DMLTeX und makeindex (s. hierzu Kapitel \ref{sec:glossar}) zuviel wird, kannst du diese
+Falls dir das dauernde Aufrufen von \DMLLaTeX{} bzw. Pdf\DMLTeX{} und die Aufrufe von
+Bib\DMLTeX{} und makeindex (s. hierzu Kapitel \ref{sec:glossar}) zuviel wird, kannst du diese
 Arbeitsschritte auch über eine Befehlsdatei, ein sogenanntes \texttt{Batchscript}
 automatisieren. Ein Beispiel für eine solche Batchdatei findet sich in Listing
 \ref{subsec:batchdatei}.
