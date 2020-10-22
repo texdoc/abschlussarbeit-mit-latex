@@ -8,7 +8,7 @@
 \chapter{Mathematischer Textsatz}
 \index{Formeln}\index{Mathematik}
 
-In \DMLLaTeX \ ist eine sehr mächtige Mathematik-Umgebung integriert, mit welcher du nahezu beliebige mathematische Formeln setzen kannst. Hier ein Beispiel einer sinnlosen, komplizierten Formel
+In \DMLLaTeX{} ist eine sehr mächtige Mathematik-Umgebung integriert, mit welcher du nahezu beliebige mathematische Formeln setzen kannst. Hier ein Beispiel einer sinnlosen, komplizierten Formel
 \begin{equation}
 	x = 12 \cdot \left( \frac{
 		\sqrt[g]{ \frac{ 100 + \chi }{ \cos 45^{f} } }
@@ -24,7 +24,6 @@ Da das Setzen mathematischer Formeln ein Thema ist, welches allein mehrere Büch
 Einige wichtige Symbole und Konstrukte kannst du über das Menü \enquote{Mathe} von TeXnicCenter direkt in deinen Quelltext einfügen. Jedoch hinkt dieses Menü den modernen mathematischen Packages teilweise hinterher, weshalb es geschickter ist, sich die neuesten Manuals aus dem Internet herunterzuladen und zu studieren.
 
 Wenn du komplexere Formeln in deinem Dokument verwendest oder viele mathematische Formeln benötigst, solltest du die Pakete der American Mathematical Society (kurz: \AmS) einbinden und deren relativ kurzgehaltene Manuals lesen. Die \AmSmath-Packages stellen weitere Symbole und spezielle mathematische Umgebungen bereit. Eine detaillierte Erklärung zu den Packages bietet die \AmS\ auf ihrer Website sowie das CTAN.\footnote{Der URL des {\rmfamily\LaTeX}-Teils der Website der \AmS\ lautet \href{https://www.ams.org/tex/amslatex.html}{https://www.ams.org/tex/amslatex.html}; im CTAN, genauer auf \href{https://www.ctan.org/pkg/amslatex}{https://www.ctan.org/pkg/amslatex} sind ebenfalls kurze Infos zu den einzelnen Packages abrufbar.} Eingebunden werden die Packages beispielsweise durch
-
 \begin{lstlisting}
 \usepackage{amsmath, amsthm, amssymb}
 \usepackage{mathtools}
@@ -40,13 +39,11 @@ Mit diesen Packages sollte man auch für mathematische Abschlussarbeiten -- zumi
 \subsection{Einbettung in Text}
 
 Eine kurze mathematische Formel innerhalb von Fließtext schließt du einfach in zwei Dollarzeichen (\$) ein, also z.\,B.
-
 \begin{lstlisting}
 $100 + a^2$
 \end{lstlisting}
 
 Damit bettest du die mathematische Formel oder auch nur ein einzelnes Zeichen in den Text ein. Die Formel aus dem Beispiel sieht z.\,B. so aus: $100 + a^2$. Du siehst, dass zum Setzen der Formel ein spezieller Zeichensatz verwendet wird. Dadurch kann sehr gut zwischen normalem Text und mathematischen Formeln unterschieden werden.
-
 \begin{lstlisting}
 \begin{quote}
 	Die Hypothenuse $c$ eines rechtwinkligen Dreiecks kann mit der Formel 
@@ -67,7 +64,6 @@ Dies sieht dann im Text folgendermaßen aus:
 \subsection{Einfache abgesetzte Formeln}
 
 Abgesetzte Formeln innerhalb deines Dokuments kannst du z.\,B. mithilfe der \enquote{equation}-Umgebung einbauen:
-
 \begin{lstlisting}
 \begin{equation}
 	c = \sqrt{a^2 + b^2}
@@ -82,10 +78,9 @@ gesetzt.
 
 \subsection{Umgebungen für mehrere Gleichungen}
 
-Neben den Umgebungen für eine einzelne Formel existieren weitere Umgebungen, mit denen du mehrere Formeln mit sehr unterschiedlichen Anordnungen setzen kannst. Die \AmSmath-Pakete liefern hierfür u.\,a. die Umgebungen \enquote{align}, \enquote{gather}, \enquote{split}, \enquote{multline}, \enquote{flalign} und \enquote{alignat}. Bis auf \enquote{split} lässt sich bei allen genannten Umgebungen die automatische Nummerierung durch einen nachgestellten Stern \enquote{*} deaktivieren. Die häufig von Laien verwendete Umgebung \enquote{eqnarray} ist nicht voll kompatibel zu den \AmSmath-Paketen und deshalb zu vermeiden\footnote{Nähere infos dazu stehen im \DMLLaTeX-Sündenregister\\\href{ftp://ftp.dante.de/tex-archive/info/l2tabu/german/l2tabu.pdf}{ftp://ftp.dante.de/tex-archive/info/l2tabu/german/l2tabu.pdf}} und z.\,B. durch \enquote{align} zu ersetzen. Damit kannst du z.\,B. Formeln an den Gleichheitszeichen ausrichten.
+Neben den Umgebungen für eine einzelne Formel existieren weitere Umgebungen, mit denen du mehrere Formeln mit sehr unterschiedlichen Anordnungen setzen kannst. Die \AmSmath-Pakete liefern hierfür u.\,a. die Umgebungen \enquote{align}, \enquote{gather}, \enquote{split}, \enquote{multline}, \enquote{flalign} und \enquote{alignat}. Bis auf \enquote{split} lässt sich bei allen genannten Umgebungen die automatische Nummerierung durch einen nachgestellten Stern \enquote{*} deaktivieren. Die häufig von Laien verwendete Umgebung \enquote{eqnarray} ist nicht voll kompatibel zu den \AmSmath-Paketen und deshalb zu vermeiden\footnote{Nähere infos dazu stehen im \DMLLaTeX"=Sündenregister\\\href{ftp://ftp.dante.de/tex-archive/info/l2tabu/german/l2tabu.pdf}{ftp://ftp.dante.de/tex-archive/info/l2tabu/german/l2tabu.pdf}} und z.\,B. durch \enquote{align} zu ersetzen. Damit kannst du z.\,B. Formeln an den Gleichheitszeichen ausrichten.
 
 Der Code
-
 \begin{lstlisting}
 \begin{equation}
 	a + a = 2a
@@ -160,7 +155,6 @@ wird das Kommando \texttt{\textbackslash qquad} dazu verwendet, einen ausreichen
 Oft möchte man \enquote{sprechende} Formeln verwenden, welche aus normalen Text bestehen, aber trotzdem von den mathematischen Konstrukten profitieren. Dies geht mit dem Befehl \texttt{\textbackslash text}, mit dem man normalen Text in eine Formel einbetten kann.
 
 Der Beispiel-Code
-
 \begin{lstlisting}
 \begin{equation}
 	\text{Leistung} = \frac{ \text{Arbeit} }{ \text{Zeit} }
@@ -176,7 +170,6 @@ ergibt die aus der Physik bekannte Formel
 Um Gleichungsumformungen zu kommentieren, ohne jedoch die einheitliche Ausrichtung am Gleichheitszeichen zu gefährden, bietet sich \enquote{intertext} an.
 
 Durch
-
 \begin{lstlisting}
 \begin{quote}
 	\begin{align}
@@ -204,7 +197,6 @@ generiert.
 Die Brüche und Wurzeln passen sich in der Größe automatisch an die Formel an, welche sie umschließen.
 
 Die Beispiele
-
 \begin{lstlisting}
 \begin{equation}
 	\frac ab
@@ -238,7 +230,6 @@ aus.
 \section{Funktionen}
 
 Für die am häufigsten verwendeten Funktionen existieren entsprechende Befehle, welche die Namen dieser Funktionen passend in die Formel einfügen.
-
 \begin{lstlisting}
 \begin{equation}
 	\arccos(x)
@@ -274,7 +265,6 @@ $\diag C, \rg(A-\lambda I), \dom M$
 
 Begrenzungssymbole, z.\,B. Klammern, schließen einen Formelausdruck ein.\\
 Wenn du die normalen Klammen verwendest, passen sich diese nicht in der Höhe an die Formel an. Dazu gibt es spezielle Ausdrücke, welche du in
-
 \begin{lstlisting}
 \begin{gather*}
 	(x)
@@ -307,7 +297,6 @@ siehst. Naja, eigentlich siehst du erst in der Übersetzung
 deren Wirkung. An den letzten Beispielen wird zudem deutlich, dass dieser Automatismus nicht nur auf die gewöhnlichen runden Klammern beschränkt ist.
 
 Durch \verb|\left| und \verb|\right| wird die Größe der Klammern verändert, wobei sich Größe an der minimalen und maximalen Höhe des eingeschlossenen Ausdrucks orientiert. Manchmal führt dieser Automatismus zu unhübschen Ergebnissen, weshalb es auch möglich ist, die Größe manuell zu beeinflussen.
-
 \begin{lstlisting}
 \begin{gather*}
 	\Biggl( \biggl( \Bigl( \bigl( (x) \bigr) \Bigr) \biggr) \Biggr)\\
@@ -328,7 +317,6 @@ Durch \verb|\left| und \verb|\right| wird die Größe der Klammern verändert, w
 \section{Unter und über dem Ausdruck}
 
 Es existieren diverse Befehle, mit denen du über und unter Ausdrücken Symbole oder Linien setzen kannst.
-
 \begin{lstlisting}
 \begin{equation}
 	\overline{ a + x }
@@ -360,7 +348,6 @@ Das sieht dann folgendermaßen aus:
 \section{Pfeile}
 
 Es existiert eine riesige Auswahl an verschiedenen Pfeilen, welche du auch sehr gut im normalen Text einsetzen kannst. Man kann mehrere Seiten nur mit verschiedenen Pfeilen füllen. Hier zeige ich nur eine winzige, demonstrative Auswahl an Pfeilen:
-
 \begin{lstlisting}
 \begin{equation}
 	\leftarrow
@@ -392,7 +379,7 @@ Diese kleine Auswahl von Pfeilen wird übersetzt zu
 Selbstverständlich können Pfeile auch beschriftet werden, wie im Beispiel
 \begin{lstlisting}
 \begin{gather}
-	\sum_{i=0}^n\frac 1{i!} \xrightarrow{n\leftarrow\infty} e\\
+	\sum_{i=0}^n\frac 1{i!} \xrightarrow{n\rightarrow\infty} e\\
 	A\xrightarrow[u,x]{a-b} B\nonumber\\
 \end{gather}
 \end{lstlisting}
@@ -406,7 +393,6 @@ zu sehen ist.
 \section{Griechische Buchstaben und spezielle Symbole}
 
 Natürlich stehen dir alle griechischen Buchstaben zur Verfügung. Zudem existieren viele Zusatzsymbole, welche du gut in Tabellen oder als Aufzählungszeichen verwenden kannst.
-
 \begin{lstlisting}
 \begin{equation}
 	\kappa \quad \xi \quad \Omega
@@ -427,7 +413,7 @@ Die Symbole werden folgendermaßen dargestellt:
 	\blacksquare \quad \square 
 \end{equation}
 
-Eine sehr umfangreiche Liste von Symbolen bietet die \enquote{The Comprehensive \DMLLaTeX \ Symbol List}\footnote{\href{https://www.ctan.org/pkg/comprehensive}{https://www.ctan.org/pkg/comprehensive}}.
+Eine sehr umfangreiche Liste von Symbolen bietet die \enquote{The Comprehensive \DMLLaTeX{} Symbol List}\footnote{\href{https://www.ctan.org/pkg/comprehensive}{https://www.ctan.org/pkg/comprehensive}}.
 
 \section{Matrizen}
 Für Matrizen stehen verschiedene Umgebungen zur Verfügung. Da jene aber alle sehr ähnlich sind, möchte ich hier auf bloß eine, nämlich \enquote{pmatrix}, anhand eines Beispiels eingehen. Wie bei Tabellen werden Spalten mit dem Und-Zeichen und Zeilen mit zwei Backslashes separiert.
@@ -473,7 +459,6 @@ Code            & Darstellung & Kommentar\\
 
 \subsection{Kursiv oder nicht?}
 Es führt regelmäßig zu Auseinandersetzungen, ob das Differential-d nun kursiv $\int xdx$ gesetzt werden soll oder nicht $\int x\mathrm dx$. Es hängt unter anderem davon ab, ob man das Differential-d nun als Operator -- und jene werden meist nicht kursiv gesetzt -- oder ob man traditionell $dx$ als eine Variable ansieht. Ähnlich sieht es beispielsweise bei der eulerschen Zahl $e$ aus, die man als Konstante oder als Funktion ansehen kann. Ich werde hier keine Schreibweise propagieren, aber wenigstens auf die Unterschiede hinweisen. Richtig sind ja letztendlich beide Schreibweisen, denn beide werden verstanden.
-
 \begin{lstlisting}
 \begin{equation*}
 	\int x dx \quad \int x \mathrm dx \quad e^{2i\pi} \quad \mathrm e^{2i\pi}
@@ -485,7 +470,6 @@ Es führt regelmäßig zu Auseinandersetzungen, ob das Differential-d nun kursiv
 \end{equation*}
 
 Je nach Geschmack werden auch vor den Differential-ds schmale Leerräume eingefügt.
-
 \begin{lstlisting}
 \begin{equation*}
 	\int x\,dx \quad \int x\,\mathrm dx

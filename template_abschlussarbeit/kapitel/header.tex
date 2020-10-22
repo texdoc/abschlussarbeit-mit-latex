@@ -1,41 +1,44 @@
-%
 % Headerdatei der Abschlussarbeit
-%
-%
 
 \documentclass[
+		pdftex,
 		a4paper,
 		12pt,
 		twoside,
 		openright,
 		parskip,
-		draft,
+		ngerman,
 		chapterprefix,%       Kapitel anschreiben als Kapitel
 ]{scrreprt}
 
-\usepackage{moreverb}
-
 %Deutsche Trennungen, Anführungsstriche und mehr:
-\usepackage{german, ngerman}
-\usepackage[german]{babel}
+\usepackage[ngerman]{babel}
 
 %Eingabe von ü,ä,ö,ß erlauben
-\usepackage[latin1]{inputenc}
+\usepackage[utf8]{inputenc}
+%Ausgabe von ä, ö, ü, ß erlauben
+\usepackage[T1]{fontenc}
 
 %Zum Einbinden von Grafiken
-\usepackage{graphics}
-
-%Ein Paket, das die Darstellung von "Text, wie er eingegeben wird"
-%erlaubt: Also
-%\begin{verbatim} \end{document}\end{verbatim} erzeugt die Ausgabe von
-%\end{document} im Typewrites-Style und beendet nicht das Dokument.
-\usepackage{verbatim}
-
-%Source-Code printer for LaTeX
-\usepackage{listings}
+\usepackage{graphicx}
 
 %Darstellung des Glossars einstellen
-\usepackage[style=super, header=none, border=none, number=none, cols=2,
-						toc=true]{glossary}
+\usepackage[style=super, nonumberlist, toc=true]{glossaries}
 
-\makeglossary
+\usepackage[%
+	pdftitle={Der Beruf des Spürhundes in Gegenwart und Zukunft},%
+	pdfauthor={Bjarne Friedjof Blue},%
+	pdfcreator={LaTeX with hyperref and KOMA-Script},%
+	pdfpagemode=UseOutlines,% Inhaltsverzeichnis anzeigen beim Öffnen
+	pdflang=de%
+]{hyperref}
+\hypersetup{%
+	colorlinks=true,%        Aktivieren von farbigen Links im Dokument (keine Rahmen)
+	linkcolor=blue,%         Farbe festlegen.
+	citecolor=blue,%         Farbe festlegen.
+	filecolor=blue,%         Farbe festlegen.
+	menucolor=blue,%         Farbe festlegen.
+	urlcolor=blue,%          Farbe von URL's im Dokument.
+	bookmarksnumbered=true%  Überschriftsnummerierung im PDF Inhalt anzeigen.
+}%
+\makeglossaries%

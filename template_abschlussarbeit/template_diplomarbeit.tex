@@ -1,13 +1,17 @@
-%
-%
 % Hauptdatei der Abschlussarbeit
-%
-%
 
 \input{kapitel/header}
 
-\begin{document}
+\newglossaryentry{Schnauze}{
+	name={Schnauze},
+	description={Fachausdruck für die Hundenase.}
+}
+\newglossaryentry{Knochen}{
+	name={Knochen},
+	description={Lieblingsspeise eines jeden Hundes. Besonderer Beliebtheit erfreuen sich Rinderknochen.}
+}
 
+\begin{document}
 
 %Alle in der Datenbank existierenden Einträge werden bearbeitet
 \nocite{*}
@@ -21,18 +25,23 @@
 
 \input{kapitel/danksagung}
 
+\newpage
+
+\pagenumbering{arabic}
+
 \tableofcontents
+\addcontentsline{toc}{chapter}{Inhaltsverzeichnis}
+
+\newpage
 
 \input{kapitel/charakteristik_spuerhund}
 
-\pagenumbering{arabic}
+\newpage
 
 \input{kapitel/zukunftsaussichten_spuerhund}
 
 \newpage
 		
-\pagenumbering{roman}
-
 \input{kapitel/eidesstattliche_erklaerung}
 
 %\listoffigures
@@ -40,12 +49,11 @@
 %\listoftables
 
 \renewcommand{\glossaryname}{Glossar}
-\printglossary
-
+\printglossary%
 \newpage
 \addcontentsline{toc}{chapter}{Literaturverzeichnis}
 \bibliography{referenzen}
-\bibliographystyle{geralpha}
+\bibliographystyle{alpha}
 
 \appendix
 \end{document}

@@ -15,7 +15,15 @@ jobs:
         with:
           root_file: diplomarbeit_mit_latex.tex
       - name: Gather build artifacts
-        run: mkdir build && cp diplomarbeit_mit_latex.pdf build/
+        run: |
+          mkdir build
+          cp diplomarbeit_mit_latex.pdf build/
+          cd gh-pages
+          cp -a . ../build/
+      - uses: actions/upload-artifact@v2
+        with:
+          name: gh-pages
+          path: build/
       - name: Deploy
         if: github.ref == 'refs/heads/master'
         uses: crazy-max/ghaction-github-pages@v2
@@ -23,7 +31,7 @@ jobs:
           target_branch: gh-pages
           build_dir: build
         env:
-          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
   build_template:
     runs-on: ubuntu-latest
     steps:

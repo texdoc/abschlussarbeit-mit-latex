@@ -47,19 +47,19 @@ Das hat verschiedene Vorteile:
 	\item Wenn du später ähnliche Dokumente erstellst, kannst du die separate Headerdatei kopieren und wiederverwenden.
 \end{itemize}
 
-Wie du auch siehst, kannst du die Dateiendung \enquote{.tex} beim \texttt{\textbackslash include} und beim \texttt{\textbackslash input} Befehl weglassen. \DMLLaTeX \ fügt diese Endung automatisch an den Dateinamen an.
+Wie du auch siehst, kannst du die Dateiendung \enquote{.tex} beim \texttt{\textbackslash include} und beim \texttt{\textbackslash input} Befehl weglassen. \DMLLaTeX{} fügt diese Endung automatisch an den Dateinamen an.
 
 \subsection{Der Unterschied zwischen \texttt{\textbackslash include} und \texttt{\textbackslash input}}
 
 Wenn du nocheinmal das Listing \ref{lst:beispiel05} betrachtest, siehst du, dass ich den Kopfbereich mit dem \texttt{\textbackslash input}-, die Kapitel aber mit dem \texttt{\textbackslash include}- Befehl eingebunden habe.
 
-Der \texttt{\textbackslash input} Befehl fügt die angegebene Datei genau an der angegebenen Stelle ein, der \texttt{\textbackslash include} Befehl macht jedoch noch mehr. Bevor die Datei an der angegebenen Stelle eingebunden wird, wird noch ein \texttt{\textbackslash clearpage} Befehl eingefügt. Dieser Befehl schreibt ausstehende Dinge wie Fußnoten und Floats (siehe Kapitel \ref{sec:tabellenundbilder}) noch fertig und beginnt eine neue Seite. Am Ende der eingefügten Datei merkt sich \DMLLaTeX \ alle Zählerstände usw. und speichert sie als \enquote{.aux} Datei ab.
+Der \texttt{\textbackslash input} Befehl fügt die angegebene Datei genau an der angegebenen Stelle ein, der \texttt{\textbackslash include} Befehl macht jedoch noch mehr. Bevor die Datei an der angegebenen Stelle eingebunden wird, wird noch ein \texttt{\textbackslash clearpage} Befehl eingefügt. Dieser Befehl schreibt ausstehende Dinge wie Fußnoten und Floats (siehe Kapitel \ref{sec:tabellenundbilder}) noch fertig und beginnt eine neue Seite. Am Ende der eingefügten Datei merkt sich \DMLLaTeX{} alle Zählerstände usw. und speichert sie als \enquote{.aux} Datei ab.
 
-Fügst du jetzt den Befehl \texttt{\textbackslash includeonly} am Anfang des Hauptdokuments ein, damit nur ein einzelnes Kapitel erzeugt wird, dann rekonstruiert \DMLLaTeX \ aus diesen \enquote{.aux} Dateien die Zählerstände und nummeriert das einzelne Kapitel genauso, als würde es mitten in deinem Dokument stehen.
+Fügst du jetzt den Befehl \texttt{\textbackslash includeonly} am Anfang des Hauptdokuments ein, damit nur ein einzelnes Kapitel erzeugt wird, dann rekonstruiert \DMLLaTeX{} aus diesen \enquote{.aux} Dateien die Zählerstände und nummeriert das einzelne Kapitel genauso, als würde es mitten in deinem Dokument stehen.
 
 \subsection{Der Header}
 
-Jetzt erstellst du eine neue Datei und speicherst sie in deinem Projektverzeichnis unter dem Dateinamen \enquote{header.tex}. In dieser Datei baust du den ganzen Kopfbereich deines \DMLLaTeX-Dokuments auf. So eine Headerdatei siehst du in Listing \ref{lst:beispiel06}.
+Jetzt erstellst du eine neue Datei und speicherst sie in deinem Projektverzeichnis unter dem Dateinamen \enquote{header.tex}. In dieser Datei baust du den ganzen Kopfbereich deines \DMLLaTeX"=Dokuments auf. So eine Headerdatei siehst du in Listing \ref{lst:beispiel06}.
 
 \lstinputlisting[caption=Headerdatei des Projekts (header.tex),
 	label=lst:beispiel06, frame=tb]%
