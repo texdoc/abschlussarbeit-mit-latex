@@ -6,7 +6,7 @@ Das Dokument [abschlussarbeit_mit_latex.pdf](https://github.com/texdoc/diplomarb
 
 ## Vorarbeiten
 
-Damit das Dokument selbst mittels LaTeX erstellt kann, ist eine vorhergehende LaTeX-Installation erforderlich. Für Windows ist im PDF-Dokument https://github.com/texdoc/diplomarbeit-mit-latex/raw/gh-pages/abschlussarbeit_mit_latex.pdf eine ausführliche Installationsanleitung beschrieben. Unter Linux (Debian) sollte es reichen, folgende Pakete zu installieren:
+Damit das Dokument selbst mittels LaTeX erstellt kann, ist eine vorhergehende LaTeX-Installation erforderlich. Für Windows ist im PDF-Dokument [abschlussarbeit_mit_latex.pdf](https://github.com/texdoc/diplomarbeit-mit-latex/raw/gh-pages/abschlussarbeit_mit_latex.pdf) eine ausführliche Installationsanleitung beschrieben. Unter Linux (Debian) sollte es reichen, folgende Pakete zu installieren:
 ```
 sudo apt-get install latexmk texlive-fonts-recommended texlive-fonts-extra texlive-lang-german texlive-lang-french texlive-latex-base texlive-latex-extra texlive-latex-recommended texlive-science
 ```
