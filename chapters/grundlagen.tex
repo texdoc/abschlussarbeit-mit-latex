@@ -10,7 +10,7 @@
 \label{sec:grundlagen}
 \index{Grundlagen|(}
 
-\DMLLaTeX \ ist einfacher zu erlernen, als du vielleicht denkst. Anders als grafische Tools, welche WYSIWYG\footnote{What You See Is What You Get} bieten (wollen), beschreibst du ähnlich wie bei HTML die Struktur deines Dokuments in einer speziellen Sprache. Danach \enquote{kompilierst} du das Dokument und erzeugst dadurch das fertige Dokument, zum Beispiel eine PDF-Datei.
+\DMLLaTeX{} ist einfacher zu erlernen, als du vielleicht denkst. Anders als grafische Tools, welche WYSIWYG\footnote{What You See Is What You Get} bieten (wollen), beschreibst du ähnlich wie bei HTML die Struktur deines Dokuments in einer speziellen Sprache. Danach \enquote{kompilierst} du das Dokument und erzeugst dadurch das fertige Dokument, zum Beispiel eine PDF-Datei.
 
 
 \section{Das erste kleine LaTeX"=Dokument}
@@ -48,7 +48,7 @@ Jetzt kannst du einen Projektnamen eingeben. Gib z.\,B. \enquote{Beispiel1} als 
 
 Wenn du den Projektnamen eingegeben hast, klickst du auf \enquote{Ok}. Jetzt wird das neue Projekt erstellt. Dazu wird das Unterverzeichnis \enquote{Beispiel1} erstellt, und darin die Datei \enquote{Beispiel1.tcp}. Dies ist die Projektdatei.
 
-Weiter wird eine neue Datei \enquote{Beispiel1.tex} erstellt. Dies ist unsere \DMLLaTeX-Datei.
+Weiter wird eine neue Datei \enquote{Beispiel1.tex} erstellt. Dies ist unsere \DMLLaTeX"=Datei.
 
 \subsection{Erstes Beispiel}
 \label{sec:erstesbeispiel}
@@ -68,9 +68,9 @@ Falls du lieber die alte deutsche Rechtschreibung verwenden möchtest, dann soll
 \item[Zeile 7] \enquote{inputenc}\index{Paket!inputenc} binden wir ein, damit die deutschen Zeichen ä, ö, ü, Ä, Ö, Ü und ß automatisch erkannt werden und wir diese nicht als \enquote{''a} usw. schreiben müssen.
 \item[Zeile 8] Das Paket \enquote{fontenc} mit der Option \enquote{T1}, ändert die Fontkodierung auf das \enquote{T1} Format. %TODO: Erläuterung, wozu dieses gut sein soll
 
-Normalerweise verwendet \DMLLaTeX \ Schriftarten mit einem Umfang von 128 Zeichen. Darin sind z.\,B. keine Umlaute oder Buchstaben mit Akzenten enthalten. Diese werden jeweils aus dem Buchstaben und Akzent zusammengesetzt. Also \enquote{a} und \enquote{\textasciicircum} ergibt \enquote{â}.
+Normalerweise verwendet \DMLLaTeX{} Schriftarten mit einem Umfang von 128 Zeichen. Darin sind z.\,B. keine Umlaute oder Buchstaben mit Akzenten enthalten. Diese werden jeweils aus dem Buchstaben und Akzent zusammengesetzt. Also \enquote{a} und \enquote{\textasciicircum} ergibt \enquote{â}.
 
-Mittlerweile stehen für die meisten Schriften in den \DMLLaTeX-Distributionen erweiterte \enquote{europäische} Versionen zur Verfügung (In der \enquote{T1-Codierung}). Diese Schriften enthalten bis zu 256 Zeichen. Dort sind auch Umlaute und akzentuierte Zeichen vorgefertigt enthalten. Das führt zu einer höheren typographischen Qualität der Dokumente und löst auch einige Probleme mit der Silbentrennung.
+Mittlerweile stehen für die meisten Schriften in den \DMLLaTeX"=Distributionen erweiterte \enquote{europäische} Versionen zur Verfügung (In der \enquote{T1-Codierung}). Diese Schriften enthalten bis zu 256 Zeichen. Dort sind auch Umlaute und akzentuierte Zeichen vorgefertigt enthalten. Das führt zu einer höheren typographischen Qualität der Dokumente und löst auch einige Probleme mit der Silbentrennung.
 \item[Zeile 10 und 11] Hier definieren wir den Titel\index{Dokumenttitel} und den Autor\index{Autor} des Dokuments.
 \end{description}
 
@@ -106,7 +106,6 @@ Speichere die Datei jetzt mit \enquote{Ctrl+S} oder über das Menü \enquote{Dat
 Jetzt kannst du den Kompiliervorgang mit der Taste \enquote{F7} starten oder über das Menü \enquote{Ausgabe} $\Rightarrow$ \enquote{Projekt compilieren} oder auch über die Symbolleiste.
 
 Im Statusbereich laufen jetzt diverse Meldungen vorbei. Nach einigen Sekunden oder Minuten, je nachdem, wie schnell dein Computer ist, ist der Kompiliervorgang vorbei. Im Statusfenster siehst du z.\,B. folgende Ausgabe:
-
 \begin{lstlisting}
 LaTeX-Ergebnis: 0 Fehler, 1 Warnung(en), 0 zu volle/leere Box(en), 1 Seite(n)
 \end{lstlisting}
@@ -133,15 +132,12 @@ Den Adobe Reader musst du während der Arbeit mit dem TeXnicCenter nicht mehr sc
 \section{Sonderzeichen}
 \index{Sonderzeichen}\label{Sonderzeichen}
 
-Alle \DMLLaTeX \ Befehle beginnen mit einem \enquote{Backslash}, zudem gibt es einige Sonderzeichen welche du nicht direkt verwenden darfst. Hier das Beispiel eines
-\DMLLaTeX \ Befehls:
-
+Alle \DMLLaTeX"=Befehle beginnen mit einem \enquote{Backslash}, zudem gibt es einige Sonderzeichen welche du nicht direkt verwenden darfst. Hier das Beispiel eines \DMLLaTeX"=Befehls:
 \begin{lstlisting}
 	\textbackslash
 \end{lstlisting}
 
 Die Sonderzeichen, welche du nicht direkt verwenden darfst, liste ich hier kurz auf. Später erfährst du, wie man diese Sonderzeichen in den Text einbauen kann und welchen Zweck sie haben. Verzichte am Anfang einfach auf diese Zeichen.
-
 \begin{lstlisting}
 	% # $ & ~ _ ^ \ { } "
 \end{lstlisting}
@@ -151,10 +147,9 @@ Die Sonderzeichen, welche du nicht direkt verwenden darfst, liste ich hier kurz 
 
 Das Prozentzeichen (\%) wird für Kommentare innerhalb deiner Datei verwendet. Damit kannst du für dich Anmerkungen machen und Dinge kommentieren. 
 
-Wenn du spezielle Pakete in deinem \DMLLaTeX \ Dokument einbindest, solltest du z.\,B. mit einem kurzen Kommentar beschreiben, was dieses Paket macht.
+Wenn du spezielle Pakete in deinem \DMLLaTeX"=Dokument einbindest, solltest du z.\,B. mit einem kurzen Kommentar beschreiben, was dieses Paket macht.
 
 Falls du ein Prozentzeichen in deinen Text einbauen möchtest, musst du einen Backslash vor das Prozentzeichen setzen.
-
 \begin{lstlisting}
 %
 % Ein Kommentar
