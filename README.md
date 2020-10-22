@@ -1,6 +1,6 @@
 # Abschlussarbeit mit LaTeX
 
-Das Dokument https://github.com/texdoc/diplomarbeit-mit-latex/raw/gh-pages/abschlussarbeit_mit_latex.pdf kann mittels `latexmk -pdf abschlussarbeit_mit_latex.tex` erstellt werden.
+Das Dokument [abschlussarbeit_mit_latex.pdf](https://github.com/texdoc/diplomarbeit-mit-latex/raw/gh-pages/abschlussarbeit_mit_latex.pdf) kann mittels `latexmk -pdf abschlussarbeit_mit_latex.tex` erstellt werden.
 
 "Abschlussarbeit mit LaTeX" (alter Name: "Diplomarbeit mit LaTeX") ist ein Dokument, welches einen einfachen Einstieg in LaTeX (primär unter Windows) beschreibt. In der Anleitung wird die LaTeX-Distribution [MiKTeX](https://miktex.org/) beschrieben in Kombination mit der Umgebung [TeXnicCenter](https://www.texniccenter.org/). Ein kleines Tutorial führt Schritt für Schritt in die Materie ein.
 
