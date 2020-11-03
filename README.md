@@ -1,14 +1,12 @@
-# Diplomarbeit mit LaTeX
+# Abschlussarbeit mit LaTeX
 
-Das Dokument kann mittels `latexmk -pdf diplomarbeit_mit_latex.tex` erstellt werden.
+Das Dokument [abschlussarbeit_mit_latex.pdf](https://github.com/texdoc/diplomarbeit-mit-latex/raw/gh-pages/abschlussarbeit_mit_latex.pdf) kann mittels `latexmk -pdf abschlussarbeit_mit_latex.tex` erstellt werden.
 
-"Diplomarbeit mit LaTeX" ist ein Dokument welches einen einfachen Einstieg in LaTeX (primär unter Windows) beschreibt. In der Anleitung wird die LaTeX-Distribution [MiKTeX](https://miktex.org/) beschrieben in Kombination mit der Umgebung [TeXnicCenter](https://www.texniccenter.org/).
-
-Das Dokument soll einen schnellen Einstieg mit LaTeX ermöglichen. Ein kleines Tutorial führt dich Schritt für Schritt in die Materie ein.
+"Abschlussarbeit mit LaTeX" (alter Name: "Diplomarbeit mit LaTeX") ist ein Dokument, welches einen einfachen Einstieg in LaTeX (primär unter Windows) beschreibt. In der Anleitung wird die LaTeX-Distribution [MiKTeX](https://miktex.org/) beschrieben in Kombination mit der Umgebung [TeXnicCenter](https://www.texniccenter.org/). Ein kleines Tutorial führt Schritt für Schritt in die Materie ein.
 
 ## Vorarbeiten
 
-Damit das Dokument selbst mittels LaTeX erstellt kann, ist eine vorhergehende LaTeX-Installation erforderlich. Unter Debian sollte es reichen, folgende Pakete zu installieren:
+Damit das Dokument selbst mittels LaTeX erstellt kann, ist eine vorhergehende LaTeX-Installation erforderlich. Für Windows ist im PDF-Dokument [abschlussarbeit_mit_latex.pdf](https://github.com/texdoc/diplomarbeit-mit-latex/raw/gh-pages/abschlussarbeit_mit_latex.pdf) eine ausführliche Installationsanleitung beschrieben. Unter Linux (Debian) sollte es reichen, folgende Pakete zu installieren:
 ```
 sudo apt-get install latexmk texlive-fonts-recommended texlive-fonts-extra texlive-lang-german texlive-lang-french texlive-latex-base texlive-latex-extra texlive-latex-recommended texlive-science
 ```

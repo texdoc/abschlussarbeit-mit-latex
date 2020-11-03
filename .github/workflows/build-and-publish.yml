@@ -10,14 +10,14 @@ jobs:
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v2
-      - name: Compile diplomarbeit_mit_latex.tex
+      - name: Compile abschlussarbeit_mit_latex.tex
         uses: dante-ev/latex-action@master
         with:
-          root_file: diplomarbeit_mit_latex.tex
+          root_file: abschlussarbeit_mit_latex.tex
       - name: Gather build artifacts
         run: |
           mkdir build
-          cp diplomarbeit_mit_latex.pdf build/
+          cp abschlussarbeit_mit_latex.pdf build/
           cd gh-pages
           cp -a . ../build/
       - uses: actions/upload-artifact@v2
@@ -37,8 +37,8 @@ jobs:
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v2
-      - name: Compile diplomarbeit_mit_latex.tex
+      - name: Compile abschlussarbeit_mit_latex.tex
         uses: dante-ev/latex-action@master
         with:
-          root_file: template_diplomarbeit.tex
-          working_directory: template_diplomarbeit
+          root_file: template_abschlussarbeit.tex
+          working_directory: template_abschlussarbeit
