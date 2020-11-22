@@ -84,8 +84,18 @@
 %
 \usepackage{color}
 
-% 11. Paket für spezielle PDF features.
-%
+% varioref verbessert die Referenzierungen von Bildern (und Tabellen etc.), die 
+% sich auf entfernten Seiten befinden.
+% Wichtig: es darf nicht nach hyperref geladen werden.
+\usepackage{varioref}
+\renewcommand\reftextfaceafter {\kern-.33em}
+\renewcommand\reftextfacebefore{\kern-.33em}
+\renewcommand\reftextafter     {auf der \reftextvario{nächsten}{folgenden} Seite}
+\renewcommand\reftextbefore    {auf der vorigen Seite}
+%\renewcommand\reftextfaraway[1]{on page~\pageref{#1}}
+\renewcommand\reftextfaraway[1]{\kern-.33em}
+
+% Paket für spezielle PDF features.
 \usepackage[%
 	pdftitle={Abschlussarbeit mit LaTeX},%                     Titel des PDF-Dokuments
 	pdfauthor={Tobias Erbsland, Andreas Nitsch},%              Autor des PDF-Dokuments
@@ -99,10 +109,15 @@
 	pdflang=de%                                                Sprache des Dokuments
 ]{hyperref}
 
-% 12. Paket um Quellcode sauber zu formatieren.
-%     Mit der option 'savemem' verschieben wir das laden von 
-%     einzelnen Programmiersprachen auf einen späteren Zeitpunkt.
-%
+% cleverref bietet mit \cref eine wesentlich komfortablere 
+% Referenzierungsmoeglichkeit als das alte \ref.
+% Wichtig: es darf nicht vor hyperref geladen werden.
+\usepackage[capitalise,nameinlink,noabbrev]{cleveref}
+\crefname{lstlisting}{\lstlistingname}{\lstlistingname}
+
+% Paket um Quellcode sauber zu formatieren.
+% Mit der option 'savemem' verschieben wir das laden von 
+% einzelnen Programmiersprachen auf einen späteren Zeitpunkt.
 \usepackage[savemem]{listings}
 
 % 13a. Privates Paket für die Schriftart 'Goudy Sans' laden.

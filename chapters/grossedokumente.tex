@@ -11,7 +11,7 @@
 
 Bei großen Dokumenten geht schnell der Überblick verloren. Eine Möglichkeit, etwas Struktur reinzubringen, ist, dassdu dein Dokument in einzelne Dateien aufteilst. Dazu stehen dir die Befehle \texttt{\textbackslash include} und \texttt{\textbackslash input} zur Verfügung, mit welchen du eine weitere Datei an dieser Stelle einbinden kannst.
 
-TeXnicCenter unterstützt dich bereits darin, indem er für dein Projekt ein eigenes Unterverzeichnis anlegt. Ich gehe in den folgenden Beispielen davon aus, dass du eine Abschlussarbeit zu einem Onlineshop schreibst. Beim Erstellen von deinem TeXnicCenter"=Projekt (siehe dazu Kapitel \ref{sec:erstellenneuesprojekt} auf Seite \pageref{sec:erstellenneuesprojekt}) gibst du also als Projektname \enquote{onlineshop} an. TeXnicCenter erstellt dir dann in dem gewählen Unterverzeichnis ein Verzeichnis mit dem Namen \enquote{onlineshop} und legt darin die Datei \enquote{onlineshop.tex} an. Diese Datei definiert TeXnicCenter automatisch auch als Hauptdatei.
+TeXnicCenter unterstützt dich bereits darin, indem er für dein Projekt ein eigenes Unterverzeichnis anlegt. Ich gehe in den folgenden Beispielen davon aus, dass du eine Abschlussarbeit zu einem Onlineshop schreibst. Beim Erstellen von deinem TeXnicCenter"=Projekt (siehe dazu \vref{sec:erstellenneuesprojekt}) gibst du also als Projektname \enquote{onlineshop} an. TeXnicCenter erstellt dir dann in dem gewählen Unterverzeichnis ein Verzeichnis mit dem Namen \enquote{onlineshop} und legt darin die Datei \enquote{onlineshop.tex} an. Diese Datei definiert TeXnicCenter automatisch auch als Hauptdatei.
 
 \section{Aufbauen einer Verzeichnisstruktur}
 
@@ -33,7 +33,7 @@ onlineshop -+- bibliographie
 
 \subsection{Die Hauptdatei}
 
-In deiner Hauptdatei fügst du praktisch nur \texttt{\textbackslash include} und ein \texttt{\textbackslash input} Befehl ein, welche weitere Dateien einbinden. So eine Hauptdatei siehst du in Listing \ref{lst:beispiel05}.
+In deiner Hauptdatei fügst du praktisch nur \texttt{\textbackslash include} und ein \texttt{\textbackslash input} Befehl ein, welche weitere Dateien einbinden. So eine Hauptdatei siehst du in \cref{lst:beispiel05}.
 
 \lstinputlisting[caption=Hauptdatei des Projekts (onlineshop.tex),
 	label=lst:beispiel05, frame=tb]%
@@ -43,7 +43,7 @@ Das hat verschiedene Vorteile:
 
 \begin{itemize}
 	\item Durch einfaches Austauschen der einzelnen \texttt{\textbackslash include}"=Befehle kannst du die Kapitel neu anordnen.
-	\item Indem du z.\,B. den Befehl \texttt{\textbackslash includeonly\{kapitel/ersteskapitel\}} als ersten Befehl in Listing \ref{lst:beispiel05} einfügst, wird nur genau das Kapitel \enquote{Erstes Kapitel} erzeugt. Was natürlich sehr viel schneller geht, als wenn das ganze Dokument erstellt werden müsste. Das spart dir viel Zeit, wenn du die Darstellung eines einzelnen Kapitels optimierst.
+	\item Indem du z.\,B. den Befehl \texttt{\textbackslash includeonly\{kapitel/ersteskapitel\}} als ersten Befehl in \cref{lst:beispiel05} einfügst, wird nur genau das Kapitel \enquote{Erstes Kapitel} erzeugt. Was natürlich sehr viel schneller geht, als wenn das ganze Dokument erstellt werden müsste. Das spart dir viel Zeit, wenn du die Darstellung eines einzelnen Kapitels optimierst.
 	\item Wenn du später ähnliche Dokumente erstellst, kannst du die separate Headerdatei kopieren und wiederverwenden.
 \end{itemize}
 
@@ -51,15 +51,15 @@ Wie du auch siehst, kannst du die Dateiendung \enquote{.tex} beim \texttt{\textb
 
 \subsection{Der Unterschied zwischen \texttt{\textbackslash include} und \texttt{\textbackslash input}}
 
-Wenn du nocheinmal das Listing \ref{lst:beispiel05} betrachtest, siehst du, dass ich den Kopfbereich mit dem \texttt{\textbackslash input}-, die Kapitel aber mit dem \texttt{\textbackslash include}- Befehl eingebunden habe.
+Wenn du nocheinmal \cref{lst:beispiel05} betrachtest, siehst du, dass der Kopfbereich mit dem \texttt{\textbackslash input}-, die Kapitel aber mit dem \texttt{\textbackslash include}-Befehl eingebunden wurde.
 
-Der \texttt{\textbackslash input} Befehl fügt die angegebene Datei genau an der angegebenen Stelle ein, der \texttt{\textbackslash include} Befehl macht jedoch noch mehr. Bevor die Datei an der angegebenen Stelle eingebunden wird, wird noch ein \texttt{\textbackslash clearpage} Befehl eingefügt. Dieser Befehl schreibt ausstehende Dinge wie Fußnoten und Floats (siehe Kapitel \ref{sec:tabellenundbilder}) noch fertig und beginnt eine neue Seite. Am Ende der eingefügten Datei merkt sich \DMLLaTeX{} alle Zählerstände usw. und speichert sie als \enquote{.aux} Datei ab.
+Der \texttt{\textbackslash input}-Befehl fügt die angegebene Datei genau an der angegebenen Stelle ein, der \texttt{\textbackslash include} Befehl macht jedoch noch mehr. Bevor die Datei an der angegebenen Stelle eingebunden wird, wird noch ein \texttt{\textbackslash clearpage} Befehl eingefügt. Dieser Befehl schreibt ausstehende Dinge wie Fußnoten und Floats (siehe \cref{sec:tabellenundbilder}) noch fertig und beginnt eine neue Seite. Am Ende der eingefügten Datei merkt sich \DMLLaTeX{} alle Zählerstände usw. und speichert sie als \enquote{.aux} Datei ab.
 
 Fügst du jetzt den Befehl \texttt{\textbackslash includeonly} am Anfang des Hauptdokuments ein, damit nur ein einzelnes Kapitel erzeugt wird, dann rekonstruiert \DMLLaTeX{} aus diesen \enquote{.aux} Dateien die Zählerstände und nummeriert das einzelne Kapitel genauso, als würde es mitten in deinem Dokument stehen.
 
 \subsection{Der Header}
 
-Jetzt erstellst du eine neue Datei und speicherst sie in deinem Projektverzeichnis unter dem Dateinamen \enquote{header.tex}. In dieser Datei baust du den ganzen Kopfbereich deines \DMLLaTeX"=Dokuments auf. So eine Headerdatei siehst du in Listing \ref{lst:beispiel06}.
+Jetzt erstellst du eine neue Datei und speicherst sie in deinem Projektverzeichnis unter dem Dateinamen \enquote{header.tex}. In dieser Datei baust du den ganzen Kopfbereich deines \DMLLaTeX"=Dokuments auf. So eine Headerdatei siehst du in \cref{lst:beispiel06}.
 
 \lstinputlisting[caption=Headerdatei des Projekts (header.tex),
 	label=lst:beispiel06, frame=tb]%
@@ -69,7 +69,7 @@ Jetzt erstellst du eine neue Datei und speicherst sie in deinem Projektverzeichn
 
 Für jedes Kapitel erstellst du jetzt eine separate Datei. Diese Dateien solltest du nicht nummerieren, sondern nach ihrem Inhalt benennen, sonst erweist sich das einfache Verschieben oder Austauschen der einzelnen Kapitel als sehr verwirrend. Wenn plötzlich die Kapitel in der Reihenfolge 3, 2, 5, 1 und 4 in dem Hauptdokument eingebunden werden, geht schnell die Übersicht verloren.
 
-Eine solche Kapiteldatei siehst du z.\,B. in Listing \ref{lst:beispiel07}
+Eine solche Kapiteldatei siehst du z.\,B. in \cref{lst:beispiel07}
 
 \lstinputlisting[
 	caption=Kapiteldatei des Projekts (einfuehrung.tex im Verzeichnis \enquote{kapitel}),
@@ -80,7 +80,7 @@ Eine solche Kapiteldatei siehst du z.\,B. in Listing \ref{lst:beispiel07}
 
 Am Schluss erstellst du noch die Titelseite in einer separaten Datei. Dabei kannst du z.\,B. die Umgebung \enquote{titlepage} verwenden.
 
-Eine Datei, welche die Titelseite enthält, siehst du z.\,B. in Listing \ref{lst:beispiel08}. Du siehst auch das nach der Titelseite auch das Inhaltsverzeichnis, das Abbildungs- und Tabellenverzeichnis eingefügt wird.
+Eine Datei, welche die Titelseite enthält, siehst du z.\,B. in \cref{lst:beispiel08}. Du siehst auch das nach der Titelseite auch das Inhaltsverzeichnis, das Abbildungs- und Tabellenverzeichnis eingefügt wird.
 
 \lstinputlisting[
 	caption=Titelseite des Projekts (titelseite.tex im Verzeichnis \enquote{kapitel}),
