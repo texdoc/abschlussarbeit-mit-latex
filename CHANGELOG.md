@@ -16,6 +16,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - (se) Eingangskapitel aktualisiert
 - (se) Dokumentname ge\"andert zu "Abschlussarbeit mit LaTeX"
 - (se) Alles auf UTF8 umgestellt
+- (se) von altem \ref umgestellt auf cleveref (und varioref)
 
 ### Fixed
 
