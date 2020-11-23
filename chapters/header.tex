@@ -4,13 +4,11 @@
 % Copyright (c) 2002, 2003, 2005, 2007, 2008 Tobias Erbsland
 % Copyright (c) 2005, 2006 Andreas Nitsch
 % See the file main.tex for copying conditions.
-%
 
 % A. DOKUMENTKLASSE
 % ---------------------------------------------------------------------------
-
-%  1. Definieren der Dokumentklasse.
-%     Wir verwenden die KOMA-Script Klasse 'scrbook' für ein Buch.
+% Definieren der Dokumentklasse.
+% Wir verwenden die KOMA-Script Klasse 'scrbook' für ein Buch.
 %
 \documentclass[%
 	pdftex,%              PDFTex verwenden da wir ausschliesslich ein PDF erzeugen.
@@ -25,12 +23,13 @@
 	index=totoc,%         Index ins Inhaltsverzeichnis einfügen.
 	ngerman%              Sprache des Dokumentes
 ]{scrbook}
-% das package listings benutzt altes komascript, siehe
+% Das package listings benutzt altes KOMA-Script, sodass wir scrhack laden muessen, siehe
 % https://tex.stackexchange.com/questions/51867/koma-warning-about-toc
 \usepackage{scrhack}
-% tabellen mit automatischem zeilenumbruch
+% Tabellen mit automatischem Zeilenumbruch
 \usepackage{tabularx}
-% avoid overfull boxes on page numbers >99, see 
+% Bei mehr als 99 Seiten muss die Einrueckung der Seitenzahlen im 
+% Inhaltsverzeichnis korrigiert werden, um overfull boxes zu vermeiden.
 % https://tex.stackexchange.com/questions/49887/overfull-hbox-warning-for-toc-entries-when-using-memoir-documentclass
 % http://compgroups.net/comp.text.tex/page-number-alignment-in-koma-script-table-of-c/1914765
 \makeatletter
@@ -38,54 +37,55 @@
 \renewcommand*{\@pnumwidth}{2.2em}
 \makeatother
 
-%  2. Festlegen der Zeichencodierung des Dokuments und des Zeichensatzes.
-%     Wir verwenden 'UTF-8' für das Dokument
-%     und die 'T1'-codierung für die Schrift.
-%
+% Festlegen der Zeichencodierung des Dokuments und des Zeichensatzes.
+% Wir verwenden 'UTF-8' für das Dokument
+% und die 'T1'-codierung für die Schrift.
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 
-%  3. Packet für die Index-Erstellung laden.
-%
+% Packet für die Index-Erstellung laden.
 \usepackage{makeidx}
 
-%  4. Paket für die Lokalisierung ins Deutsche laden.
-%     Wir verwenden neue deutsche Rechtschreibung mit 'ngerman'.
-%
+% Paket für die Lokalisierung ins Deutsche laden.
+% Wir verwenden neue deutsche Rechtschreibung mit 'ngerman'.
 \usepackage[main=ngerman,french]{babel}
 
-%  5. Paket für Anführungszeichen laden.
-%     Wir setzen den Stil auf 'swiss', und verwenden so die Schweizer Anführungszeichen.
-%
+% Paket für Anführungszeichen laden.
+% Wir setzen den Stil auf 'swiss', und verwenden so die Schweizer Anführungszeichen.
 \usepackage[style=swiss]{csquotes}
 
-%  6. Paket für erweiterte Tabelleneigenschaften.
-%
+% Paket für erweiterte Tabelleneigenschaften.
 \usepackage{array}
 
-%  7. Paket um Grafiken im Dokument einbetten zu können.
-%     Im PDF sind GIF, PNG, und PDF Grafiken möglich.
-%
+% Paket um Grafiken im Dokument einbetten zu können.
+% Im PDF sind GIF, PNG, und PDF Grafiken möglich.
 \usepackage{graphicx}
 
-%  8. Pakete für mathematischen Textsatz.
-%
+% Pakete für mathematischen Textsatz.
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{dsfont}
 %\usepackage{mathtools}
 
-%  9. Paket um Textteile drehen zu können.
-%
+% Paket um Textteile drehen zu können.
 \usepackage{rotating}
 
-% 10. Paket für Farben an verschieden Stellen. 
-%     Wir definieren zusätzliche benannte Farben.
-%
+% Paket für Farben an verschieden Stellen. 
+% Wir definieren zusätzliche benannte Farben.
 \usepackage{color}
 
-% 11. Paket für spezielle PDF features.
-%
+% varioref verbessert die Referenzierungen von Bildern (und Tabellen etc.), die 
+% sich auf entfernten Seiten befinden.
+% Wichtig: es darf nicht nach hyperref geladen werden.
+\usepackage{varioref}
+\renewcommand\reftextfaceafter{\kern-.33em}
+\renewcommand\reftextfacebefore{\kern-.33em}
+\renewcommand\reftextafter{auf der \reftextvario{nächsten}{folgenden} Seite}
+\renewcommand\reftextbefore{auf der vorigen Seite}
+%\renewcommand\reftextfaraway[1]{on page~\pageref{#1}}
+\renewcommand\reftextfaraway[1]{\kern-.33em}
+
+% Paket für spezielle PDF features.
 \usepackage[%
 	pdftitle={Abschlussarbeit mit LaTeX},%                     Titel des PDF-Dokuments
 	pdfauthor={Tobias Erbsland, Andreas Nitsch},%              Autor des PDF-Dokuments
@@ -99,22 +99,27 @@
 	pdflang=de%                                                Sprache des Dokuments
 ]{hyperref}
 
-% 12. Paket um Quellcode sauber zu formatieren.
-%     Mit der option 'savemem' verschieben wir das laden von 
-%     einzelnen Programmiersprachen auf einen späteren Zeitpunkt.
-%
+% caption setzt per default hypcap=true, sodass Sprungmarken im PDF-File nicht nur 
+% zu den Captions von Bildern springen, sondern an den oberen Rand der Bilder.
+\usepackage{caption}
+% cleverref bietet mit \cref eine wesentlich komfortablere 
+% Referenzierungsmoeglichkeit als das alte \ref.
+% Wichtig: es darf nicht vor hyperref geladen werden.
+\usepackage[capitalise,nameinlink,noabbrev]{cleveref}
+\crefname{lstlisting}{\lstlistingname}{\lstlistingname}
+
+% Paket um Quellcode sauber zu formatieren.
+% Mit der option 'savemem' verschieben wir das laden von 
+% einzelnen Programmiersprachen auf einen späteren Zeitpunkt.
 \usepackage[savemem]{listings}
 
-% 13a. Privates Paket für die Schriftart 'Goudy Sans' laden.
-%      Dieses Paket ist nur für die publizierte Version des Dokuments gedacht
-%      und an dieser Stelle mit den nachfolgenden Anweisungen auskommentiert.
-%
+% Privates Paket für die Schriftart 'Goudy Sans' laden.
+% Dieses Paket ist nur für die publizierte Version des Dokuments gedacht
+% und an dieser Stelle mit den nachfolgenden Anweisungen auskommentiert.
 %\usepackage{goudysans}
 
-%
-% 13a. Font 'Latin Modern Family' verwenden.
-%      Verwende dieses Paket wenn du DML selbst kompilierst.
-%
+% Font 'Latin Modern Family' verwenden.
+% Verwende dieses Paket wenn du DML selbst kompilierst.
 \usepackage{lmodern}
 
 % B. EINSTELLUNGEN
